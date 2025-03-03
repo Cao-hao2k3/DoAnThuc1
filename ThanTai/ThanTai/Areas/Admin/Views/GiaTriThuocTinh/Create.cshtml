@@ -1,0 +1,42 @@
+﻿@model ThanTai.Models.GiaTriThuocTinh
+
+@{
+    ViewData["Title"] = "Thêm giá trị";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="SanPhamID" class="control-label"></label>
+                <select asp-for="SanPhamID" class="form-control" asp-items="ViewBag.SanPhamID"></select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ThuocTinhID" class="control-label"></label>
+                <select asp-for="ThuocTinhID" class="form-control" asp-items="ViewBag.ThuocTinhID"></select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="GiaTri" class="control-label"></label>
+                <input asp-for="GiaTri" class="form-control" />
+                <span asp-validation-for="GiaTri" class="text-danger"></span>
+            </div>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-floppy-disk"></i> Thêm mới
+                </button> 
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

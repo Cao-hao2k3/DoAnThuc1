@@ -1,0 +1,39 @@
+﻿@model ThanTai.Models.LoaiSanPham
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <!-- Hiển thị lỗi nếu có -->
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">
+                <i class="fa-solid fa-circle-exclamation"></i> @TempData["ErrorMessage"]
+            </div>
+        }
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+
+            <div class="alert alert-danger" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i> Bạn có muốn xóa loại sản phẩm <strong>@Model.Tenloai</strong> không?
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Tên loại sản phẩm:</dt>
+                <dd class="col-sm-9">@Model.Tenloai</dd>
+
+                <dt class="col-sm-3">Loại sản phẩm cha:</dt>
+                <dd class="col-sm-9">@Model.ParentCategory?.Tenloai</dd>
+            </dl>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-circle-check"></i> Xác nhận xóa</button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

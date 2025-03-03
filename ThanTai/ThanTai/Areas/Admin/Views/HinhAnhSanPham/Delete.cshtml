@@ -1,0 +1,68 @@
+﻿@model ThanTai.Models.HinhAnhSanPham
+
+@{
+    ViewData["Title"] = "Xóa ảnh sản phẩm";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+
+            <dl class="row">
+                <!-- Ảnh sản phẩm -->
+                <dt class="col-sm-3">Ảnh sản phẩm:</dt>
+                <dd class="col-sm-9">
+                    @if (!string.IsNullOrEmpty(Model.AnhSanPham))
+                    {
+                        try
+                        {
+                            var images = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(Model.AnhSanPham);
+                            if (images != null && images.Any())
+                            {
+                                foreach (var img in images)
+                                {
+                                    <img src="@img" class="img-thumbnail me-2" style="width: 100px; height: auto;" />
+                                }
+                            }
+                            else
+                            {
+                                <span>Không có ảnh sản phẩm</span>
+                            }
+                        }
+                        catch
+                        {
+                            <span>Lỗi khi đọc ảnh sản phẩm</span>
+                        }
+                    }
+                    else
+                    {
+                        <span>Không có ảnh sản phẩm</span>
+                    }
+                </dd>
+
+                <!-- Ảnh thông số -->
+                <dt class="col-sm-3">Ảnh thông số:</dt>
+                <dd class="col-sm-9">
+                    @if (!string.IsNullOrEmpty(Model.AnhThongSo))
+                    {
+                        <img src="@Model.AnhThongSo" class="img-thumbnail" style="width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span>Không có ảnh thông số</span>
+                    }
+                </dd>
+            </dl>
+
+            <!-- Nút xác nhận xóa -->
+            <div class="mb-0">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-circle-check"></i> Xác nhận xóa
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

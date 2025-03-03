@@ -1,0 +1,37 @@
+﻿@model ThanTai.Models.GiaTriThuocTinh
+
+@{
+    ViewData["Title"] = "Xóa thuộc tình";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+
+            <div class="alert alert-danger" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Bạn có muốn xóa giá trị thuộc tính này không?
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Giá trị:</dt>
+                <dd class="col-sm-9">@Model.GiaTri</dd>
+
+                <dt class="col-sm-3">Sản phẩm:</dt>
+                <dd class="col-sm-9">@Model.SanPham?.TenSanPham</dd>
+
+                <dt class="col-sm-3">Thuộc tính:</dt>
+                <dd class="col-sm-9">@Model.ThuocTinh?.TenThuocTinh</dd>
+            </dl>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-circle-check"></i> Xác nhận xóa
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model ThanTai.Models.SanPham
+
+@{
+    ViewData["Title"] = "Chỉnh sửa sản phẩm";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+
+            <div class="mb-3">
+                <label asp-for="LoaiSanPhamID" class="control-label"></label>
+                <select asp-for="LoaiSanPhamID" class="form-control" asp-items="ViewBag.LoaiSanPhamID"></select>
+                <span asp-validation-for="LoaiSanPhamID" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ThuongHieuID" class="control-label"></label>
+                <select asp-for="ThuongHieuID" class="form-control" asp-items="ViewBag.ThuongHieuID"></select>
+                <span asp-validation-for="ThuongHieuID" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="TenSanPham" class="control-label"></label>
+                <input asp-for="TenSanPham" class="form-control" />
+                <span asp-validation-for="TenSanPham" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="DonGia" class="control-label"></label>
+                <input asp-for="DonGia" class="form-control" />
+                <span asp-validation-for="DonGia" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="SoLuong" class="control-label"></label>
+                <input asp-for="SoLuong" class="form-control" />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="MoTa" class="control-label"></label>
+                <textarea asp-for="MoTa" class="form-control"></textarea>
+                <span asp-validation-for="MoTa" class="text-danger"></span>
+            </div>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-floppy-disk"></i> Cập nhật
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

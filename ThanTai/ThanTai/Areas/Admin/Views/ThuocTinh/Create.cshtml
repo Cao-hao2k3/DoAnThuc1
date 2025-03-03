@@ -1,0 +1,28 @@
+﻿@model ThanTai.Models.ThuocTinh
+
+@{
+    ViewData["Title"] = "Thêm thuộc tính";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="TenThuocTinh" class="control-label"></label>
+                <input asp-for="TenThuocTinh" class="form-control" />
+                <span asp-validation-for="TenThuocTinh" class="text-danger"></span>
+            </div>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Thêm mới</button> hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

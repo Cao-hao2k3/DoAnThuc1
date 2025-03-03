@@ -1,0 +1,30 @@
+﻿@model ThanTai.Models.ThuongHieu
+
+@{
+    ViewData["Title"] = "Xóa thương hiệu";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+
+            <div class="alert alert-danger" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i> Bạn có muốn xóa thương hiệu <strong>@Model.TenThuongHieu</strong> không?
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Tên thương hiệu:</dt>
+                <dd class="col-sm-9">@Model.TenThuongHieu</dd>
+            </dl>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-circle-check"></i> Xác nhận xóa
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

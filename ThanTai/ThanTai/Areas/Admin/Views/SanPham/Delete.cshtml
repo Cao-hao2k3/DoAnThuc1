@@ -1,0 +1,45 @@
+﻿@model ThanTai.Models.SanPham
+
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+
+            <div class="alert alert-danger" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i> Bạn có muốn xóa sản phẩm này <strong>@Model.TenSanPham</strong> không?
+            </div>
+
+            <dl class="row">
+                <dt class="col-sm-3">Tên sản phẩm:</dt>
+                <dd class="col-sm-9">@Model.TenSanPham</dd>
+
+                <dt class="col-sm-3">Đơn giá:</dt>
+                <dd class="col-sm-9">@Model.DonGia</dd>
+
+                <dt class="col-sm-3">Số lượng:</dt>
+                <dd class="col-sm-9">@Model.SoLuong</dd>
+
+                <dt class="col-sm-3">Mô tả:</dt>
+                <dd class="col-sm-9">@Model.MoTa</dd>
+
+                <dt class="col-sm-3">Loại sản phẩm:</dt>
+                <dd class="col-sm-9">@Model.LoaiSanPham.Tenloai</dd>
+
+                <dt class="col-sm-3">Thương hiệu:</dt>
+                <dd class="col-sm-9">@Model.ThuongHieu.TenThuongHieu</dd>
+            </dl>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-danger">
+                    <i class="fa-solid fa-circle-check"></i> Xác nhận xóa
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

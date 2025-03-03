@@ -1,0 +1,68 @@
+﻿@model ThanTai.Models.HinhAnhSanPham
+
+@{
+    ViewData["Title"] = "Chỉnh sửa ảnh sản phẩm";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ID" />
+
+            <div class="mb-3">
+                <label class="form-label">Sản phẩm</label>
+                <select asp-for="SanPhamID" class="form-control" asp-items="ViewBag.SanPhamID"></select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ảnh sản phẩm hiện tại</label>
+                <div>
+                    @if (!string.IsNullOrEmpty(Model.AnhSanPham))
+                    {
+                        var images = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(Model.AnhSanPham);
+                        foreach (var img in images)
+                        {
+                            <img src="@img" class="img-thumbnail me-2" style="width: 100px; height: auto;" />
+                        }
+                    }
+                    else
+                    {
+                        <span>Không có ảnh sản phẩm</span>
+                    }
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thay đổi ảnh sản phẩm</label>
+                <input type="file" name="AnhSanPhamFiles" class="form-control" multiple />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ảnh thông số hiện tại</label>
+                <div>
+                    @if (!string.IsNullOrEmpty(Model.AnhThongSo))
+                    {
+                        <img src="@Model.AnhThongSo" class="img-thumbnail" style="width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span>Không có ảnh thông số</span>
+                    }
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thay đổi ảnh thông số</label>
+                <input type="file" name="AnhThongSoFile" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">
+                    <i class="fa-solid fa-circle-check"></i> Lưu thay đổi
+                </button>
+                hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>

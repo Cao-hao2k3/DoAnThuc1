@@ -1,0 +1,37 @@
+﻿@model ThanTai.Models.LoaiSanPham
+
+@{
+    ViewData["Title"] = "Thêm sản phẩm";
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Tenloai" class="control-label"></label>
+                <input asp-for="Tenloai" class="form-control" />
+                <span asp-validation-for="Tenloai" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ParentID" class="control-label"></label>
+                <select asp-for="ParentID" class="form-control" asp-items="@(ViewData["ParentID"] as SelectList)">
+                    <option value="">-- Không có loại cha --</option>
+                </select>
+                <span asp-validation-for="ParentID" class="text-danger"></span>
+            </div>
+
+            <div class="mb-0">
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Thêm mới</button> hoặc <a asp-action="Index">Quay về danh sách</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
