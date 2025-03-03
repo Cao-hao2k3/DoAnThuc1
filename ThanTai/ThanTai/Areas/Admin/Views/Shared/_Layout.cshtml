@@ -1,6 +1,8 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor _httpContextAccessor;
 @{
 	var user = _httpContextAccessor.HttpContext.User;
+	var sessionUserName = _httpContextAccessor.HttpContext.Session.GetString("UserName");
+	var sessionUserImage = _httpContextAccessor.HttpContext.Session.GetString("UserImage");
 }
 
 <!DOCTYPE html>
@@ -12,33 +14,29 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ThanTai.styles.css" asp-append-version="true" />
+	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 11]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<!-- Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+	<meta name="author" content="Phoenixcoded" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<!-- Favicon icon -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="icon" href="~/dist/assets/images/favicon.ico" type="image/x-icon">
+	<!-- vendor css -->
+	<link rel="stylesheet" href="~/dist/assets/css/style.css">
 </head>
 
 <body>
-    <head>
-        <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 11]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-            <![endif]-->
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="">
-        <meta name="author" content="Phoenixcoded" />
-        <!-- Favicon icon -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="icon" href="~/dist/assets/images/favicon.ico" type="image/x-icon">
-        <!-- vendor css -->
-        <link rel="stylesheet" href="~/dist/assets/css/style.css">
-    </head>
-
 	<!-- [ Pre-loader ] start -->
 	<div class="loader-bg">
 		<div class="loader-track">
@@ -52,18 +50,17 @@
 			<div class="navbar-content scroll-div ">
 				<div class="">
 					<div class="main-menu-header">
-						<img class="img-radius" src="@Url.Content("~/uploads/" + ViewBag.UserImage)"
-							 alt="User-Profile-Image" width="80" height="80">
+						<img class="img-radius" src="~/uploads/@sessionUserImage" alt="User-Profile-Image" width="80" height="80">
 						<div class="user-details">
-							<span>@ViewBag.UserName</span>
-							<div id="more-details">UX Designer<i class="fa fa-chevron-down m-l-5"></i></div>
+							<span>@sessionUserName</span>
+							<div id="more-details">UX Designer <i class="fa fa-chevron-down m-l-5"></i></div>
 						</div>
 					</div>
 					<div class="collapse" id="nav-user-link">
 						<ul class="list-unstyled">
-							<li class="list-group-item"><a href="user-profile.html"><i class="feather icon-user m-r-5"></i>View Profile</a></li>
+							<li class="list-group-item"><a href="user-profile.html"><i class="feather icon-user m-r-5"></i>Thông tin cá nhân</a></li>
 							<li class="list-group-item"><a href="#!"><i class="feather icon-settings m-r-5"></i>Settings</a></li>
-							<li class="list-group-item"><a href="auth-normal-sign-in.html"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
+							<li class="list-group-item"><a asp-area="" asp-controller="Home" asp-action="Logout"><i class="feather icon-log-out m-r-5"></i>Đăng xuất</a></li>
 						</ul>
 					</div>
 				</div>
@@ -142,15 +139,6 @@
 			</div>
 		</div>
 	</nav>
-
-	@if (!user.Identity.IsAuthenticated)
-	{
-		
-	}
-	else
-	{
-	
-	}
 
 	<!-- [ navigation menu ] end -->
 	<!-- [ Header ] start -->

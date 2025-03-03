@@ -4,31 +4,43 @@ using ThanTai.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ThanTaiShopDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ThanTaiShopConnection")));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+// 1️ Thêm dịch vụ Session vào ứng dụng
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session hết hạn sau 30 phút
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true; // Bắt buộc với GDPR
+});
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
- .AddCookie(options =>
- {
-     options.Cookie.Name = "ThanTaiShop.Cookie";
-     options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
-     options.SlidingExpiration = true;
-     options.LoginPath = "/Home/Login";
-     options.LogoutPath = "/Home/Logout";
-     options.AccessDeniedPath = "/Home/Forbidden";
- });
+// 2️ Thêm dịch vụ HTTP Context Accessor để dùng Session trong Views và Controllers
 builder.Services.AddHttpContextAccessor();
 
+// 3️ Cấu hình Entity Framework với SQL Server
+builder.Services.AddDbContext<ThanTaiShopDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ThanTaiShopConnection")));
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+// 4️ Cấu hình Authentication bằng Cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "ThanTaiShop.Cookie";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+        options.SlidingExpiration = true;
+        options.LoginPath = "/Home/Login";
+        options.LogoutPath = "/Home/Logout";
+        options.AccessDeniedPath = "/Home/Forbidden";
+    });
+
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// 5️ Cấu hình Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -37,14 +49,18 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// 6️ Kích hoạt Session trước Authentication
+app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(name: "adminareas", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+// 7️ Cấu hình Routing
+app.MapControllerRoute(
+    name: "adminareas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 app.Run();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QrnJnVLksW4=",
+  "dgSpecHash": "FDEnUNExSMM=",
   "success": true,
-  "projectFilePath": "D:\\HocTap\\DoAnTTCK\\ThanTai\\ThanTai\\ThanTai.csproj",
+  "projectFilePath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\ThanTai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -15,6 +15,7 @@ namespace ThanTai.Controllers
         private readonly ThanTaiShopDbContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
 
+
         public HomeController(ILogger<HomeController> logger, ThanTaiShopDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
@@ -57,7 +58,7 @@ namespace ThanTai.Controllers
                     return View(dangNhap);
                 }
 
-                // Tạo danh sách claims
+                // Tạo claims để lưu thông tin người dùng
                 var claims = new List<Claim>
         {
             new Claim("ID", nguoiDung.ID.ToString()),
@@ -77,9 +78,10 @@ namespace ThanTai.Controllers
                                               new ClaimsPrincipal(claimsIdentity),
                                               authProperties);
 
-                Console.WriteLine($"Đăng nhập thành công! Quyền: {(nguoiDung.Quyen ? "Admin" : "User")}");
+                //  Lưu thông tin vào Session
+                _httpContextAccessor.HttpContext.Session.SetString("UserName", nguoiDung.HoVaTen);
+                _httpContextAccessor.HttpContext.Session.SetString("UserImage", nguoiDung.Anh);
 
-                // Chuyển hướng đúng đến khu vực Admin hoặc trang chủ User
                 if (nguoiDung.Quyen)
                 {
                     return RedirectToRoute(new { area = "Admin", controller = "Home", action = "Index" });
@@ -126,8 +128,13 @@ namespace ThanTai.Controllers
         // GET: Logout
         public async Task<IActionResult> Logout()
         {
+            // Xóa Session khi đăng xuất
+            HttpContext.Session.Clear();
+
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
             return RedirectToAction("Index", "Home", new { Area = "" });
+
         }
 
         // GET: Forbidden

@@ -8042,11 +8042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HocTap\\DoAnTTCK\\ThanTai\\ThanTai\\ThanTai.csproj",
+      "projectUniqueName": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\ThanTai.csproj",
       "projectName": "ThanTai",
-      "projectPath": "D:\\HocTap\\DoAnTTCK\\ThanTai\\ThanTai\\ThanTai.csproj",
+      "projectPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\ThanTai.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\HocTap\\DoAnTTCK\\ThanTai\\ThanTai\\obj\\",
+      "outputPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

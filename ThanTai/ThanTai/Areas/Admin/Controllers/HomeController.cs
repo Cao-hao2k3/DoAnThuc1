@@ -21,18 +21,6 @@ namespace ThanTai.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var userId = User.FindFirst("ID")?.Value;
-
-            if (userId != null)
-            {
-                var nguoiDung = _context.NguoiDung.FirstOrDefault(x => x.ID.ToString() == userId);
-                if (nguoiDung != null)
-                {
-                    ViewBag.UserName = nguoiDung.HoVaTen;
-                    ViewBag.UserImage = nguoiDung.Anh;
-                }
-            }
-
             return View();
         }
     }
