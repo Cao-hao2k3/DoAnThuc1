@@ -19,17 +19,15 @@
                         for (int i = 0; i < images.Count; i++)
                         {
                             <div class="image-container" data-index="@i" style="display: inline-block; position: relative; margin: 5px;">
-                                <!-- Ảnh hiển thị -->
-                                <img src="@images[i]" class="img-thumbnail" style="width: 100px; height: auto;" />
+                                <img src="@images[i]" class="img-thumbnail" style="width: 100px; height: auto;" id="preview_@i" />
 
-                                <!-- Input ẩn lưu ảnh cũ -->
-                                <input type="hidden" name="OldImages" value="@images[i]" />
+                                <!-- Lưu đường dẫn ảnh cũ -->
+                                <input type="file" name="NewImages[@i]" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
 
-                                <!-- Input file để chọn ảnh mới -->
-                                <input type="file" name="NewImages" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
+                                <!-- Chọn ảnh mới (nếu cần) -->
+                                <input type="file" name="NewImages[@i]" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
 
-                                <!-- Nút chọn ảnh -->
-                                <button type="button" class="btn btn-sm btn-warning mt-2" onclick="document.querySelectorAll('input[name=\'NewImages\']')[@i].click()">Chọn thay đổi</button>
+                                <button type="button" class="btn btn-sm btn-warning mt-2" onclick="document.querySelector('input[name=\'NewImages[@i]\']').click()">Chọn thay đổi</button>
                             </div>
                         }
                     }
@@ -39,7 +37,6 @@
                     }
                 </div>
             </div>
-
 
             <div class="mb-3">
                 <label class="form-label">Ảnh thông số hiện tại</label>
@@ -76,7 +73,7 @@
         if (file && file.type.startsWith("image/")) {
             let reader = new FileReader();
             reader.onload = function (e) {
-                document.querySelector(`[data-index='${index}'] img`).src = e.target.result;
+                document.getElementById(`preview_${index}`).src = e.target.result;
             };
             reader.readAsDataURL(file);
         }

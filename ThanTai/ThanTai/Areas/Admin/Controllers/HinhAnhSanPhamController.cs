@@ -187,7 +187,7 @@ namespace ThanTai.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, HinhAnhSanPham model, List<IFormFile> AnhSanPhamFiles, IFormFile? AnhThongSoFile)
+        public async Task<IActionResult> Edit(int id, HinhAnhSanPham model, IFormFile? AnhThongSoFile)
         {
             if (id != model.ID)
             {
@@ -202,13 +202,35 @@ namespace ThanTai.Areas.Admin.Controllers
 
             string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
 
-            List<string> sanPhamImages = AnhSanPhamFiles.Any()
-                ? await SaveFiles(AnhSanPhamFiles, uploadsFolder)
-                : JsonConvert.DeserializeObject<List<string>>(existingImage.AnhSanPham) ?? new List<string>();
+            // Lấy danh sách ảnh cũ từ JSON
+            List<string> sanPhamImages = JsonConvert.DeserializeObject<List<string>>(existingImage.AnhSanPham) ?? new List<string>();
 
-            //  Đảm bảo lưu JSON đúng định dạng
+            // Xử lý ảnh mới được tải lên
+            foreach (var file in Request.Form.Files)
+            {
+                string key = file.Name; // key sẽ có dạng "NewImages[1]", "NewImages[2]"
+                if (key.StartsWith("NewImages[") && key.EndsWith("]"))
+                {
+                    // Lấy index từ key
+                    int startIndex = key.IndexOf("[") + 1;
+                    int endIndex = key.IndexOf("]");
+                    int index = int.Parse(key.Substring(startIndex, endIndex - startIndex));
+
+                    // Lưu ảnh mới vào thư mục
+                    string newImagePath = await SaveFile(file, uploadsFolder);
+
+                    // Thay thế ảnh tại vị trí index
+                    if (index < sanPhamImages.Count)
+                    {
+                        sanPhamImages[index] = newImagePath;
+                    }
+                }
+            }
+
+            // Cập nhật lại JSON
             existingImage.AnhSanPham = JsonConvert.SerializeObject(sanPhamImages);
 
+            // Cập nhật ảnh thông số nếu có thay đổi
             if (AnhThongSoFile != null)
             {
                 existingImage.AnhThongSo = await SaveFile(AnhThongSoFile, uploadsFolder);
@@ -219,5 +241,6 @@ namespace ThanTai.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

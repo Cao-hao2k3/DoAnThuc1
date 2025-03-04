@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ASZIK1MeCVrLczTn60HIOYg35MjVzpQ4c7mL5pUFDdg=",
+  "Hash": "utqU66AgYhSI8Qx+pw3xSzkfm7irB0HQIpVv+/Q2ejE=",
   "Source": "ThanTai",
   "BasePath": "_content/ThanTai",
   "Mode": "Default",
@@ -11336,6 +11336,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\624adac5-8658-4532-b2d0-5946fc8a1080.jpg"
     },
     {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "uploads/62b1f241-5669-4f74-8884-e3da134e6b3f#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4u4wwc7xeh",
+      "Integrity": "fGBMjOoSJf8FGtoo2LIvzkR5LOsyNuyFnAjpVr3XgKU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg"
+    },
+    {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\77a854a2-e9a4-48d0-8111-eb1dbf44a939.png",
       "SourceId": "ThanTai",
       "SourceType": "Discovered",
@@ -11441,6 +11462,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\c4e3224f-d497-415b-829f-532181e96b1d.jpg"
     },
     {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "uploads/d1c36f07-8d01-4760-a8b5-96a951fe8dd7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2uva4g3lrc",
+      "Integrity": "qvPb7gMkc+8s7AoQW+EkB9vrb4HJ2GZIfzMyosj1gBU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg"
+    },
+    {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d54cd16c-775e-4a31-801a-24264f7b86ae.jpg",
       "SourceId": "ThanTai",
       "SourceType": "Discovered",
@@ -11462,27 +11504,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d54cd16c-775e-4a31-801a-24264f7b86ae.jpg"
     },
     {
-      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg",
-      "SourceId": "ThanTai",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
-      "BasePath": "_content/ThanTai",
-      "RelativePath": "uploads/dac22f97-a0dd-4ff0-a565-8dddf156cd21#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "3nc52s2ezm",
-      "Integrity": "wV7OHb57EECRjF2Rz65O/dN1N4horr6WbQJKm3kE09U=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg"
-    },
-    {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\dd42a29f-4526-4da8-97ba-e672cf3b6c27.jpg",
       "SourceId": "ThanTai",
       "SourceType": "Discovered",
@@ -11502,6 +11523,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\dd42a29f-4526-4da8-97ba-e672cf3b6c27.jpg"
+    },
+    {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "uploads/e6d3720c-dfe0-4fae-90c7-d8dfd5a81012#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vwb5dklpix",
+      "Integrity": "caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg"
     },
     {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e9c35cfb-f665-4cdd-91da-37f1e39ad3ed.jpg",
@@ -55664,6 +55706,88 @@
       ]
     },
     {
+      "Route": "uploads/62b1f241-5669-4f74-8884-e3da134e6b3f.4u4wwc7xeh.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fGBMjOoSJf8FGtoo2LIvzkR5LOsyNuyFnAjpVr3XgKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:44:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4u4wwc7xeh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/62b1f241-5669-4f74-8884-e3da134e6b3f.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fGBMjOoSJf8FGtoo2LIvzkR5LOsyNuyFnAjpVr3XgKU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/62b1f241-5669-4f74-8884-e3da134e6b3f.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19037"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fGBMjOoSJf8FGtoo2LIvzkR5LOsyNuyFnAjpVr3XgKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:44:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fGBMjOoSJf8FGtoo2LIvzkR5LOsyNuyFnAjpVr3XgKU="
+        }
+      ]
+    },
+    {
       "Route": "uploads/77a854a2-e9a4-48d0-8111-eb1dbf44a939.png",
       "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\77a854a2-e9a4-48d0-8111-eb1dbf44a939.png",
       "Selectors": [],
@@ -56074,6 +56198,88 @@
       ]
     },
     {
+      "Route": "uploads/d1c36f07-8d01-4760-a8b5-96a951fe8dd7.2uva4g3lrc.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166255"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qvPb7gMkc+8s7AoQW+EkB9vrb4HJ2GZIfzMyosj1gBU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2uva4g3lrc"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qvPb7gMkc+8s7AoQW+EkB9vrb4HJ2GZIfzMyosj1gBU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166255"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qvPb7gMkc+8s7AoQW+EkB9vrb4HJ2GZIfzMyosj1gBU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:44:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qvPb7gMkc+8s7AoQW+EkB9vrb4HJ2GZIfzMyosj1gBU="
+        }
+      ]
+    },
+    {
       "Route": "uploads/d54cd16c-775e-4a31-801a-24264f7b86ae.3nc52s2ezm.jpg",
       "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d54cd16c-775e-4a31-801a-24264f7b86ae.jpg",
       "Selectors": [],
@@ -56142,88 +56348,6 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 04 Mar 2025 03:04:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-wV7OHb57EECRjF2Rz65O/dN1N4horr6WbQJKm3kE09U="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/dac22f97-a0dd-4ff0-a565-8dddf156cd21.3nc52s2ezm.jpg",
-      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37573"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wV7OHb57EECRjF2Rz65O/dN1N4horr6WbQJKm3kE09U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 03:08:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3nc52s2ezm"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wV7OHb57EECRjF2Rz65O/dN1N4horr6WbQJKm3kE09U="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg",
-      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\dac22f97-a0dd-4ff0-a565-8dddf156cd21.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "37573"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wV7OHb57EECRjF2Rz65O/dN1N4horr6WbQJKm3kE09U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 04 Mar 2025 03:08:51 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -56316,6 +56440,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-XIh4qOvT9k2ZN5TEyNs0dpWOTPrvD47KkNmICoem9fg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:42:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.vwb5dklpix.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 04 Mar 2025 05:42:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vwb5dklpix"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo="
         }
       ]
     },
