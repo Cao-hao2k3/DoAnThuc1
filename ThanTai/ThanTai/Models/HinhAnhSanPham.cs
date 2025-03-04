@@ -15,9 +15,9 @@ namespace ThanTai.Models
         public int SanPhamID { get; set; }
 
         [Required]
-        [StringLength(500)]
+        [StringLength(2000)]
         [DisplayName("Ảnh sản phẩm")]
-        public string AnhSanPham { get; set; } = "[]";
+        public string AnhSanPham { get; set; } = "[]"; // Lưu danh sách ảnh dưới dạng JSON
 
         [StringLength(500)]
         [DisplayName("Ảnh thông số sản phẩm")]
@@ -26,11 +26,21 @@ namespace ThanTai.Models
         [ForeignKey("SanPhamID")]
         public virtual SanPham? SanPham { get; set; }
 
+        // Thuộc tính không ánh xạ vào database, dùng để thao tác trong controller
         [NotMapped]
         public List<string> AnhSanPhamList
         {
             get => string.IsNullOrEmpty(AnhSanPham) ? new List<string>() : JsonConvert.DeserializeObject<List<string>>(AnhSanPham);
             set => AnhSanPham = JsonConvert.SerializeObject(value);
         }
+
+        // Thuộc tính dùng để upload file trong form
+        [NotMapped]
+        [DisplayName("Danh sách ảnh sản phẩm")]
+        public List<IFormFile>? AnhSanPhamFiles { get; set; }
+
+        [NotMapped]
+        [DisplayName("Ảnh thông số sản phẩm")]
+        public IFormFile? AnhThongSoFile { get; set; }
     }
 }

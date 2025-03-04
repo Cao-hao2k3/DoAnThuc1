@@ -16,7 +16,6 @@ namespace ThanTai.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
-
     public class HinhAnhSanPhamController : Controller
     {
         private readonly ThanTaiShopDbContext _context;
@@ -34,57 +33,49 @@ namespace ThanTai.Areas.Admin.Controllers
             return View(images);
         }
 
-        public IActionResult Create()
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
         {
-            ViewData["SanPhamID"] = new SelectList(_context.SanPham, "ID", "TenSanPham");
-            return View();
+            if (id == null) return NotFound();
+            var hinhAnhSanPham = await _context.HinhAnhSanPham.FindAsync(id);
+            if (hinhAnhSanPham == null) return NotFound();
+
+            ViewData["SanPhamID"] = new SelectList(_context.SanPham, "ID", "TenSanPham", hinhAnhSanPham.SanPhamID);
+            return View(hinhAnhSanPham);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(HinhAnhSanPham model, List<IFormFile> AnhSanPhamFiles, IFormFile? AnhThongSoFile)
+        public async Task<IActionResult> Edit(int id, string oldImage, IFormFile? newImage)
         {
-            if (!AnhSanPhamFiles.Any() && AnhThongSoFile == null)
-            {
-                ModelState.AddModelError("", "Vui lòng chọn ít nhất một ảnh.");
-            }
+            if (newImage == null) return BadRequest("Bạn cần chọn ảnh mới để thay thế.");
+            var hinhAnhSanPham = await _context.HinhAnhSanPham.FindAsync(id);
+            if (hinhAnhSanPham == null) return NotFound();
 
-            // Kiểm tra dữ liệu đầu vào
-            Console.WriteLine($"SanPhamID: {model.SanPhamID}");
-            Console.WriteLine($"Số ảnh sản phẩm: {AnhSanPhamFiles.Count}");
-            Console.WriteLine($"Ảnh thông số: {(AnhThongSoFile != null ? AnhThongSoFile.FileName : "Không có")}");
+            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+            var imageList = JsonConvert.DeserializeObject<List<string>>(hinhAnhSanPham.AnhSanPham) ?? new List<string>();
 
-            if (!ModelState.IsValid)
+            if (imageList.Contains(oldImage))
             {
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                // Xóa ảnh cũ khỏi hệ thống
+                string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, oldImage.TrimStart('/'));
+                if (System.IO.File.Exists(oldImagePath))
                 {
-                    Console.WriteLine($"Lỗi ModelState: {error.ErrorMessage}");
+                    System.IO.File.Delete(oldImagePath);
                 }
 
-                ViewData["SanPhamID"] = new SelectList(_context.SanPham, "ID", "TenSanPham", model.SanPhamID);
-                return View(model);
-            }
+                // Lưu ảnh mới
+                string newImagePath = await SaveFile(newImage, uploadsFolder);
+                int index = imageList.IndexOf(oldImage);
+                imageList[index] = newImagePath;
+                hinhAnhSanPham.AnhSanPham = JsonConvert.SerializeObject(imageList);
 
-            // Lưu ảnh sản phẩm
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-            List<string> sanPhamImages = await SaveFiles(AnhSanPhamFiles, uploadsFolder);
-            model.AnhSanPham = sanPhamImages.Any() ? JsonConvert.SerializeObject(sanPhamImages) : "[]";
-
-            // Lưu ảnh thông số
-            if (AnhThongSoFile != null)
-            {
-                model.AnhThongSo = await SaveFile(AnhThongSoFile, uploadsFolder);
+                _context.Update(hinhAnhSanPham);
+                await _context.SaveChangesAsync();
             }
-
-            try
+            else
             {
-                _context.Add(model);
-                int result = await _context.SaveChangesAsync();
-                Console.WriteLine($"Kết quả SaveChangesAsync: {result}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Lỗi khi lưu vào database: {ex.Message}");
+                return BadRequest("Ảnh cũ không tồn tại trong danh sách.");
             }
 
             return RedirectToAction(nameof(Index));
@@ -107,151 +98,5 @@ namespace ThanTai.Areas.Admin.Controllers
 
             return "/uploads/" + uniqueFileName;
         }
-
-        private async Task<List<string>> SaveFiles(List<IFormFile> files, string uploadsFolder)
-        {
-            List<string> savedFiles = new List<string>();
-
-            foreach (var file in files)
-            {
-                string filePath = await SaveFile(file, uploadsFolder);
-                savedFiles.Add(filePath);
-            }
-
-            return savedFiles;
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hinhAnhSanPham = await _context.HinhAnhSanPham
-                .Include(h => h.SanPham)
-                .FirstOrDefaultAsync(m => m.ID == id);
-
-            if (hinhAnhSanPham == null)
-            {
-                return NotFound();
-            }
-
-            return View(hinhAnhSanPham);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var hinhAnhSanPham = await _context.HinhAnhSanPham.FindAsync(id);
-            if (hinhAnhSanPham == null)
-            {
-                return NotFound();
-            }
-
-            // Xóa file ảnh khỏi thư mục "uploads"
-            if (!string.IsNullOrEmpty(hinhAnhSanPham.AnhSanPham))
-            {
-                List<string> imagePaths = JsonConvert.DeserializeObject<List<string>>(hinhAnhSanPham.AnhSanPham);
-                foreach (var imagePath in imagePaths)
-                {
-                    string fullPath = Path.Combine(_webHostEnvironment.WebRootPath, imagePath.TrimStart('/'));
-                    if (System.IO.File.Exists(fullPath))
-                    {
-                        System.IO.File.Delete(fullPath);
-                    }
-                }
-            }
-
-            if (!string.IsNullOrEmpty(hinhAnhSanPham.AnhThongSo))
-            {
-                string tsPath = Path.Combine(_webHostEnvironment.WebRootPath, hinhAnhSanPham.AnhThongSo.TrimStart('/'));
-                if (System.IO.File.Exists(tsPath))
-                {
-                    System.IO.File.Delete(tsPath);
-                }
-            }
-
-            // Xóa khỏi database
-            _context.HinhAnhSanPham.Remove(hinhAnhSanPham);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hinhAnhSanPham = await _context.HinhAnhSanPham
-                .Include(h => h.SanPham)
-                .FirstOrDefaultAsync(m => m.ID == id);
-
-            if (hinhAnhSanPham == null)
-            {
-                return NotFound();
-            }
-
-            ViewData["SanPhamID"] = new SelectList(_context.SanPham, "ID", "TenSanPham", hinhAnhSanPham.SanPhamID);
-            return View(hinhAnhSanPham);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, HinhAnhSanPham model, List<IFormFile> AnhSanPhamFiles, IFormFile? AnhThongSoFile)
-        {
-            if (id != model.ID)
-            {
-                return NotFound();
-            }
-
-            var existingImage = await _context.HinhAnhSanPham.FindAsync(id);
-            if (existingImage == null)
-            {
-                return NotFound();
-            }
-
-            // Lưu ảnh mới nếu có
-            string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-            List<string> sanPhamImages = AnhSanPhamFiles.Any() ? await SaveFiles(AnhSanPhamFiles, uploadsFolder) : JsonConvert.DeserializeObject<List<string>>(existingImage.AnhSanPham);
-
-            // Nếu có ảnh thông số mới thì thay thế
-            string anhThongSoPath = existingImage.AnhThongSo;
-            if (AnhThongSoFile != null)
-            {
-                anhThongSoPath = await SaveFile(AnhThongSoFile, uploadsFolder);
-            }
-
-            // Cập nhật dữ liệu
-            existingImage.SanPhamID = model.SanPhamID;
-            existingImage.AnhSanPham = JsonConvert.SerializeObject(sanPhamImages);
-            existingImage.AnhThongSo = anhThongSoPath;
-
-            try
-            {
-                _context.Update(existingImage);
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_context.HinhAnhSanPham.Any(e => e.ID == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return RedirectToAction(nameof(Index));
-        }
-
     }
 }

@@ -15,14 +15,18 @@
                 <select asp-for="SanPhamID" class="form-control" asp-items="ViewBag.SanPhamID"></select>
             </div>
 
+            <!-- Input chọn nhiều ảnh sản phẩm -->
             <div class="mb-3">
                 <label class="control-label">Ảnh sản phẩm</label>
-                <input type="file" name="AnhSanPhamFiles" class="form-control" multiple />
+                <input type="file" name="AnhSanPhamFiles" class="form-control" multiple id="AnhSanPhamInput" accept="image/*" />
+                <div id="AnhSanPhamPreview" class="mt-2 d-flex flex-wrap"></div>
             </div>
 
+            <!-- Input chọn ảnh thông số -->
             <div class="mb-3">
                 <label class="control-label">Ảnh thông số sản phẩm</label>
-                <input type="file" name="AnhThongSoFile" class="form-control" />
+                <input type="file" name="AnhThongSoFile" class="form-control" id="AnhThongSoInput" accept="image/*" />
+                <div id="AnhThongSoPreview" class="mt-2"></div>
             </div>
 
             <div class="mb-0">
@@ -40,3 +44,57 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+<script>
+    let imageList = []; // Mảng lưu danh sách file ảnh đã chọn
+
+    document.getElementById("AnhSanPhamInput").addEventListener("change", function (event) {
+        let previewContainer = document.getElementById("AnhSanPhamPreview");
+        let fileInput = event.target;
+
+        // Sử dụng DataTransfer để giữ lại file cũ và thêm file mới
+        let dataTransfer = new DataTransfer();
+
+        Array.from(fileInput.files).forEach(file => {
+            if (file.type.startsWith("image/")) { // Kiểm tra nếu là file ảnh
+                imageList.push(file); // Lưu file vào danh sách
+
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    let img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.classList.add("img-thumbnail", "m-1");
+                    img.style.width = "100px";
+                    img.style.height = "100px";
+                    previewContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Gán lại tất cả ảnh vào input file để gửi lên server
+        imageList.forEach(file => dataTransfer.items.add(file));
+        fileInput.files = dataTransfer.files;
+    });
+
+    // Hiển thị ảnh thông số trước khi upload (chỉ chọn 1 ảnh)
+    document.getElementById("AnhThongSoInput").addEventListener("change", function (event) {
+        let previewContainer = document.getElementById("AnhThongSoPreview");
+        previewContainer.innerHTML = ""; // Xóa ảnh cũ
+
+        let file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let img = document.createElement("img");
+                img.src = e.target.result;
+                img.classList.add("img-thumbnail", "m-1");
+                img.style.width = "100px";
+                img.style.height = "100px";
+                previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+

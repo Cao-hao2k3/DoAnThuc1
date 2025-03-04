@@ -15,15 +15,20 @@
                 <select asp-for="SanPhamID" class="form-control" asp-items="ViewBag.SanPhamID"></select>
             </div>
 
+            <!-- Ảnh sản phẩm hiện tại -->
             <div class="mb-3">
                 <label class="form-label">Ảnh sản phẩm hiện tại</label>
-                <div>
+                <div id="AnhSanPhamPreview">
                     @if (!string.IsNullOrEmpty(Model.AnhSanPham))
                     {
                         var images = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(Model.AnhSanPham);
-                        foreach (var img in images)
+                        for (int i = 0; i < images.Count; i++)
                         {
-                            <img src="@img" class="img-thumbnail me-2" style="width: 100px; height: auto;" />
+                            <div class="image-container" data-index="@i" style="display: inline-block; position: relative; margin: 5px;">
+                                <img src="@images[i]" class="img-thumbnail" style="width: 100px; height: auto;" />
+                                <input type="file" name="AnhSanPhamFiles" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
+                                <button type="button" class="btn btn-sm btn-warning mt-2" onclick="document.querySelectorAll('input[name=\'AnhSanPhamFiles\']')[@i].click()">Chọn thay đổi</button>
+                            </div>
                         }
                     }
                     else
@@ -34,16 +39,11 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Thay đổi ảnh sản phẩm</label>
-                <input type="file" name="AnhSanPhamFiles" class="form-control" multiple />
-            </div>
-
-            <div class="mb-3">
                 <label class="form-label">Ảnh thông số hiện tại</label>
                 <div>
                     @if (!string.IsNullOrEmpty(Model.AnhThongSo))
                     {
-                        <img src="@Model.AnhThongSo" class="img-thumbnail" style="width: 100px; height: auto;" />
+                        <img src="@Model.AnhThongSo" id="AnhThongSoPreview" class="img-thumbnail" style="width: 100px; height: auto;" />
                     }
                     else
                     {
@@ -54,7 +54,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Thay đổi ảnh thông số</label>
-                <input type="file" name="AnhThongSoFile" class="form-control" />
+                <input type="file" name="AnhThongSoFile" class="form-control" accept="image/*" onchange="previewThongSo(event)" />
             </div>
 
             <div class="mb-3">
@@ -66,3 +66,27 @@
         </form>
     </div>
 </div>
+
+<script>
+    function previewImage(event, index) {
+        let file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                document.querySelector(`[data-index='${index}'] img`).src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function previewThongSo(event) {
+        let file = event.target.files[0];
+        if (file && file.type.startsWith("image/")) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById("AnhThongSoPreview").src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
