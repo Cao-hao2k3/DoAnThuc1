@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\areas\\admin\\views\\hinhanhsanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\areas\\admin\\views\\hinhanhsanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\areas\\admin\\controllers\\hinhanhsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\areas\\admin\\controllers\\hinhanhsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\controllers\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\controllers\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HinhAnhSanPhamController.cs",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\HinhAnhSanPhamController.cs",
-              "RelativeDocumentMoniker": "ThanTai\\Areas\\Admin\\Controllers\\HinhAnhSanPhamController.cs",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\HinhAnhSanPhamController.cs",
-              "RelativeToolTip": "ThanTai\\Areas\\Admin\\Controllers\\HinhAnhSanPhamController.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAgwPIAAAAJAAAAAAAAAA==",
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPham.cs",
+              "RelativeDocumentMoniker": "ThanTai\\Controllers\\SanPham.cs",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPham.cs",
+              "RelativeToolTip": "ThanTai\\Controllers\\SanPham.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T05:37:21.289Z",
+              "WhenOpened": "2025-03-04T13:52:38.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Views\\HinhAnhSanPham\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ThanTai\\Areas\\Admin\\Views\\HinhAnhSanPham\\Edit.cshtml",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Views\\HinhAnhSanPham\\Edit.cshtml",
-              "RelativeToolTip": "ThanTai\\Areas\\Admin\\Views\\HinhAnhSanPham\\Edit.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "ThanTai\\Views\\SanPham\\Index.cshtml",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\Index.cshtml",
+              "RelativeToolTip": "ThanTai\\Views\\SanPham\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T05:34:55.994Z",
+              "WhenOpened": "2025-03-04T13:31:38.312Z",
               "EditorCaption": ""
             }
           ]

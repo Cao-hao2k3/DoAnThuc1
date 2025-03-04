@@ -1,0 +1,81 @@
+﻿@using Newtonsoft.Json
+@model List<ThanTai.Models.SanPham>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="mb-3">
+                <div class="category-title"><i class="fas fa-bars"></i> DANH MỤC SẢN PHẨM</div>
+                <ul class="list-group">
+                    <li class="list-group-item">ĐIỆN TỬ</li>
+                    <li class="list-group-item">ĐIỆN NĂNG LƯỢNG MẶT TRỜI</li>
+                    <li class="list-group-item">ĐIỆN GIA DỤNG</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var sanPham in Model)
+                {
+                    var hinhAnhDauTien = sanPham.HinhAnhSanPham?
+                    .FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
+                            <div class="card-body text-center d-flex flex-column flex-grow-1">
+                                <h6 class="card-title flex-grow-1">@sanPham.TenSanPham</h6>
+                                <p class="text-danger"><b>Giá: @(sanPham.DonGia > 0 ? sanPham.DonGia.ToString("N0") + " VNĐ" : "Liên hệ")</b></p>
+                                <button class="btn btn-success mt-auto"><i class="fas fa-shopping-cart"></i> Xem Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .category-title {
+        background: red;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+    }
+
+        .category-title::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background: red;
+        }
+
+    .cart-title {
+        background: blue;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: inline-block;
+        position: relative;
+    }
+
+        .cart-title::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background: blue;
+        }
+</style>
