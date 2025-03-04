@@ -11,12 +11,6 @@
             <input type="hidden" asp-for="ID" />
 
             <div class="mb-3">
-                <label class="form-label">Sản phẩm</label>
-                <select asp-for="SanPhamID" class="form-control" asp-items="ViewBag.SanPhamID"></select>
-            </div>
-
-            <!-- Ảnh sản phẩm hiện tại -->
-            <div class="mb-3">
                 <label class="form-label">Ảnh sản phẩm hiện tại</label>
                 <div id="AnhSanPhamPreview">
                     @if (!string.IsNullOrEmpty(Model.AnhSanPham))
@@ -25,9 +19,17 @@
                         for (int i = 0; i < images.Count; i++)
                         {
                             <div class="image-container" data-index="@i" style="display: inline-block; position: relative; margin: 5px;">
+                                <!-- Ảnh hiển thị -->
                                 <img src="@images[i]" class="img-thumbnail" style="width: 100px; height: auto;" />
-                                <input type="file" name="AnhSanPhamFiles" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
-                                <button type="button" class="btn btn-sm btn-warning mt-2" onclick="document.querySelectorAll('input[name=\'AnhSanPhamFiles\']')[@i].click()">Chọn thay đổi</button>
+
+                                <!-- Input ẩn lưu ảnh cũ -->
+                                <input type="hidden" name="OldImages" value="@images[i]" />
+
+                                <!-- Input file để chọn ảnh mới -->
+                                <input type="file" name="NewImages" class="form-control d-none" accept="image/*" onchange="previewImage(event, @i)" />
+
+                                <!-- Nút chọn ảnh -->
+                                <button type="button" class="btn btn-sm btn-warning mt-2" onclick="document.querySelectorAll('input[name=\'NewImages\']')[@i].click()">Chọn thay đổi</button>
                             </div>
                         }
                     }
@@ -37,6 +39,7 @@
                     }
                 </div>
             </div>
+
 
             <div class="mb-3">
                 <label class="form-label">Ảnh thông số hiện tại</label>
