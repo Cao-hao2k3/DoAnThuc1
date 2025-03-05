@@ -1,0 +1,199 @@
+﻿@model ThanTai.Models.SanPham
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Ảnh sản phẩm -->
+        <div class="col-md-6">
+            <div class="product-image">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any())
+                        {
+                            var isFirst = true;
+                            @foreach (var hinhAnh in Model.HinhAnhSanPham)
+                            {
+                                @foreach (var anh in hinhAnh.AnhSanPhamList)
+                                {
+                                    <div class="carousel-item @(isFirst ? "active" : "")">
+                                        <img src="@anh" class="d-block w-100 rounded" alt="@Model.TenSanPham">
+                                    </div>
+                                    isFirst = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <div class="carousel-item active">
+                                <img src="https://via.placeholder.com/500" class="d-block w-100 rounded" alt="Ảnh mặc định">
+                            </div>
+                        }
+                    </div>
+                    <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#productCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <!-- Danh sách ảnh thu nhỏ -->
+                <div class="mt-3 d-flex overflow-auto">
+                    @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any())
+                    {
+                        @foreach (var hinhAnh in Model.HinhAnhSanPham)
+                        {
+                            @foreach (var anh in hinhAnh.AnhSanPhamList)
+                            {
+                                <img src="@anh" class="img-thumbnail mx-1" style="width: 60px; height: 60px; cursor: pointer;" onclick="changeMainImage('@anh')">
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin sản phẩm -->
+        <div class="col-md-6">
+            <div class="product-info">
+                <h2>@Model.TenSanPham</h2>
+                <p><strong>Thương hiệu:</strong> @Model.ThuongHieu?.TenThuongHieu</p>
+                <p><strong>Loại sản phẩm:</strong> @Model.LoaiSanPham?.Tenloai</p>
+                <p><strong>Giá:</strong> <span class="text-danger">@Model.DonGia.ToString("N0") VNĐ</span></p>
+                <p><strong>Lượt đánh giá: </strong> <span class="text-danger">@Model.LuotDanhGia <i class="fa-solid fa-star" style="color: gold;"></i></span></p>
+                <p><strong>Sản phẩm đã bán: </strong><span class="text-danger">@Model.LuotBan</span></p>
+                <p><strong>Mô tả:</strong> @Model.MoTa</p>
+                <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần cam kết (chỉ nằm bên trái) -->
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="commitment-box">
+                <h5><strong>Điện máy Khải Duy cam kết</strong></h5>
+                <div class="commitment-item">
+                    <i class="fa-solid fa-shield-heart commitment-icon"></i>
+                    <span class="commitment-text">Bảo hành remote 1 năm, máy nén 12 năm</span>
+                </div>
+
+                <div class="commitment-item">
+                    <i class="fa-solid fa-circle-info commitment-icon"></i>
+                    <span class="commitment-text">Phí vật tư có thể phát sinh thêm <a href="#">Xem chi tiết</a></span>
+                </div>
+
+                <div class="commitment-item">
+                    <i class="fa-solid fa-rotate commitment-icon"></i>
+                    <span class="commitment-text">Hư gì đổi nấy 12 tháng tận nhà (miễn phí tháng đầu) <a href="#">Xem chi tiết</a></span>
+                </div>
+
+                <div class="commitment-item">
+                    <i class="fa-solid fa-shield-halved commitment-icon"></i>
+                    <span class="commitment-text">Bảo hành <strong>chính hãng 1 năm</strong>, có người đến tận nhà</span>
+                </div>
+
+                <div class="commitment-item">
+                    <i class="fa-solid fa-box commitment-icon"></i>
+                    <span class="commitment-text">Thùng máy lạnh có: Remote, Giá đỡ remote</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ảnh thông số -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <!-- Ảnh thông số kỹ thuật -->
+            @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any(h => !string.IsNullOrEmpty(h.AnhThongSo)))
+            {
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h5>Thông số kỹ thuật</h5>
+                        @foreach (var hinhAnh in Model.HinhAnhSanPham)
+                        {
+                            if (!string.IsNullOrEmpty(hinhAnh.AnhThongSo))
+                            {
+                                <img src="@hinhAnh.AnhThongSo" class="img-fluid rounded shadow-sm thong-so-ky-thuat" alt="Thông số kỹ thuật của @Model.TenSanPham">
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Thuộc tính sản phẩm -->
+    @if (Model.GiaTriThuocTinhs != null && Model.GiaTriThuocTinhs.Any())
+    {
+        <h5>Thông số kỹ thuật:</h5>
+        <table class="table table-bordered border-secondary">
+            <tbody>
+                @foreach (var gt in Model.GiaTriThuocTinhs)
+                {
+                    <tr>
+                        <th>@gt.ThuocTinh?.TenThuocTinh</th>
+                        <td>@gt.GiaTri</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>
+
+<script>
+    function changeMainImage(imageUrl) {
+        let activeImage = document.querySelector("#productCarousel .carousel-item.active img");
+        activeImage.src = imageUrl;
+    }
+</script>
+
+<style>
+    .commitment-box {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .commitment-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+        .commitment-item:last-child {
+            border-bottom: none;
+        }
+
+    .commitment-icon {
+        font-size: 20px;
+        color: #1e88e5;
+        width: 30px;
+    }
+
+    .commitment-text {
+        flex: 1;
+        font-size: 15px;
+    }
+
+        .commitment-text a {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        background-color: #f8f9fa;
+        text-align: left;
+        padding: 10px;
+        width: 30%; /* Điều chỉnh độ rộng cột tên */
+    }
+
+    td {
+        padding: 10px;
+    }
+</style>

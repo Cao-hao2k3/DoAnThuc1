@@ -44,6 +44,12 @@
                 <span asp-validation-for="MoTa" class="text-danger"></span>
             </div>
 
+            <div class="mb-3">
+                <label asp-for="GiamGia" class="control-label"></label>
+                <textarea asp-for="GiamGia" class="form-control"></textarea>
+                <span asp-validation-for="GiamGia" class="text-danger"></span>
+            </div>
+
             <div class="mb-0">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Thêm mới</button> hoặc <a asp-action="Index">Quay về danh sách</a>
             </div>

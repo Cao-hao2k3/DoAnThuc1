@@ -18,6 +18,9 @@
                     <th>@Html.DisplayNameFor(model => model.MoTa)</th>
                     <th>@Html.DisplayNameFor(model => model.LoaiSanPham)</th>
                     <th>@Html.DisplayNameFor(model => model.ThuongHieu)</th>
+                    <th>@Html.DisplayNameFor(model => model.GiamGia)</th>
+                    <th>@Html.DisplayNameFor(model => model.LuotDanhGia)</th>
+                    <th>@Html.DisplayNameFor(model => model.LuotBan)</th>
                     <th width="5%">Sửa</th>
                     <th width="5%">Xóa</th>
                 </tr>
@@ -36,6 +39,9 @@
                         <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
                         <td>@Html.DisplayFor(modelItem => item.LoaiSanPham.Tenloai)</td>
                         <td>@Html.DisplayFor(modelItem => item.ThuongHieu.TenThuongHieu)</td>
+                        <td>@Html.DisplayFor(modelItem => item.GiamGia)</td>
+                        <td>@Html.DisplayFor(modelItem => item.LuotDanhGia)</td>
+                        <td>@Html.DisplayFor(modelItem => item.LuotBan)</td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>

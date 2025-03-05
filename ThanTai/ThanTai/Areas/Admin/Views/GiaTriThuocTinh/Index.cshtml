@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ThanTai.Models.GiaTriThuocTinh>
+﻿@model IEnumerable<ThanTai.Models.ViewModels.GiaTriThuocTinhViewModel>
 
 @{
     ViewData["Title"] = "Giá trị thuộc tính";
@@ -11,9 +11,9 @@
         <table class="table table-sm table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
-                    <th width="10%">Mã giá trị</th>
-                    <th>@Html.DisplayNameFor(model => model.SanPhamID)</th>
-                    <th>@Html.DisplayNameFor(model => model.ThuocTinhID)</th>
+                    <th width="10%">STT</th>
+                    <th>@Html.DisplayNameFor(model => model.TenSanPham)</th>
+                    <th>@Html.DisplayNameFor(model => model.TenThuocTinh)</th>
                     <th>@Html.DisplayNameFor(model => model.GiaTri)</th>
                     <th width="5%">Sửa</th>
                     <th width="5%">Xóa</th>
@@ -27,8 +27,8 @@
                 {
                     <tr>
                         <td>@stt</td>
-                        <td>@Html.DisplayFor(modelItem => item.SanPhamID)</td>
-                        <td>@Html.DisplayFor(modelItem => item.ThuocTinhID)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TenSanPham)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TenThuocTinh)</td>
                         <td>@Html.DisplayFor(modelItem => item.GiaTri)</td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -43,4 +43,3 @@
         </table>
     </div>
 </div>
-

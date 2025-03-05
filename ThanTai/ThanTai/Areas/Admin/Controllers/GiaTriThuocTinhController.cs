@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ThanTai.Models;
+using ThanTai.Models.ViewModels;
 
 namespace ThanTai.Areas.Admin.Controllers
 {
@@ -25,8 +26,19 @@ namespace ThanTai.Areas.Admin.Controllers
         // GET: GiaTriThuocTinh
         public async Task<IActionResult> Index()
         {
-            var thanTaiShopDbContext = _context.GiaTriThuocTinh.Include(g => g.SanPham).Include(g => g.ThuocTinh);
-            return View(await thanTaiShopDbContext.ToListAsync());
+            var danhSach = await _context.GiaTriThuocTinh
+                .Include(g => g.SanPham)
+                .Include(g => g.ThuocTinh)
+                .Select(g => new GiaTriThuocTinhViewModel
+                {
+                    ID = g.ID,
+                    TenSanPham = g.SanPham.TenSanPham,
+                    TenThuocTinh = g.ThuocTinh.TenThuocTinh,
+                    GiaTri = g.GiaTri
+                })
+                .ToListAsync();
+
+            return View(danhSach);
         }
 
         // GET: GiaTriThuocTinh/Details/5

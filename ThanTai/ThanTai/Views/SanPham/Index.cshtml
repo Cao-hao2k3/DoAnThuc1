@@ -29,7 +29,9 @@
                             <div class="card-body text-center d-flex flex-column flex-grow-1">
                                 <h6 class="card-title flex-grow-1">@sanPham.TenSanPham</h6>
                                 <p class="text-danger"><b>Giá: @(sanPham.DonGia > 0 ? sanPham.DonGia.ToString("N0") + " VNĐ" : "Liên hệ")</b></p>
-                                <button class="btn btn-success mt-auto"><i class="fas fa-shopping-cart"></i> Xem Chi Tiết</button>
+                                <a asp-area="" asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-success">
+                                    <i class="fas fa-shopping-cart"></i> Xem Chi Tiết
+                                </a>
                             </div>
                         </div>
                     </div>

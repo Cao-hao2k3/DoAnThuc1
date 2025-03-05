@@ -61,7 +61,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa")] SanPham sanPham)
+        public async Task<IActionResult> Create([Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan")] SanPham sanPham)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa")] SanPham sanPham)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan")] SanPham sanPham)
         {
             if (id != sanPham.ID)
             {

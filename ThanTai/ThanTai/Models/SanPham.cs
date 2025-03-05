@@ -40,6 +40,10 @@ namespace ThanTai.Models
         [ForeignKey("LoaiSanPhamID")]
 
         public int? GiamGia { get; set; }
+
+        public int LuotDanhGia { get; set; }
+
+        public int LuotBan { get; set; }
         public virtual LoaiSanPham? LoaiSanPham { get; set; }
 
         public virtual ThuongHieu? ThuongHieu { get; set; }
