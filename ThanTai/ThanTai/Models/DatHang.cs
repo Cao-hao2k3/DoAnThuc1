@@ -30,7 +30,10 @@ namespace ThanTai.Models
         public DateTime NgayDatHang { get; set; }
 
         [DisplayName("Tình trạng thanh toán")]
-        public bool TinhTrangThanhToan { get; set; }
+        public bool TinhTrangThanhToan { get; set; } // 1 là đã thanh toán 2 là chưa 
+
+        [DisplayName("Hình thức giao hàng")]
+        public bool HinhThucGiaoHang { get; set; } // 1 là giao hàng tận nơi 2 là nhận tại cửa hàng
         public NguoiDung? NguoiDung { get; set; }
         public TinhTrang? TinhTrang { get; set; }
         public ICollection<DatHangChiTiet>? DatHangChiTiet { get; set; }

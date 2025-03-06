@@ -1,0 +1,179 @@
+﻿<link href="~/css/GioHang.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="cart-container">
+        <!-- Tiêu đề -->
+        <div class="cart-header text-center">
+            <h4>Giỏ Hàng</h4>
+        </div>
+
+        <!-- Địa chỉ nhận hàng -->
+        <div class="address-box d-flex align-items-center mt-3 p-3" data-bs-toggle="modal" data-bs-target="#addressModal">
+            <span>📍</span>
+            <div>
+                <a href="#" id="editAddress">Vui lòng cung cấp thông tin nhận hàng</a><br>
+                <span id="currentAddress"> </span>
+            </div>
+            <div class="ms-auto">
+                <a href="#">›</a>
+            </div>
+        </div>
+
+        <!-- 🖼 Ảnh sản phẩm + thông tin (đã di chuyển ra ngoài modal) -->
+        <div class="product-container mt-3 p-3 border rounded">
+            <div class="row">
+                <!-- Ảnh sản phẩm -->
+                <div class="col-md-2 d-flex align-items-center">
+                    <img src="~/img/banner1.png" class="img-fluid rounded" alt="Product Image">
+                </div>
+
+                <!-- Thông tin sản phẩm -->
+                <div class="col-md-6">
+                    <h5>Google Tivi Sony 4K 65 inch KD-65X77L</h5>
+                    <span class="badge bg-light text-dark p-2">Màu Đen</span>
+                    <p class="text-primary mt-2">4 Khuyến mãi <span>&#9662;</span></p>
+
+                    <!-- Hình quà tặng -->
+                    <div class="mt-2">
+                        <span class="text-muted">Hình quà khuyến mãi</span>
+                        <div class="border rounded p-2 mt-1 d-inline-block">
+                            <span>🎁 Quạt đứng Rapido RWF-16MWD 48W</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giá sản phẩm -->
+                <div class="col-md-2 text-end">
+                    <p class="text-danger fw-bold fs-5">18.890.000đ</p>
+                    <p class="text-muted text-decoration-line-through">18.990.000đ</p>
+                </div>
+
+                <!-- Số lượng + Xóa -->
+                <div class="col-md-2 text-end d-flex align-items-center justify-content-end">
+                    <button class="btn btn-outline-secondary btn-sm">-</button>
+                    <input type="text" class="form-control text-center mx-2" value="3" style="width: 50px;">
+                    <button class="btn btn-outline-secondary btn-sm">+</button>
+                    <a href="#" class="ms-3 text-danger">Xóa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Nhập Địa Chỉ -->
+<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addressModalLabel">Thông tin giao hàng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addressForm">
+                    <!-- Thông tin người đặt -->
+                    <div class="mb-3">
+                        <label class="form-label">Thông tin người đặt</label>
+                        <div class="d-flex">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="gender" id="male">
+                                <label class="form-check-label" for="male">Anh</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="female">
+                                <label class="form-check-label" for="female">Chị</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Họ và Tên">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Số điện thoại">
+                    </div>
+
+                    <!-- Chọn hình thức giao hàng -->
+                    <div class="mb-3">
+                        <label class="form-label">Chọn hình thức giao hàng</label>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-outline-primary btn-toggle active" id="homeDelivery">🚚 Giao tận nơi</button>
+                            <button type="button" class="btn btn-outline-primary btn-toggle" id="storePickup">🏠 Nhận tại siêu thị</button>
+                        </div>
+                    </div>
+
+                    <!-- Nhập địa chỉ -->
+                    <div class="mb-3">
+                        <label class="form-label">Tỉnh/Thành phố</label>
+                        <select class="form-control" id="provinceSelect">
+                            <option value="">Chọn tỉnh/thành</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Quận/Huyện</label>
+                        <select class="form-control" id="districtSelect" disabled>
+                            <option value="">Chọn quận/huyện</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phường/Xã</label>
+                        <select class="form-control" id="wardSelect" disabled>
+                            <option value="">Chọn phường/xã</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Nhập số nhà, tên đường">
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100" id="confirmAddress">Xác Nhận</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/GioHang.js"></script>
+
+<style>
+    .product-container img {
+        width: 80px; /* Hoặc điều chỉnh theo mong muốn */
+        height: auto;
+        object-fit: contain;
+    }
+
+    .product-container h5 {
+        font-size: 16px; /* Nhỏ hơn mặc định */
+        font-weight: 500; /* Làm nhẹ bớt chữ */
+    }
+
+    .product-container .badge {
+        font-size: 12px; /* Nhỏ lại phần màu sắc */
+        padding: 3px 8px;
+    }
+
+    .product-container p {
+        font-size: 14px; /* Nhỏ lại chữ phần giá và khuyến mãi */
+        margin-bottom: 5px;
+    }
+
+    .product-container .text-danger {
+        font-size: 16px; /* Giá to vừa phải */
+        font-weight: bold;
+    }
+
+    .product-container .text-muted {
+        font-size: 12px; /* Giá gạch ngang nhỏ lại */
+    }
+
+    .product-container .btn-outline-secondary {
+        font-size: 12px; /* Nút bấm nhỏ lại */
+        padding: 2px 6px;
+    }
+
+    .product-container input[type="text"] {
+        font-size: 14px;
+        width: 40px; /* Nhỏ gọn */
+        height: 30px;
+        text-align: center;
+    }
+
+</style>

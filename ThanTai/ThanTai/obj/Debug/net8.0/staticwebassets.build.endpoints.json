@@ -249,6 +249,88 @@
       ]
     },
     {
+      "Route": "css/GioHang.css",
+      "AssetFile": "css/GioHang.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9S2pUSXSIp+TnYwuFuIrET+uqoyilVo+EgnuT+2MLE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 14:01:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9S2pUSXSIp+TnYwuFuIrET+uqoyilVo+EgnuT+2MLE="
+        }
+      ]
+    },
+    {
+      "Route": "css/GioHang.neq85ivsvg.css",
+      "AssetFile": "css/GioHang.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "793"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r9S2pUSXSIp+TnYwuFuIrET+uqoyilVo+EgnuT+2MLE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 14:01:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "neq85ivsvg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r9S2pUSXSIp+TnYwuFuIrET+uqoyilVo+EgnuT+2MLE="
+        },
+        {
+          "Name": "label",
+          "Value": "css/GioHang.css"
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
@@ -18367,6 +18449,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-vbVv5G2VBwrQQ6XDHSJC+R+YvxqCpEU94jSlM0kSEDc="
+        }
+      ]
+    },
+    {
+      "Route": "js/GioHang.js",
+      "AssetFile": "js/GioHang.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5635"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 14:11:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="
+        }
+      ]
+    },
+    {
+      "Route": "js/GioHang.jt53p0p9zk.js",
+      "AssetFile": "js/GioHang.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5635"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Mar 2025 14:11:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jt53p0p9zk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="
+        },
+        {
+          "Name": "label",
+          "Value": "js/GioHang.js"
         }
       ]
     },

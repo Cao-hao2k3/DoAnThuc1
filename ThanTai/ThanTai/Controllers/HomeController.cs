@@ -81,7 +81,7 @@ namespace ThanTai.Controllers
                 //  Lưu thông tin vào Session
                 _httpContextAccessor.HttpContext.Session.SetString("UserName", nguoiDung.HoVaTen);
                 _httpContextAccessor.HttpContext.Session.SetString("UserImage", nguoiDung.Anh);
-
+                _httpContextAccessor.HttpContext.Session.SetInt32("UserID", nguoiDung.ID);
                 if (nguoiDung.Quyen)
                 {
                     return RedirectToRoute(new { area = "Admin", controller = "Home", action = "Index" });

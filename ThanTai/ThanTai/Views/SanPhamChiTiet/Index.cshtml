@@ -62,7 +62,10 @@
                 <p><strong>Lượt đánh giá: </strong> <span class="text-danger">@Model.LuotDanhGia <i class="fa-solid fa-star" style="color: gold;"></i></span></p>
                 <p><strong>Sản phẩm đã bán: </strong><span class="text-danger">@Model.LuotBan</span></p>
                 <p><strong>Mô tả:</strong> @Model.MoTa</p>
-                <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+                <form asp-controller="SanPhamChiTiet" asp-action="ThemVaoGioHang" method="post">
+                    <input type="hidden" name="sanPhamID" value="@Model.ID" />
+                    <button type="submit" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                </form>
             </div>
         </div>
     </div>
@@ -145,6 +148,32 @@
         let activeImage = document.querySelector("#productCarousel .carousel-item.active img");
         activeImage.src = imageUrl;
     }
+    document.addEventListener("DOMContentLoaded", function () {
+        var thongBao = "@TempData["ThongBao"]";
+        var thongBaoLoi = "@TempData["ThongBaoLoi"]";
+
+        if (thongBao.trim() !== "") {
+            var toastEl = document.getElementById("toastThongBao");
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+
+            // Tự động ẩn sau 3 giây
+            setTimeout(function () {
+                toast.hide();
+            }, 3000);
+        }
+
+        if (thongBaoLoi.trim() !== "") {
+            var toastEl = document.getElementById("toastThongBaoLoi");
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+
+            // Tự động ẩn sau 3 giây
+            setTimeout(function () {
+                toast.hide();
+            }, 3000);
+        }
+    });
 </script>
 
 <style>
@@ -197,3 +226,36 @@
         padding: 10px;
     }
 </style>
+
+
+<!-- Toast Notification -->
+<div aria-live="polite" aria-atomic="true" style="position: fixed; top: 1rem; right: 1rem; z-index: 1050;">
+    <!-- Thông báo thành công (Màu xanh) -->
+    @if (!string.IsNullOrEmpty(TempData["ThongBao"] as string))
+    {
+        <div class="toast bg-success text-white" id="toastThongBao" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                @TempData["ThongBao"]
+            </div>
+        </div>
+    }
+
+    <!-- Thông báo lỗi (Màu đỏ) -->
+    @if (!string.IsNullOrEmpty(TempData["ThongBaoLoi"] as string))
+    {
+        <div class="toast bg-danger text-white" id="toastThongBaoLoi" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-danger text-white">
+                <strong class="me-auto">Lỗi</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                @TempData["ThongBaoLoi"]
+            </div>
+        </div>
+    }
+</div>
+ 

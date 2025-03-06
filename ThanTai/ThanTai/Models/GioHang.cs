@@ -10,11 +10,11 @@ namespace ThanTai.Models
         public int NguoiDungID { get; set; }
 
         public int SanPhamID { get; set; }
-        
-        public int SoLuong { get;set; }
 
+        public int SoLuong { get; set; }
+        
         public NguoiDung? NguoiDung { get; set; }
 
-        public SanPham? SanPham { get; set; }
+        public virtual SanPham? SanPham { get; set; }
     }
 }

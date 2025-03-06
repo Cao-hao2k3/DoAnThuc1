@@ -8,6 +8,7 @@
         public short SoLuong { get; set; }
         public int DonGia { get; set; }
 
+        public int TongTien { get;set; }
         public DatHang? DatHang { get; set; }
         public SanPham? SanPham { get; set; }
     }

@@ -12,6 +12,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cC8YX0\u002BlYzjixaKp972zREh6WgForDkf7TK90OuSN2U="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"40"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022cC8YX0\u002BlYzjixaKp972zREh6WgForDkf7TK90OuSN2U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 07 Jan 2019 02:55:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ThanTai/css/GioHang.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\GioHang.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-r9S2pUSXSIp\u002BTnYwuFuIrET\u002BuqoyilVo\u002BEgnuT\u002B2MLE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"793"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022r9S2pUSXSIp\u002BTnYwuFuIrET\u002BuqoyilVo\u002BEgnuT\u002B2MLE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 14:01:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ThanTai/css/GioHang.neq85ivsvg.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\GioHang.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"neq85ivsvg"},{"Name":"integrity","Value":"sha256-r9S2pUSXSIp\u002BTnYwuFuIrET\u002BuqoyilVo\u002BEgnuT\u002B2MLE="},{"Name":"label","Value":"_content/ThanTai/css/GioHang.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"793"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022r9S2pUSXSIp\u002BTnYwuFuIrET\u002BuqoyilVo\u002BEgnuT\u002B2MLE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 14:01:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ThanTai/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -2663,6 +2675,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vbVv5G2VBwrQQ6XDHSJC\u002BR\u002BYvxqCpEU94jSlM0kSEDc="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6116"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vbVv5G2VBwrQQ6XDHSJC\u002BR\u002BYvxqCpEU94jSlM0kSEDc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Feb 2025 01:42:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ThanTai/js/GioHang.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\GioHang.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5635"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 14:11:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ThanTai/js/GioHang.jt53p0p9zk.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\GioHang.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jt53p0p9zk"},{"Name":"integrity","Value":"sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="},{"Name":"label","Value":"_content/ThanTai/js/GioHang.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5635"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 14:11:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ThanTai/js/site.3r8b2a0bt1.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

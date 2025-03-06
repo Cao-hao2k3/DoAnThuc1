@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\.babelrc"
     },
     {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\GioHang.css",
+      "PackagePath": "staticwebassets\\css\\GioHang.css"
+    },
+    {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -891,6 +895,10 @@
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
+      "PackagePath": "staticwebassets\\js\\GioHang.js"
     },
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\site.js",

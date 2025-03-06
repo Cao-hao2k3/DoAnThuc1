@@ -1,4 +1,5 @@
 wwwroot\.babelrc
+wwwroot\css\GioHang.css
 wwwroot\css\site.css
 wwwroot\dist\assets\css\layout-dark.css
 wwwroot\dist\assets\css\layout-rtl.css
@@ -220,6 +221,7 @@ wwwroot\gulpfile.js
 wwwroot\img\banner1.png
 wwwroot\img\banner2.png
 wwwroot\img\logo.png
+wwwroot\js\GioHang.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
