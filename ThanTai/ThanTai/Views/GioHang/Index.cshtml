@@ -1,4 +1,5 @@
-﻿<link href="~/css/GioHang.css" rel="stylesheet" />
+﻿@model List<ThanTai.Models.GioHang>
+<link href="~/css/GioHang.css" rel="stylesheet" />
 
 <div class="container mt-4">
     <div class="cart-container">
@@ -20,43 +21,49 @@
         </div>
 
         <!-- 🖼 Ảnh sản phẩm + thông tin (đã di chuyển ra ngoài modal) -->
-        <div class="product-container mt-3 p-3 border rounded">
-            <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="product-container mt-3 p-3 border rounded d-flex">
                 <!-- Ảnh sản phẩm -->
-                <div class="col-md-2 d-flex align-items-center">
-                    <img src="~/img/banner1.png" class="img-fluid rounded" alt="Product Image">
+                <div class="product-image me-3">
+                    <img src="@Url.Content(item.SanPham?.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPham ?? "/uploads/no-image.jpg")"
+                         alt="Ảnh sản phẩm" width="120" height="120" class="rounded">
                 </div>
 
                 <!-- Thông tin sản phẩm -->
-                <div class="col-md-6">
-                    <h5>Google Tivi Sony 4K 65 inch KD-65X77L</h5>
-                    <span class="badge bg-light text-dark p-2">Màu Đen</span>
-                    <p class="text-primary mt-2">4 Khuyến mãi <span>&#9662;</span></p>
-
-                    <!-- Hình quà tặng -->
-                    <div class="mt-2">
-                        <span class="text-muted">Hình quà khuyến mãi</span>
-                        <div class="border rounded p-2 mt-1 d-inline-block">
-                            <span>🎁 Quạt đứng Rapido RWF-16MWD 48W</span>
-                        </div>
-                    </div>
+                <div class="product-info flex-grow-1">
+                    <h5>@item.SanPham.TenSanPham</h5>
                 </div>
 
                 <!-- Giá sản phẩm -->
-                <div class="col-md-2 text-end">
-                    <p class="text-danger fw-bold fs-5">18.890.000đ</p>
-                    <p class="text-muted text-decoration-line-through">18.990.000đ</p>
-                </div>
+                <div class="product-price text-end">
+                    <p class="text-danger fw-bold fs-5">@item.SanPham.GiaSauKhiGiam.ToString("N0")đ</p>
 
-                <!-- Số lượng + Xóa -->
-                <div class="col-md-2 text-end d-flex align-items-center justify-content-end">
-                    <button class="btn btn-outline-secondary btn-sm">-</button>
-                    <input type="text" class="form-control text-center mx-2" value="3" style="width: 50px;">
-                    <button class="btn btn-outline-secondary btn-sm">+</button>
-                    <a href="#" class="ms-3 text-danger">Xóa</a>
+                    <!-- Chỉnh số lượng -->
+                    <div class="quantity-control d-flex align-items-center">
+                        <form method="post" asp-action="CapNhatSoLuong" asp-controller="GioHang">
+                            <input type="hidden" name="gioHangId" value="@item.ID" />
+                            <input type="hidden" name="thayDoi" value="-1" />
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">−</button>
+                        </form>
+
+                        <span class="px-2">@item.SoLuong</span>
+
+                        <form method="post" asp-action="CapNhatSoLuong" asp-controller="GioHang">
+                            <input type="hidden" name="gioHangId" value="@item.ID" />
+                            <input type="hidden" name="thayDoi" value="1" />
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">+</button>
+                        </form>
+                    </div>
+
+                    <!-- Nút Xóa -->
+                    <form method="post" asp-action="XoaSanPham" asp-controller="GioHang">
+                        <input type="hidden" name="gioHangId" value="@item.ID" />
+                        <button type="submit" class="text-danger mt-2 btn btn-link">Xóa</button>
+                    </form>
                 </div>
             </div>
-        </div>
+        }
     </div>
 </div>
 
@@ -134,6 +141,7 @@
 <script src="~/js/GioHang.js"></script>
 
 <style>
+
     .product-container img {
         width: 80px; /* Hoặc điều chỉnh theo mong muốn */
         height: auto;

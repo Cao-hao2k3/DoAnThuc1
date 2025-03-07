@@ -65,14 +65,19 @@ namespace ThanTai.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Tính toán giá sau khi giảm
+                sanPham.GiaSauKhiGiam = sanPham.DonGia - (sanPham.DonGia * (sanPham.GiamGia ?? 0) / 100);
+
                 _context.Add(sanPham);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["LoaiSanPhamID"] = new SelectList(_context.LoaiSanPham, "ID", "Tenloai", sanPham.LoaiSanPhamID);
             ViewData["ThuongHieuID"] = new SelectList(_context.ThuongHieu, "ID", "TenThuongHieu", sanPham.ThuongHieuID);
             return View(sanPham);
         }
+
 
         // GET: SanPham/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -108,6 +113,9 @@ namespace ThanTai.Areas.Admin.Controllers
             {
                 try
                 {
+                    // Tính toán giá sau khi giảm
+                    sanPham.GiaSauKhiGiam = sanPham.DonGia - (sanPham.DonGia * (sanPham.GiamGia ?? 0) / 100);
+
                     _context.Update(sanPham);
                     await _context.SaveChangesAsync();
                 }
@@ -124,10 +132,12 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["LoaiSanPhamID"] = new SelectList(_context.LoaiSanPham, "ID", "Tenloai", sanPham.LoaiSanPhamID);
             ViewData["ThuongHieuID"] = new SelectList(_context.ThuongHieu, "ID", "TenThuongHieu", sanPham.ThuongHieuID);
             return View(sanPham);
         }
+
 
         // GET: SanPham/Delete/5
         public async Task<IActionResult> Delete(int? id)

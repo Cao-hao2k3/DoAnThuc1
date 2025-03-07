@@ -23,20 +23,37 @@
                     var hinhAnhDauTien = sanPham.HinhAnhSanPham?
                     .FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
 
+                    var giaGoc = sanPham.DonGia;
+                    var giamGia = sanPham.GiamGia ?? 0; // Xử lý nếu null thì mặc định là 0
+                    var giaSauGiam = giaGoc - (giaGoc * giamGia / 100);
+
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 d-flex flex-column">
                             <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
                             <div class="card-body text-center d-flex flex-column flex-grow-1">
                                 <h6 class="card-title flex-grow-1">@sanPham.TenSanPham</h6>
-                                <p class="text-danger"><b>Giá: @(sanPham.DonGia > 0 ? sanPham.DonGia.ToString("N0") + " VNĐ" : "Liên hệ")</b></p>
+
+                                @if (giamGia > 0)
+                                {
+                                    <p class="text-muted">
+                                        <del class="text-danger">@giaGoc.ToString("N0") VNĐ</del>
+                                        <span class="badge bg-danger">@giamGia% OFF</span>
+                                    </p>
+                                    <p class="text-danger"><b>Giá: @giaSauGiam.ToString("N0") VNĐ</b></p>
+                                }
+                                else
+                                {
+                                    <p class="text-danger"><b>Giá: @giaGoc.ToString("N0") VNĐ</b></p>
+                                }
+
                                 <a asp-area="" asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-success">
                                     <i class="fas fa-shopping-cart"></i> Xem Chi Tiết
                                 </a>
                             </div>
                         </div>
                     </div>
-
                 }
+
             </div>
         </div>
     </div>
