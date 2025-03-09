@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ThanTai.Models;
@@ -19,23 +20,32 @@ namespace ThanTai.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public IActionResult GioHangRong()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
-            // Lấy ID tài khoản từ session
             int? userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserID");
             if (userId == null)
             {
-                return RedirectToAction("Login", "Account"); // Chuyển hướng về trang đăng nhập nếu chưa đăng nhập
+                return RedirectToAction("Login", "Home");
             }
 
-            // Lấy giỏ hàng của người dùng
             var gioHang = _context.GioHang
                 .Where(g => g.NguoiDungID == userId)
                 .Include(g => g.SanPham)
                 .ThenInclude(s => s.HinhAnhSanPham)
                 .ToList();
 
-            // Lấy ảnh đầu tiên từ JSON ngay trong controller
+            // Nếu giỏ hàng không có sản phẩm thì trả về view "GioHangRong"
+            if (gioHang == null || gioHang.Count == 0)
+            {
+                return View("GioHangRong");
+            }
+
+            // Xử lý hình ảnh sản phẩm
             foreach (var item in gioHang)
             {
                 if (item.SanPham?.HinhAnhSanPham != null)
@@ -48,7 +58,7 @@ namespace ThanTai.Controllers
             return View(gioHang);
         }
 
-        // Phương thức lấy ảnh đầu tiên từ chuỗi JSON
+
         private string GetFirstImageFromJson(string jsonImages)
         {
             if (!string.IsNullOrEmpty(jsonImages))
@@ -60,10 +70,10 @@ namespace ThanTai.Controllers
                 }
                 catch
                 {
-                    return "/uploads/no-image.jpg"; // Tránh lỗi JSON
+                    return "/uploads/no-image.jpg";
                 }
             }
-            return "/uploads/no-image.jpg"; // Trả về ảnh mặc định nếu dữ liệu trống
+            return "/uploads/no-image.jpg";
         }
 
         [HttpPost]
@@ -75,7 +85,7 @@ namespace ThanTai.Controllers
                 gioHang.SoLuong += thayDoi;
                 if (gioHang.SoLuong <= 0)
                 {
-                    _context.GioHang.Remove(gioHang); // Xóa nếu số lượng <= 0
+                    _context.GioHang.Remove(gioHang);
                 }
                 _context.SaveChanges();
             }
@@ -94,5 +104,60 @@ namespace ThanTai.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult DatHang(string tenNguoiDat, string dienThoaiNguoiDat, string diaChiGiaoHang, int hinhThucGiaoHang, int paymentMethod, string[] sanPhamIDs, int[] soLuongs, decimal[] donGias, string? otherName, string? otherPhone)
+        {
+            int? userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserID");
+            if (userId == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+            // Tạo đối tượng DatHang
+            var datHang = new DatHang
+            {
+                NguoiDungID = userId.Value,
+                TinhTrangID = 3, // Đang xử lý
+                TenNguoiDat = tenNguoiDat,
+                DienThoaiNguoiDat = dienThoaiNguoiDat,
+                DiaChiGiaoHang = diaChiGiaoHang,
+                NgayDatHang = DateTime.Now,
+                TinhTrangThanhToan = 1, // 1 là chưa thanh toán 2 là đã thanh toán
+                HinhThucGiaoHang = hinhThucGiaoHang,
+                TenNguoiNhanHangKhac = otherName,
+                SoDienThoaiNguoiNhanKhac = otherPhone,
+                HinhThucThanhToan = paymentMethod
+            };
+
+            _context.DatHang.Add(datHang);
+            _context.SaveChanges();
+
+            // Tạo danh sách DatHangChiTiet
+            for (int i = 0; i < sanPhamIDs.Length; i++)
+            {
+                var chiTiet = new DatHangChiTiet
+                {
+                    DatHangID = datHang.ID,
+                    SanPhamID = int.Parse(sanPhamIDs[i]),
+                    SoLuong = (short)soLuongs[i],
+                    DonGia = donGias[i],
+                    TongTien = soLuongs[i] * donGias[i]
+                };
+                _context.DatHangChiTiet.Add(chiTiet);
+            }
+            _context.SaveChanges();
+
+            // Xóa giỏ hàng sau khi đặt hàng thành công
+            var gioHang = _context.GioHang.Where(g => g.NguoiDungID == userId).ToList();
+            _context.GioHang.RemoveRange(gioHang);
+            _context.SaveChanges();
+
+            return RedirectToAction("DatHangThanhCong");
+        }
+
+        public IActionResult DatHangThanhCong()
+        {
+            return View();
+        }
     }
 }

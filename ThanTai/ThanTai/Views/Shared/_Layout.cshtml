@@ -1,6 +1,8 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor _httpContextAccessor;
 @{
     var user = _httpContextAccessor.HttpContext.User;
+    bool isAuthenticated = user.Identity.IsAuthenticated;
+    bool isAdmin = user.IsInRole("Admin");
 }
 
 @inject ThanTai.Models.ThanTaiShopDbContext _context
@@ -17,6 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -44,38 +47,39 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Menu trái -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white custom-dropdown" asp-area="" asp-controller="Home" asp-action="Index">
+                        <a class="nav-link dropdown-toggle text-white custom-dropdown" href="#" id="sanPhamDropdown" role="button" data-bs-toggle="dropdown">
                             SẢN PHẨM
                         </a>
-                        <ul class="dropdown-menu bg-black">
+                        <ul class="dropdown-menu bg-black" aria-labelledby="sanPhamDropdown">
                             @foreach (var loai in _context.LoaiSanPham.ToList())
                             {
-                                <li><a class="dropdown-item text-white dropdown-item-custom" href="#">@loai.Tenloai</a></li>
+                                <li><a class="dropdown-item text-white dropdown-item-custom" asp-controller="SanPham" asp-action="Index" asp-route-loai="@loai.ID">@loai.Tenloai</a></li>
                             }
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">TIN TỨC</a>
+                        <a class="nav-link nav-link-custom" asp-area="" asp-controller="TinTuc" asp-action="Index">TIN TỨC</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">LIÊN HỆ</a>
+                        <a class="nav-link nav-link-custom" asp-area="" asp-controller="LienHe" asp-action="Index">LIÊN HỆ</a>
                     </li>
                 </ul>
 
-                <!-- Looking for -->
+                <!-- Ô tìm kiếm -->
                 <div class="search-box">
                     <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Tìm kiếm khóa học, bài viết, video, ...">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm, bài viết...">
                 </div>
 
-                <!-- Icons -->
-                <div class="d-flex">
-                    <!-- Icon Giỏ Hàng với Dropdown -->
+                <!-- Biểu tượng và dropdown -->
+                <div class="d-flex align-items-center">
+                    <!-- Giỏ hàng -->
                     <div class="icon-btn icon-cart" id="cart-icon">
                         <i class="bi bi-cart"></i>
                         <span class="cart-badge">0</span>
@@ -84,82 +88,77 @@
                         <div class="dropdown-cart">
                             <div class="cart-header">
                                 <span class="cart-quantity">0 Sản phẩm,</span>
-                                <span class="cart-total">0VNĐ</span>
+                                <span class="cart-total">0 VNĐ</span>
                             </div>
-                         <div class="cart-footer">
-                                <button class="checkout-btn">
-                                    <i class="bi bi-check-lg"></i> THANH TOÁN
-                                </button>
-                         </div>
+                            <div class="cart-footer">
+                                @if (!isAuthenticated)
+                                {
+                                    <a asp-area="" asp-controller="Home" asp-action="Login" class="checkout-btn">
+                                        <i class="bi bi-check-lg"></i> THANH TOÁN
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-area="" asp-controller="GioHang" asp-action="Index" class="checkout-btn">
+                                        <i class="bi bi-check-lg"></i> THANH TOÁN
+                                    </a>
+                                }
+                            </div>
                         </div>
                     </div>
 
-                   
-                </div>
-                @if (!user.Identity.IsAuthenticated)
-                {
+                    <!-- Tài khoản người dùng -->
                     <div class="icon-btn icon-menu" id="menu-icon">
                         <i class="bi bi-list"></i>
 
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu-custom">
-                            <a asp-area="" asp-controller="Home" asp-action="Login" class="dropdown-item d-flex align-items-center">
-                                <i class="fas fa-sign-in-alt me-2 text-primary"></i> <span class="fw-bold text-uppercase">Đăng Nhập</span>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a asp-area="" asp-controller="Home" asp-action="Index" class="dropdown-item d-flex align-items-center">
-                                <i class="fas fa-credit-card me-2 text-success"></i> <span class="fw-bold text-uppercase">Thanh Toán</span>
-                            </a>
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    // Kiểm tra nếu là Admin thì chỉ hiển thị menu Admin
-                    bool isAdmin = _httpContextAccessor.HttpContext.User.IsInRole("Admin");
-
-                    <div class="icon-btn icon-menu" id="menu-icon">
-                        <i class="bi bi-list"></i>
-
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu-custom">
-                            <div class="dropdown-header">
-                                <i class="fa-solid fa-user-circle"></i>
-                                <span>@user.Claims.FirstOrDefault(c => c.Type == "HoVaTen")?.Value</span>
-                            </div>
-
-                            @if (isAdmin)
+                            @if (!isAuthenticated)
                             {
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="SanPham" asp-action="Index">
-                                    <i class="fa-solid fa-chart-line"></i> Quản lý hệ thống
-                                </a>
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="LoaiSanPham" asp-action="Index">
-                                    <i class="fa-solid fa-users-cog"></i> Quản lý người dùng
-                                </a>
-                                <a class="dropdown-item" asp-area="Admin" asp-controller="Home" asp-action="Index">
-                                    <i class="fa-solid fa-boxes"></i> Quản lý đơn hàng
+                                <a asp-area="" asp-controller="Home" asp-action="Login" class="dropdown-item d-flex align-items-center">
+                                    <i class="fas fa-sign-in-alt me-2 text-primary"></i> <span class="fw-bold text-uppercase">Đăng Nhập</span>
                                 </a>
                             }
                             else
                             {
-                                <a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Profile">
-                                    <i class="fa-solid fa-id-card"></i> Thông tin cá nhân
-                                </a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Order" asp-action="History">
-                                    <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử mua hàng
-                                </a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Order" asp-action="Index">
-                                    <i class="fa-solid fa-box"></i> Xem đơn hàng
+                                <div class="dropdown-header">
+                                    <i class="fa-solid fa-user-circle"></i>
+                                    <span>@user.Claims.FirstOrDefault(c => c.Type == "HoVaTen")?.Value</span>
+                                </div>
+
+                                @if (isAdmin)
+                                {
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="SanPham" asp-action="Index">
+                                        <i class="fa-solid fa-chart-line"></i> Quản lý hệ thống
+                                    </a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="LoaiSanPham" asp-action="Index">
+                                        <i class="fa-solid fa-users-cog"></i> Quản lý người dùng
+                                    </a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="DonHang" asp-action="Index">
+                                        <i class="fa-solid fa-boxes"></i> Quản lý đơn hàng
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Profile">
+                                        <i class="fa-solid fa-id-card"></i> Thông tin cá nhân
+                                    </a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Order" asp-action="History">
+                                        <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử mua hàng
+                                    </a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Order" asp-action="Index">
+                                        <i class="fa-solid fa-box"></i> Xem đơn hàng
+                                    </a>
+                                }
+
+                                <hr class="dropdown-divider">
+                                <a class="dropdown-item logout-btn" asp-area="" asp-controller="Home" asp-action="Logout">
+                                    <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
                                 </a>
                             }
-
-                            <hr class="dropdown-divider">
-                            <a class="dropdown-item logout-btn" asp-area="" asp-controller="Home" asp-action="Logout">
-                                <i class="fa-solid fa-sign-out-alt"></i> Đăng xuất
-                            </a>
                         </div>
                     </div>
-                }
+                </div>
             </div>
         </div>
     </nav>

@@ -87,44 +87,4 @@ document.getElementById("otherReceiver").addEventListener("change", function () 
     form.style.display = this.checked ? "block" : "none";
 });
 
-document.getElementById("confirmAddress").addEventListener("click", function () {
-    // Lấy dữ liệu người đặt hàng
-    const gender = document.querySelector('input[name="gender"]:checked')?.nextElementSibling.textContent.trim() || "";
-    const fullName = document.querySelector("#addressForm input[placeholder='Họ và Tên']").value;
-    const phoneNumber = document.querySelector("#addressForm input[placeholder='Số điện thoại']").value;
-    const addressDetail = document.querySelector("#addressForm input[placeholder='Nhập số nhà, tên đường']").value;
-    const province = document.getElementById("provinceSelect").value;
-    const district = document.getElementById("districtSelect").value;
-    const ward = document.getElementById("wardSelect").value;
-
-    // Kiểm tra nếu chọn "Người khác nhận hàng"
-    let otherReceiverInfo = null;
-    if (document.getElementById("otherReceiver").checked) {
-        otherReceiverInfo = {
-            gender: document.querySelector('input[name="otherGender"]:checked')?.nextElementSibling.textContent.trim() || "",
-            fullName: document.getElementById("otherName").value,
-            phone: document.getElementById("otherPhone").value
-        };
-    }
-
-    // Tạo đối tượng lưu trữ thông tin
-    const addressData = {
-        gender,
-        fullName,
-        phoneNumber,
-        address: `${addressDetail}, ${ward}, ${district}, ${province}`,
-        otherReceiver: otherReceiverInfo
-    };
-
-    // Lưu vào localStorage
-    localStorage.setItem("shippingInfo", JSON.stringify(addressData));
-
-    // Hiển thị địa chỉ đã lưu trong giao diện
-    document.getElementById("currentAddress").textContent = addressData.address;
-
-    // Đóng modal
-    let modal = bootstrap.Modal.getInstance(document.getElementById("addressModal"));
-    modal.hide();
-
-    console.log("Đã lưu thông tin giao hàng:", addressData);
-});
+    

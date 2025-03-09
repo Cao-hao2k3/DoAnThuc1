@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ftFBS01WZJj44tq3BAtc0htvMtYfdYWMIWfBqCQOUTU=",
+  "Hash": "QFi+wDNY2+MGtn9CKZNHiTRLHJjFONfRZ2M14pINwFs=",
   "Source": "ThanTai",
   "BasePath": "_content/ThanTai",
   "Mode": "Default",
@@ -4784,6 +4784,27 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\vnpaylogo.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "img/vnpaylogo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y41yg8ztap",
+      "Integrity": "QtphVZqJfvcFfKA4mkHL0uPJuCgx9DnjNXhNfka68xc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\vnpaylogo.jpg"
+    },
+    {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
       "SourceId": "ThanTai",
       "SourceType": "Discovered",
@@ -4798,8 +4819,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jt53p0p9zk",
-      "Integrity": "N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=",
+      "Fingerprint": "8uqg4ky7gn",
+      "Integrity": "IOC4KqzOjbGKD+gi20rV7nHaov1Xg5Q9KyA++DLdAXI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\GioHang.js"
@@ -12587,7 +12608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 14:01:17 GMT"
+          "Value": "Sat, 08 Mar 2025 16:12:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12624,7 +12645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 14:01:17 GMT"
+          "Value": "Sat, 08 Mar 2025 16:12:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -30769,6 +30790,133 @@
       ]
     },
     {
+      "Route": "img/vnpaylogo.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\vnpaylogo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QtphVZqJfvcFfKA4mkHL0uPJuCgx9DnjNXhNfka68xc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 12:42:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QtphVZqJfvcFfKA4mkHL0uPJuCgx9DnjNXhNfka68xc="
+        }
+      ]
+    },
+    {
+      "Route": "img/vnpaylogo.y41yg8ztap.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\vnpaylogo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QtphVZqJfvcFfKA4mkHL0uPJuCgx9DnjNXhNfka68xc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 08 Mar 2025 12:42:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y41yg8ztap"
+        },
+        {
+          "Name": "label",
+          "Value": "img/vnpaylogo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QtphVZqJfvcFfKA4mkHL0uPJuCgx9DnjNXhNfka68xc="
+        }
+      ]
+    },
+    {
+      "Route": "js/GioHang.8uqg4ky7gn.js",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IOC4KqzOjbGKD+gi20rV7nHaov1Xg5Q9KyA++DLdAXI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Mar 2025 05:29:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8uqg4ky7gn"
+        },
+        {
+          "Name": "label",
+          "Value": "js/GioHang.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IOC4KqzOjbGKD+gi20rV7nHaov1Xg5Q9KyA++DLdAXI="
+        }
+      ]
+    },
+    {
       "Route": "js/GioHang.js",
       "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
       "Selectors": [],
@@ -30779,7 +30927,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5635"
+          "Value": "3655"
         },
         {
           "Name": "Content-Type",
@@ -30787,11 +30935,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\""
+          "Value": "\"IOC4KqzOjbGKD+gi20rV7nHaov1Xg5Q9KyA++DLdAXI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 14:11:23 GMT"
+          "Value": "Sun, 09 Mar 2025 05:29:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -30801,52 +30949,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="
-        }
-      ]
-    },
-    {
-      "Route": "js/GioHang.jt53p0p9zk.js",
-      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5635"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 05 Mar 2025 14:11:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jt53p0p9zk"
-        },
-        {
-          "Name": "label",
-          "Value": "js/GioHang.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-N8neCkBuUZwCxzDPvcNggjFkHwvOfOaS7Pjg70P7QbY="
+          "Value": "sha256-IOC4KqzOjbGKD+gi20rV7nHaov1Xg5Q9KyA++DLdAXI="
         }
       ]
     },

@@ -897,6 +897,10 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\vnpaylogo.jpg",
+      "PackagePath": "staticwebassets\\img\\vnpaylogo.jpg"
+    },
+    {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
       "PackagePath": "staticwebassets\\js\\GioHang.js"
     },

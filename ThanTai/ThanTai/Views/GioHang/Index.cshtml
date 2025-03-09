@@ -10,13 +10,84 @@
 
         <!-- Địa chỉ nhận hàng -->
         <div class="address-box d-flex align-items-center mt-3 p-3" data-bs-toggle="modal" data-bs-target="#addressModal">
-            <span>📍</span>
-            <div>
-                <a href="#" id="editAddress">Vui lòng cung cấp thông tin nhận hàng</a><br>
-                <span id="currentAddress"> </span>
-            </div>
-            <div class="ms-auto">
-                <a href="#">›</a>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addressModalLabel">Thông tin giao hàng</h5>
+                    </div>
+                    <div class="modal-body">
+                            <!-- Thông tin người đặt -->
+                            <div class="mb-3">
+                                <label class="form-label">Thông tin người đặt</label>
+                            </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="tenNguoiDatVisible" name="tenNguoiDatVisible" placeholder="Họ và Tên">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="dienThoaiNguoiDatVisible" name="dienThoaiNguoiDatVisible" placeholder="Số điện thoại">
+                        </div>
+
+                            <!-- Chọn hình thức giao hàng -->
+                        <div class="mb-3">
+                            <label class="form-label">Chọn hình thức giao hàng</label>
+                            <div class="btn-group w-100" data-toggle="buttons">
+                                <label class="btn btn-outline-primary btn-toggle active">
+                                    <input type="radio" name="hinhThucGiaoHang" value="1" autocomplete="off" checked> 🚚 Giao tận nơi
+                                </label>
+                                <label class="btn btn-outline-primary btn-toggle">
+                                    <input type="radio" name="hinhThucGiaoHang" value="2" autocomplete="off"> 🏠 Nhận tại siêu thị
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Nhập địa chỉ -->
+                        <div class="mb-3">
+                            <label class="form-label">Tỉnh/Thành phố</label>
+                            <select class="form-control" id="provinceSelect">
+                                <option value="">Chọn tỉnh/thành</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Quận/Huyện</label>
+                            <select class="form-control" id="districtSelect" disabled>
+                                <option value="">Chọn quận/huyện</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phường/Xã</label>
+                            <select class="form-control" id="wardSelect" disabled>
+                                <option value="">Chọn phường/xã</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="houseStreet" placeholder="Nhập số nhà, tên đường">
+                        </div>
+
+
+                        <!-- Thông tin "Người khác nhận hàng" -->
+                        <div class="card p-3 mt-3">
+                            <div class="form-check">
+                                <input class="form-check-input custom-checkbox" type="checkbox" id="otherReceiver">
+                                <label class="form-check-label fw-bold" for="otherReceiver">
+                                    Người khác nhận hàng
+                                </label>
+                            </div>
+                            <p class="text-muted small">
+                                Vui lòng cung cấp thông tin người nhận để nhân viên giao hàng có thể liên lạc
+                            </p>
+
+                            <!-- Hiển thị form cho thông tin người nhận khác -->
+                            <div id="otherReceiverForm" style="display: none;">
+                                <div class="mt-2">
+                                    <input type="text" class="form-control" name="otherNameVisible" id="otherNameVisible" placeholder="Họ và Tên">
+                                </div>
+                                <div class="mt-2">
+                                    <input type="text" class="form-control" name="otherPhoneVisible" id="otherPhoneVisible" placeholder="Số điện thoại">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -64,83 +135,189 @@
                 </div>
             </div>
         }
-    </div>
-</div>
+        <div class="card p-4">
+            <!-- Tổng tiền -->
+            <div class="d-flex justify-content-between">
+                <h5><strong>Tổng tiền</strong></h5>
+                @{
+                    decimal total = Model.Sum(item => item.SoLuong * item.SanPham.GiaSauKhiGiam);
+                }
+                <div class="d-flex justify-content-between">
+                    <h5><strong>Tổng tiền</strong></h5>
+                    <h5 class="text-danger fw-bold">@total.ToString("N0")đ</h5>
+                </div>
 
-<!-- Modal Nhập Địa Chỉ -->
-<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addressModalLabel">Thông tin giao hàng</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form id="addressForm">
-                    <!-- Thông tin người đặt -->
-                    <div class="mb-3">
-                        <label class="form-label">Thông tin người đặt</label>
-                        <div class="d-flex">
-                            <div class="form-check me-3">
-                                <input class="form-check-input" type="radio" name="gender" id="male">
-                                <label class="form-check-label" for="male">Anh</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="female">
-                                <label class="form-check-label" for="female">Chị</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Họ và Tên">
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Số điện thoại">
-                    </div>
+            <p class="text-muted">Điểm tích lũy Quà Tặng VIP: <strong>7.950 điểm</strong></p>
 
-                    <!-- Chọn hình thức giao hàng -->
-                    <div class="mb-3">
-                        <label class="form-label">Chọn hình thức giao hàng</label>
-                        <div class="btn-group w-100">
-                            <button type="button" class="btn btn-outline-primary btn-toggle active" id="homeDelivery">🚚 Giao tận nơi</button>
-                            <button type="button" class="btn btn-outline-primary btn-toggle" id="storePickup">🏠 Nhận tại siêu thị</button>
-                        </div>
-                    </div>
+            <hr>
 
-                    <!-- Nhập địa chỉ -->
-                    <div class="mb-3">
-                        <label class="form-label">Tỉnh/Thành phố</label>
-                        <select class="form-control" id="provinceSelect">
-                            <option value="">Chọn tỉnh/thành</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Quận/Huyện</label>
-                        <select class="form-control" id="districtSelect" disabled>
-                            <option value="">Chọn quận/huyện</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Phường/Xã</label>
-                        <select class="form-control" id="wardSelect" disabled>
-                            <option value="">Chọn phường/xã</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nhập số nhà, tên đường">
-                    </div>
-
-                    <button type="button" class="btn btn-primary w-100" id="confirmAddress">Xác Nhận</button>
-                </form>
+            <!-- Hình thức thanh toán -->
+            <h5 class="mb-3"><strong>Hình thức thanh toán</strong></h5>
+            <!-- Thanh toán khi nhận hàng: value = 1 -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="cash" value="1" checked>
+                <label class="form-check-label" for="cash">
+                    💰 Thanh toán tiền mặt khi nhận hàng
+                </label>
             </div>
+
+            <!-- Thanh toán chuyển khoản: value = 2 -->
+            <div class="form-check mt-2">
+                <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer" value="2">
+                <label class="form-check-label" for="bankTransfer">
+                    💳 Chuyển khoản ngân hàng
+                </label>
+            </div>
+
+            <!-- Thanh toán qua VNPAY-QR: value = 3 -->
+            <div class="form-check mt-2 d-flex align-items-center">
+                <input class="form-check-input mt-0" type="radio" name="paymentMethod" id="vnpay" value="3">
+                <label class="form-check-label d-flex align-items-center" for="vnpay">
+                    <img src="~/img/vnpaylogo.jpg" alt="VNPAY" width="30" class="ms-2 me-2">
+                    Qua VNPAY-QR
+                </label>
+            </div>
+
+            <hr>
+
+            <!-- Điều khoản -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    Tôi đồng ý với <a href="#" class="text-primary">Chính sách xử lý dữ liệu cá nhân</a> của Điện Máy Xanh
+                </label>
+            </div>
+            <!-- Form gửi thông tin --> 
+            <form method="post" asp-action="DatHang" asp-controller="GioHang" id="mainForm">
+                <input type="hidden" name="tenNguoiDat" id="tenNguoiDat">
+                <input type="hidden" name="dienThoaiNguoiDat" id="dienThoaiNguoiDat">
+                <input type="hidden" name="diaChiGiaoHang" id="diaChiGiaoHang">
+                <input type="hidden" name="hinhThucGiaoHang" id="hinhThucGiaoHang">
+                <input type="hidden" name="paymentMethod" id="paymentMethod">
+                <input type="hidden" name="otherName" id="otherName">
+                <input type="hidden" name="otherPhone" id="otherPhone">
+                <!-- Gửi danh sách sản phẩm -->
+                @foreach (var item in Model)
+                {
+                    <input type="hidden" name="sanPhamIDs" value="@item.SanPham.ID">
+                    <input type="hidden" name="soLuongs" value="@item.SoLuong">
+                    <input type="hidden" name="donGias" value="@item.SanPham.GiaSauKhiGiam">
+                }
+
+                <button type="submit" class="btn btn-warning w-100 mt-3 fw-bold">Đặt hàng </button>
+            </form>
         </div>
+
     </div>
 </div>
 
 <script src="~/js/GioHang.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const otherReceiverCheckbox = document.getElementById("otherReceiver");
+        const otherReceiverForm = document.getElementById("otherReceiverForm");
 
+        if (otherReceiverCheckbox && otherReceiverForm) {
+            otherReceiverCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    otherReceiverForm.style.display = "block";
+                } else {
+                    otherReceiverForm.style.display = "none";
+                }
+            });
+        }
+    });
+            document.addEventListener("DOMContentLoaded", function() {
+        var mainForm = document.getElementById("mainForm");
+        mainForm.addEventListener("submit", function(event) {
+            // Lấy giá trị từ các input hiển thị chính và trim khoảng trắng
+            var tenValue = document.getElementById("tenNguoiDatVisible").value.trim();
+            var phoneValue = document.getElementById("dienThoaiNguoiDatVisible").value.trim();
+            var houseStreet = document.getElementById("houseStreet").value.trim();
+
+            // Lấy thông tin từ các select địa chỉ
+            var provinceSelect = document.getElementById("provinceSelect");
+            var districtSelect = document.getElementById("districtSelect");
+            var wardSelect = document.getElementById("wardSelect");
+            var provinceValue = provinceSelect.value;
+            var districtValue = districtSelect.value;
+            var wardValue = wardSelect.value;
+
+            // Kiểm tra các trường bắt buộc (trừ phần "other")
+            if (tenValue === "" || phoneValue === "" || houseStreet === "" || provinceValue === "" || districtValue === "" || wardValue === "") {
+                event.preventDefault(); // Ngăn submit form
+                alert("Vui lòng nhập đầy đủ thông tin giao hàng (Tên, Số điện thoại, Địa chỉ)!");
+                return;
+            }
+
+            // Nếu checkbox "Người khác nhận hàng" được check thì kiểm tra các trường thông tin người nhận khác
+            var otherReceiverCheckbox = document.getElementById("otherReceiver");
+            if (otherReceiverCheckbox.checked) {
+                var otherNameVisible = document.getElementById("otherNameVisible").value.trim();
+                var otherPhoneVisible = document.getElementById("otherPhoneVisible").value.trim();
+                if (otherNameVisible === "" || otherPhoneVisible === "") {
+                    event.preventDefault();
+                    alert("Vui lòng nhập đầy đủ thông tin người nhận hàng khác!");
+                    return;
+                }
+            }
+
+            // Lấy giá trị của hình thức giao hàng từ radio button được chọn
+            var shippingMethodElement = document.querySelector('input[name="hinhThucGiaoHang"]:checked');
+            var shippingMethodValue = shippingMethodElement ? shippingMethodElement.value : '';
+
+            // Lấy giá trị của phương thức thanh toán từ radio button được chọn
+            var paymentMethodElement = document.querySelector('input[name="paymentMethod"]:checked');
+            var paymentMethodValue = paymentMethodElement ? paymentMethodElement.value : '';
+
+            // Lấy text của option được chọn từ các select (nếu cần)
+            var provinceText = provinceSelect.options[provinceSelect.selectedIndex].text;
+            var districtText = districtSelect.options[districtSelect.selectedIndex].text;
+            var wardText = wardSelect.options[wardSelect.selectedIndex].text;
+
+            // Tạo địa chỉ đầy đủ: "số nhà, tên đường - phường/xã - quận/huyện - tỉnh/thành"
+            var fullAddress = houseStreet + " - " + wardText + " - " + districtText + " - " + provinceText;
+
+            // Gán giá trị vào các input ẩn để post dữ liệu lên server
+            document.getElementById("tenNguoiDat").value = tenValue;
+            document.getElementById("dienThoaiNguoiDat").value = phoneValue;
+            document.getElementById("hinhThucGiaoHang").value = shippingMethodValue;
+            document.getElementById("paymentMethod").value = paymentMethodValue;
+            document.getElementById("diaChiGiaoHang").value = fullAddress;
+
+            // Nếu người dùng không check "Người khác nhận hàng" thì giá trị của otherName, otherPhone có thể để rỗng
+            if (!otherReceiverCheckbox.checked) {
+                document.getElementById("otherName").value = "";
+                document.getElementById("otherPhone").value = "";
+            } else {
+                // Nếu có check thì chuyển dữ liệu từ các input hiển thị other sang input ẩn
+                document.getElementById("otherName").value = otherNameVisible;
+                document.getElementById("otherPhone").value = otherPhoneVisible;
+            }
+        });
+    });
+</script>
 <style>
+    .address-box .modal-content {
+    width: 100%;
+    max-width: 600px; /* Điều chỉnh theo kích thước mong muốn */
+    margin: auto;
+}
+
+.cart-container {
+    max-width: 600px; /* Cùng kích thước với phần thông tin giao hàng */
+    margin: auto;
+}
+
+
+    .custom-checkbox {
+        accent-color: #007bff;
+    }
+
+    .disabled-input {
+        background-color: #f1f3f5;
+    }
 
     .product-container img {
         width: 80px; /* Hoặc điều chỉnh theo mong muốn */

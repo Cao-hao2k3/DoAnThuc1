@@ -221,6 +221,7 @@ wwwroot\gulpfile.js
 wwwroot\img\banner1.png
 wwwroot\img\banner2.png
 wwwroot\img\logo.png
+wwwroot\img\vnpaylogo.jpg
 wwwroot\js\GioHang.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
