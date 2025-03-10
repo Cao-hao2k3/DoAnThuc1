@@ -4,6 +4,8 @@ namespace ThanTai.Models
 {
     public class GioHang
     {
+        internal decimal DonGia;
+
         [DisplayName("Mã giỏ hàng")]
         public int ID { get; set; }
          

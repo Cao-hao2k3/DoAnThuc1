@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ThanTai")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+024aa490375105490d1294e73c1705c735669d1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ece0844af49549b05d0f29a2aee9d4325b82bf5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ThanTai")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ThanTai")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

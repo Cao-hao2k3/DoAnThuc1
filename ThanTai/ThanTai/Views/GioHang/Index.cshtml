@@ -16,10 +16,10 @@
                         <h5 class="modal-title" id="addressModalLabel">Thông tin giao hàng</h5>
                     </div>
                     <div class="modal-body">
-                            <!-- Thông tin người đặt -->
-                            <div class="mb-3">
-                                <label class="form-label">Thông tin người đặt</label>
-                            </div>
+                        <!-- Thông tin người đặt -->
+                        <div class="mb-3">
+                            <label class="form-label">Thông tin người đặt</label>
+                        </div>
                         <div class="mb-3">
                             <input type="text" class="form-control" id="tenNguoiDatVisible" name="tenNguoiDatVisible" placeholder="Họ và Tên">
                         </div>
@@ -27,7 +27,7 @@
                             <input type="text" class="form-control" id="dienThoaiNguoiDatVisible" name="dienThoaiNguoiDatVisible" placeholder="Số điện thoại">
                         </div>
 
-                            <!-- Chọn hình thức giao hàng -->
+                        <!-- Chọn hình thức giao hàng -->
                         <div class="mb-3">
                             <label class="form-label">Chọn hình thức giao hàng</label>
                             <div class="btn-group w-100" data-toggle="buttons">
@@ -188,7 +188,7 @@
                     Tôi đồng ý với <a href="#" class="text-primary">Chính sách xử lý dữ liệu cá nhân</a> của Điện Máy Xanh
                 </label>
             </div>
-            <!-- Form gửi thông tin --> 
+            <!-- Form gửi thông tin -->
             <form method="post" asp-action="DatHang" asp-controller="GioHang" id="mainForm">
                 <input type="hidden" name="tenNguoiDat" id="tenNguoiDat">
                 <input type="hidden" name="dienThoaiNguoiDat" id="dienThoaiNguoiDat">
@@ -300,15 +300,15 @@
 </script>
 <style>
     .address-box .modal-content {
-    width: 100%;
-    max-width: 600px; /* Điều chỉnh theo kích thước mong muốn */
-    margin: auto;
-}
+        width: 100%;
+        max-width: 600px; /* Điều chỉnh theo kích thước mong muốn */
+        margin: auto;
+    }
 
-.cart-container {
-    max-width: 600px; /* Cùng kích thước với phần thông tin giao hàng */
-    margin: auto;
-}
+    .cart-container {
+        max-width: 600px; /* Cùng kích thước với phần thông tin giao hàng */
+        margin: auto;
+    }
 
 
     .custom-checkbox {

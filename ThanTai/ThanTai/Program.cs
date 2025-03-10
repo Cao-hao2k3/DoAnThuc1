@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using ThanTai.Models;
-
+using WebBanHang.Services.VNPAY;
 var builder = WebApplication.CreateBuilder(args);
 
 // 1️ Thêm dịch vụ Session vào ứng dụng
@@ -34,6 +34,9 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     });
 
 builder.Services.AddControllersWithViews();
+
+//Connect VNPAY API
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 
 var app = builder.Build();
 
