@@ -2305,6 +2305,10 @@
       "PackagePath": "staticwebassets\\uploads\\ca4af31a-6857-48a9-8cbd-c4d69b034e7b.jpg"
     },
     {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\caohao.jpg",
+      "PackagePath": "staticwebassets\\uploads\\caohao.jpg"
+    },
+    {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
       "PackagePath": "staticwebassets\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg"
     },
@@ -2347,10 +2351,6 @@
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg",
       "PackagePath": "staticwebassets\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg"
-    },
-    {
-      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\user.jpg",
-      "PackagePath": "staticwebassets\\uploads\\user.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ThanTai.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

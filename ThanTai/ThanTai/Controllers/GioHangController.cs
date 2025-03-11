@@ -13,6 +13,7 @@ using System.Web;
 using System.Globalization;
 using System.Text;
 using Newtonsoft.Json.Linq;
+using WebBanHang.Logic;
 
 namespace ThanTai.Controllers
 {
@@ -21,12 +22,13 @@ namespace ThanTai.Controllers
         private readonly ThanTaiShopDbContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IVnPayService _vnPayService;
-
-        public GioHangController(ThanTaiShopDbContext context, IHttpContextAccessor httpContextAccessor, IVnPayService vnPayService)
+        private readonly IMailLogic _mailLogic;
+        public GioHangController(ThanTaiShopDbContext context, IHttpContextAccessor httpContextAccessor, IVnPayService vnPayService, IMailLogic mailLogic)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
             _vnPayService = vnPayService;
+            _mailLogic = mailLogic;
         }
 
         public IActionResult GioHangRong()
@@ -122,6 +124,18 @@ namespace ThanTai.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+            //  Truy vấn email từ database
+            var nguoiDung = await _context.NguoiDung
+                .Where(nd => nd.ID == userId.Value)
+                .Select(nd => new { nd.Email })
+                .FirstOrDefaultAsync();
+
+            if (nguoiDung == null || string.IsNullOrEmpty(nguoiDung.Email))
+            {
+                TempData["ThongBaoLoi"] = "Không tìm thấy email của người dùng!";
+                return RedirectToAction("DatHangThatBai", "GioHang");
+            }
+
             if (paymentMethod == 3) // Thanh toán VNPAY
             {
                 var paymentInfo = new PaymentInformationModel
@@ -140,13 +154,13 @@ namespace ThanTai.Controllers
                     DiaChiGiaoHang = diaChiGiaoHang,
                     HinhThucGiaoHang = hinhThucGiaoHang,
                     PaymentMethod = paymentMethod,
+                    EmailNguoiDat = nguoiDung.Email, 
                     SanPhamIDs = sanPhamIDs,
                     SoLuongs = soLuongs,
                     DonGias = donGias,
                     OtherName = otherName,
                     OtherPhone = otherPhone
                 };
-
                 _httpContextAccessor.HttpContext.Session.SetString("PendingOrder", JsonConvert.SerializeObject(orderData));
 
                 return await CreatePaymentUrlVnpay(paymentInfo);
@@ -182,6 +196,32 @@ namespace ThanTai.Controllers
 
             await _context.DatHangChiTiet.AddRangeAsync(datHangChiTiet);
             await _context.SaveChangesAsync();
+            // Gửi gmail
+            try
+            {
+                var datHangInfo = await _context.DatHang
+                    .Where(r => r.ID == datHang.ID)
+                    .Include(s => s.NguoiDung)
+                    .Include(s => s.DatHangChiTiet)
+                    .ThenInclude(ct => ct.SanPham)
+                    .SingleOrDefaultAsync();
+
+                if (datHangInfo?.NguoiDung == null)
+                {
+                    TempData["ThongBaoLoi"] = "Lỗi: Không tìm thấy thông tin người đặt hàng!";
+                    return RedirectToAction("DatHangThatBai", "GioHang");
+                }
+
+                Console.WriteLine($"Đang gửi email đến: {datHangInfo.NguoiDung.Email}");
+                await _mailLogic.GoiEmailDatHangThanhCong(datHangInfo, new MailInfo
+                {
+                    Subject = "Đặt hàng thành công tại Thần Tài Shop"
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi gửi email: " + ex.Message);
+            }
 
             var gioHang = await _context.GioHang.Where(g => g.NguoiDungID == userId).ToListAsync();
             _context.GioHang.RemoveRange(gioHang);
@@ -224,7 +264,6 @@ namespace ThanTai.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
-            // Lấy thông tin đơn hàng từ Session
             var orderDataJson = _httpContextAccessor.HttpContext.Session.GetString("PendingOrder");
             if (string.IsNullOrEmpty(orderDataJson))
             {
@@ -237,13 +276,20 @@ namespace ThanTai.Controllers
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
+                var nguoiDung = await _context.NguoiDung.FindAsync(userId.Value);
+                if (nguoiDung == null)
+                {
+                    TempData["ThongBaoLoi"] = "Lỗi: Không tìm thấy thông tin người dùng!";
+                    return RedirectToAction("DatHangThatBai", "GioHang");
+                }
+
                 var datHang = new DatHang
                 {
                     NguoiDungID = userId.Value,
                     TinhTrangID = 3,
                     NgayDatHang = DateTime.Now,
-                    TinhTrangThanhToan = 2, // Đã thanh toán
-                    HinhThucThanhToan = 3, // VNPAY
+                    TinhTrangThanhToan = 2,
+                    HinhThucThanhToan = 3,
                     TenNguoiDat = orderData.TenNguoiDat,
                     DienThoaiNguoiDat = orderData.DienThoaiNguoiDat,
                     DiaChiGiaoHang = orderData.DiaChiGiaoHang,
@@ -271,8 +317,33 @@ namespace ThanTai.Controllers
                 var gioHang = await _context.GioHang.Where(g => g.NguoiDungID == userId).ToListAsync();
                 _context.GioHang.RemoveRange(gioHang);
                 await _context.SaveChangesAsync();
+                // Gửi gmail
+                try
+                {
+                    var datHangInfo = await _context.DatHang
+                        .Where(r => r.ID == datHang.ID)
+                        .Include(s => s.NguoiDung)
+                        .Include(s => s.DatHangChiTiet)
+                        .ThenInclude(ct => ct.SanPham)
+                        .SingleOrDefaultAsync();
 
-                // Xóa dữ liệu trong Session
+                    if (datHangInfo?.NguoiDung == null)
+                    {
+                        TempData["ThongBaoLoi"] = "Lỗi: Không tìm thấy thông tin người đặt hàng!";
+                        return RedirectToAction("DatHangThatBai", "GioHang");
+                    }
+
+                    Console.WriteLine($"Đang gửi email đến: {datHangInfo.NguoiDung.Email}");
+                    await _mailLogic.GoiEmailDatHangThanhCong(datHangInfo, new MailInfo
+                    {
+                        Subject = "Đặt hàng thành công tại Thần Tài Shop"
+                    });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi khi gửi email: " + ex.Message);
+                }
+                //Xóa seesion
                 _httpContextAccessor.HttpContext.Session.Remove("PendingOrder");
 
                 await transaction.CommitAsync();
@@ -284,13 +355,17 @@ namespace ThanTai.Controllers
             {
                 await transaction.RollbackAsync();
                 TempData["ThongBaoLoi"] = "Có lỗi khi xử lý đơn hàng: " + ex.Message;
-                return RedirectToAction("Index", "GioHang");
+                return RedirectToAction("DatHangThatBai", "GioHang");
             }
         }
 
 
-
         public IActionResult DatHangThanhCong()
+        {
+            return View();
+        }
+
+        public IActionResult DatHangThatBai()
         {
             return View();
         }

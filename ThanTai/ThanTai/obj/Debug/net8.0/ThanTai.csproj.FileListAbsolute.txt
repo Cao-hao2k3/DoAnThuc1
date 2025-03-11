@@ -539,3 +539,8 @@ D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\refint\Tha
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.pdb
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.genruntimeconfig.cache
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ref\ThanTai.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MailKit.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MimeKit.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

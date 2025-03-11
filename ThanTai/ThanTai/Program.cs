@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using WebBanHang.Logic;
 using ThanTai.Models;
 using WebBanHang.Services.VNPAY;
+using ThanTai.Logic;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 1️ Thêm dịch vụ Session vào ứng dụng
@@ -37,6 +40,11 @@ builder.Services.AddControllersWithViews();
 
 //Connect VNPAY API
 builder.Services.AddScoped<IVnPayService, VnPayService>();
+
+//Email
+builder.Services.AddTransient<IMailLogic, MailLogic>();
+// Lấy thông tin cấu hình trong tập tin appsettings.json và gán vào đối tượng MailSettings
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
 var app = builder.Build();
 
