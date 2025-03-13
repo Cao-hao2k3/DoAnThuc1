@@ -173,6 +173,7 @@ namespace ThanTai.Areas.Admin.Controllers
                     if (n == null) return NotFound();
 
                     n.HoVaTen = nguoiDung.HoVaTen;
+                    n.Email = nguoiDung.Email;
                     n.DienThoai = nguoiDung.DienThoai;
                     n.DiaChi = nguoiDung.DiaChi;
                     n.TenDangNhap = nguoiDung.TenDangNhap;

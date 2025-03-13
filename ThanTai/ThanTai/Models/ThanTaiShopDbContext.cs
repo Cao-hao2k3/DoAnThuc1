@@ -20,8 +20,8 @@ namespace ThanTai.Models
 
         public DbSet<ThuocTinh> ThuocTinh { get; set; }
         public DbSet<GiaTriThuocTinh> GiaTriThuocTinh { get; set; }
-        public DbSet<GioHang> GioHang { get; set; }
-    
+        public DbSet<GioHang> GioHang { get; set; } 
+        public DbSet<KhuyenMai> KhuyenMai { get; set; }
         public DbSet<ThuongHieu> ThuongHieu { get; set; }
         public DbSet<ThanTai.Models.HinhAnhSanPham> HinhAnhSanPham { get; set; } = default!;
     }

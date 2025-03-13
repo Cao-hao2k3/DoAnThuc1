@@ -211,8 +211,7 @@ namespace ThanTai.Controllers
                     TempData["ThongBaoLoi"] = "Lỗi: Không tìm thấy thông tin người đặt hàng!";
                     return RedirectToAction("DatHangThatBai", "GioHang");
                 }
-
-                Console.WriteLine($"Đang gửi email đến: {datHangInfo.NguoiDung.Email}");
+                
                 await _mailLogic.GoiEmailDatHangThanhCong(datHangInfo, new MailInfo
                 {
                     Subject = "Đặt hàng thành công tại Thần Tài Shop"
@@ -222,6 +221,30 @@ namespace ThanTai.Controllers
             {
                 Console.WriteLine("Lỗi khi gửi email: " + ex.Message);
             }
+
+            // Cập nhật số lượng tồn kho trong bảng SanPham
+            for (int i = 0; i < sanPhamIDs.Length; i++)
+            {
+                int sanPhamID = int.Parse(sanPhamIDs[i]);
+                var sanPham = await _context.SanPham.FirstOrDefaultAsync(s => s.ID == sanPhamID);
+
+                if (sanPham != null)
+                {
+                    if (sanPham.SoLuong >= soLuongs[i])
+                    {
+                        sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
+                        sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
+                    }
+                    else
+                    {
+                        TempData["ThongBaoLoi"] = $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.";
+                        return RedirectToAction("DatHangThatBai", "GioHang");
+                    }
+                }
+            }
+
+            // Lưu thay đổi vào database
+            await _context.SaveChangesAsync();
 
             var gioHang = await _context.GioHang.Where(g => g.NguoiDungID == userId).ToListAsync();
             _context.GioHang.RemoveRange(gioHang);
@@ -313,6 +336,32 @@ namespace ThanTai.Controllers
                 await _context.DatHangChiTiet.AddRangeAsync(datHangChiTietList);
                 await _context.SaveChangesAsync();
 
+                var sanPhamIDs = ((JArray)orderData.SanPhamIDs).Select(id => int.Parse(id.ToString())).ToList();
+                var soLuongs = ((JArray)orderData.SoLuongs).Select(sl => (short)sl).ToList();
+
+                for (int i = 0; i < sanPhamIDs.Count; i++)
+                {
+                    var sanPham = await _context.SanPham.FirstOrDefaultAsync(s => s.ID == sanPhamIDs[i]);
+
+                    if (sanPham != null)
+                    {
+                        if (sanPham.SoLuong >= soLuongs[i])
+                        {
+                            sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
+                            sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
+                        }
+                        else
+                        {
+                            TempData["ThongBaoLoi"] = $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.";
+                            return RedirectToAction("DatHangThatBai", "GioHang");
+                        }
+                    }
+                }
+
+                // Lưu thay đổi vào database
+                await _context.SaveChangesAsync();
+
+
                 // Xóa giỏ hàng
                 var gioHang = await _context.GioHang.Where(g => g.NguoiDungID == userId).ToListAsync();
                 _context.GioHang.RemoveRange(gioHang);
@@ -358,7 +407,6 @@ namespace ThanTai.Controllers
                 return RedirectToAction("DatHangThatBai", "GioHang");
             }
         }
-
 
         public IActionResult DatHangThanhCong()
         {

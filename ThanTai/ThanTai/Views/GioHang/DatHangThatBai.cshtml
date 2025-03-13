@@ -1,1 +1,9 @@
 ﻿<h1>Đặt hàng thất bại</h1>
+
+
+@if (TempData["ThongBaoLoi"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ThongBaoLoi"]
+    </div>
+}
