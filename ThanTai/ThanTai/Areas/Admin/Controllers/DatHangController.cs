@@ -29,6 +29,48 @@ namespace ThanTai.Areas.Admin.Controllers
             return View(await thanTaiShopDbContext.ToListAsync());
         }
 
+        public IActionResult DangChoXuLy()
+        {
+            var donHangs = _context.DatHang
+                .Where(d => d.TinhTrangID == 3) // Lọc đơn hàng có tình trạng là 3
+                .ToList();
+
+            return View(donHangs);
+        }
+
+        public IActionResult XuLyThanhCong()
+        {
+            var donHangs = _context.DatHang
+                .Where(d => d.TinhTrangID == 1)
+                .ToList();
+
+            return View("~/Areas/Admin/Views/DatHang/XuLyThanhCong.cshtml", donHangs);
+        }
+
+        public IActionResult DonBiHuy()
+        {
+            var donHangs = _context.DatHang
+                .Where(d => d.TinhTrangID == 5)
+                .ToList();
+
+            return View("~/Areas/Admin/Views/DatHang/DonBiHuy.cshtml", donHangs);
+        }
+
+        public IActionResult ChiTiet(int id)
+        {
+            var chiTietDonHang = _context.DatHangChiTiet
+                .Include(d => d.SanPham)
+                .Where(d => d.DatHangID == id)
+                .ToList();
+
+            if (chiTietDonHang == null || !chiTietDonHang.Any())
+            {
+                return NotFound();
+            }
+
+            return View(chiTietDonHang);
+        }
+
         // GET: DatHang/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -62,7 +104,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiGiaoHang,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
+        public async Task<IActionResult> Create([Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiNguoiDat,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
         {
             if (ModelState.IsValid)
             {
@@ -88,17 +130,14 @@ namespace ThanTai.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["NguoiDungID"] = new SelectList(_context.NguoiDung, "ID", "DiaChi", datHang.NguoiDungID);
             ViewData["TinhTrangID"] = new SelectList(_context.TinhTrang, "ID", "MoTa", datHang.TinhTrangID);
             return View(datHang);
         }
 
         // POST: DatHang/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiGiaoHang,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiNguoiDat,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
         {
             if (id != datHang.ID)
             {
@@ -114,7 +153,7 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DatHangExists(datHang.ID))
+                    if (!_context.DatHang.Any(e => e.ID == datHang.ID))
                     {
                         return NotFound();
                     }
@@ -125,7 +164,6 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["NguoiDungID"] = new SelectList(_context.NguoiDung, "ID", "DiaChi", datHang.NguoiDungID);
             ViewData["TinhTrangID"] = new SelectList(_context.TinhTrang, "ID", "MoTa", datHang.TinhTrangID);
             return View(datHang);
         }

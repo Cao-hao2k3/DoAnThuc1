@@ -2353,6 +2353,10 @@
       "PackagePath": "staticwebassets\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg"
     },
     {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\user1.png",
+      "PackagePath": "staticwebassets\\uploads\\user1.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ThanTai.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

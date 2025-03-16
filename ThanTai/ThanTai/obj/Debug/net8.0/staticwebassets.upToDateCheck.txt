@@ -585,3 +585,4 @@ wwwroot\uploads\e17a987f-4e1e-45cb-a7d5-c8109cf5fe8e.jpg
 wwwroot\uploads\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg
 wwwroot\uploads\e9c35cfb-f665-4cdd-91da-37f1e39ad3ed.jpg
 wwwroot\uploads\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg
+wwwroot\uploads\user1.png

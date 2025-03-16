@@ -89,10 +89,10 @@
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Danh sách quản lý</span></a>
 						<ul class="pcoded-submenu">
-							<li><a href="bc_alert.html">Tất cả</a></li>
-							<li><a href="bc_button.html">Đang chờ xử lý</a></li>
-							<li><a href="bc_badges.html">Xử lý thành công</a></li>
-							<li><a href="bc_badges.html">Đơn đã hủy</a></li>
+							<li><a asp-area="Admin" asp-controller="DatHang" asp-action="Index">Tất cả</a></li>
+							<li><a asp-area="Admin" asp-controller="DatHang" asp-action="DangChoXuLy">Đang chờ xử lý</a></li>
+							<li><a asp-area="Admin" asp-controller="DatHang" asp-action="XuLyThanhCong">Xử lý thành công</a></li>
+							<li><a asp-area="Admin" asp-controller="DatHang" asp-action="DonBiHuy">Đơn đã hủy</a></li>
 						</ul>
 					</li>
 					<li class="nav-item pcoded-menu-caption">
@@ -108,10 +108,10 @@
 						<label>Quản Lý Doanh Thu</label>
 					</li>
 					<li class="nav-item">
-						<a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Xem danh thu</span></a>
+						<a asp-area="Admin" asp-controller="DoanhThu" asp-action="Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Xem doanh thu</span></a>
 					</li>
 					<li class="nav-item">
-						<a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
+						<a asp-area="Admin" asp-controller="DoanhThu" asp-action="SoSanhDoanhThu" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
 					</li>
 					<li class="nav-item pcoded-menu-caption">
 						<label>Bản tin</label>

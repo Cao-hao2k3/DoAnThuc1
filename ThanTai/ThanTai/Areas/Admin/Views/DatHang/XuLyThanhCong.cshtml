@@ -36,9 +36,11 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 @foreach (var item in Model)
-                {   if(item != null){
+                {
+                    if (item != null)
+                    {
                         <tr>
                             <td>@Html.DisplayFor(modelItem => item.TenNguoiDat)</td>
                             <td>@Html.DisplayFor(modelItem => item.DienThoaiNguoiDat)</td>
@@ -69,11 +71,12 @@
                             </td>
                         </tr>
                     }
-                   else{
+                    else
+                    {
                         <div class="alert alert-warning text-center" role="alert">
                             <i class="fa-solid fa-box-open"></i> Không có đơn hàng nào.
                         </div>
-                   }
+                    }
                 }
             </tbody>
         </table>

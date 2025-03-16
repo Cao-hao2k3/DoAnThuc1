@@ -1,77 +1,122 @@
 ﻿@model IEnumerable<ThanTai.Models.KhuyenMai>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Khuyến Mãi";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NgayBatDau)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NgayKetThuc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SoLuong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MoTa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KieuKhuyenMai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GiaTriGiam)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrangThai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SanPham)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayBatDau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayKetThuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoLuong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KieuKhuyenMai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaTriGiam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrangThai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SanPham.TenSanPham)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
 }
-    </tbody>
-</table>
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <p><a asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus"></i> Thêm mới</a></p>
+            </div>
+            <div class="col-md-6 text-end">
+                <div id="export-buttons"></div>
+            </div>
+        </div>
+        <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ID)</th> <!-- Thêm dòng này -->
+                    <th>@Html.DisplayNameFor(model => model.SanPhamID)</th>
+                    <th>@Html.DisplayNameFor(model => model.NgayBatDau)</th>
+                    <th>@Html.DisplayNameFor(model => model.NgayKetThuc)</th>
+                    <th>@Html.DisplayNameFor(model => model.SoLuong)</th>
+                    <th>@Html.DisplayNameFor(model => model.MoTa)</th>
+                    <th>@Html.DisplayNameFor(model => model.KieuKhuyenMai)</th>
+                    <th>@Html.DisplayNameFor(model => model.GiaTriGiam)</th>
+                    <th>@Html.DisplayNameFor(model => model.TrangThai)</th>
+                    <th width="5%">Sửa</th>
+                    <th width="5%">Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ID)</td> <!-- Thêm dòng này -->
+                        <td>@Html.DisplayFor(modelItem => item.SanPham.TenSanPham)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NgayBatDau)</td>
+                        <td>@Html.DisplayFor(modelItem => item.NgayKetThuc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
+                        <td>
+                            @(item.KieuKhuyenMai switch
+                            {
+                                0 => "Giảm theo phần trăm (%)",
+                                1 => "Giảm theo số tiền",
+                                2 => "Mua 1 tặng 1",
+                                _ => "Không xác định"
+                            })
+                        </td>
+
+                        <td>@Html.DisplayFor(modelItem => item.GiaTriGiam)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TrangThai)</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Delete" asp-route-id="@item.ID"><i class="fa-solid fa-trash-can text-danger"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+               var table = $('#datatable').DataTable({
+         language: {
+         processing: 'Đang xử lý...',
+         lengthMenu: 'Hiển thị _MENU_ dòng',
+         zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+         info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+         infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+         emptyTable: 'Không có dữ liệu',
+         infoFiltered: '(được lọc từ _MAX_ dòng)',
+         infoPostFix: '',
+         search: 'Tìm kiếm:',
+         paginate: {
+                 first: '<i class="bi bi-skip-backward-fill"></i>',
+        last: '<i class="bi bi-skip-forward-fill"></i>',
+        next: '<i class="bi bi-chevron-right"></i>',
+        previous: '<i class="bi bi-chevron-left"></i>'
+         },
+         buttons: {
+        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+        copy: '<i class="bi bi-clipboard"></i> Sao chép',
+        copyTitle: 'Đã sao chép',
+        copySuccess: {
+         _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+         1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+         }
+         }
+         },
+         buttons: [{
+         extend: 'excelHtml5',
+         title: null,
+         filename: 'DanhSachSanPham'
+         }, {
+         extend: 'copyHtml5',
+         title: null
+         }]
+         });
+
+         table.buttons().container().appendTo('#export-buttons');
+         $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+         $('#datatable').wrap('<div class="table-responsive"></div>');
+    </script>
+}
