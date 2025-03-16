@@ -1,1 +1,97 @@
-﻿<h1>So sánh doanh thu</h1>
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ doanh thu</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <style>
+        .highcharts-description {
+            margin: 0.3rem 10px;
+        }
+
+        .highcharts-figure {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Sơ đồ so sánh doanh thu các tháng của Fashion Shop
+        </p>
+    </figure>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Sơ đồ doanh thu theo năm</h2>
+        <div class="row mb-3">
+            <div class="col-md-4 offset-md-4">
+                <label for="selectedNam" class="form-label">Chọn Năm:</label>
+                <select id="selectedNam" class="form-select">
+                    <option value="">-- Chọn Năm --</option>
+                    @foreach (var nam in ViewBag.Nam)
+                    {
+                        <option value="@nam">@nam</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Sơ đồ doanh thu của Fashion Shop theo năm được chọn.
+        </p>
+    </figure>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function loadChart(nam) {
+                if (!nam) return;
+
+                fetch(`/Admin/DoanhThu/XuLyVe?selectedNam=${nam}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data.categories || !data.revenue) {
+                            console.error("Dữ liệu API không hợp lệ!", data);
+                            return;
+                        }
+
+                        Highcharts.chart('container', {
+                            chart: {
+                                type: 'line'
+                            },
+                            title: {
+                                text: `Sơ đồ doanh thu năm ${nam}`
+                            },
+                            xAxis: {
+                                categories: data.categories
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Doanh thu (triệu VNĐ)'
+                                }
+                            },
+                            series: [{
+                                name: 'Doanh thu',
+                                data: data.revenue
+                            }]
+                        });
+                    })
+                    .catch(error => console.error("Lỗi khi gọi API: ", error));
+            }
+
+            // Bắt sự kiện khi chọn năm
+            document.getElementById('selectedNam').addEventListener('change', function () {
+                loadChart(this.value);
+            });
+        });
+    </script>
+</body>
+</html>

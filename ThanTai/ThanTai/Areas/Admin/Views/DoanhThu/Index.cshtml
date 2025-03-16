@@ -1,1 +1,93 @@
-﻿<h1>Đây là doanh thu</h1>
+﻿@{
+    ViewData["Title"] = "Quản Lý Doanh Thu";
+    var doanhThu = ViewBag.DoanhThu as List<ThanTai.Models.DatHang>;
+    var tongTien = ViewBag.TongTien as decimal?;
+    var selectedNgay = ViewBag.SelectedNgay as int?;
+    var selectedThang = ViewBag.SelectedThang as int?;
+    var selectedNam = ViewBag.SelectedNam as int?;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary fw-bold">📊 Quản Lý Doanh Thu</h2>
+
+    <form asp-action="Index" method="post" class="row g-3 bg-light p-4 rounded shadow-sm">
+        <div class="col-md-3">
+            <label for="selectedNgay" class="form-label fw-semibold">📅 Chọn Ngày:</label>
+            <select name="selectedNgay" id="selectedNgay" class="form-select">
+                <option value="">-- Ngày --</option>
+                @foreach (var ngay in ViewBag.Ngay)
+                {
+                    <option value="@ngay" selected="@(selectedNgay == ngay)">@ngay</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="selectedThang" class="form-label fw-semibold">📆 Chọn Tháng:</label>
+            <select name="selectedThang" id="selectedThang" class="form-select">
+                <option value="">-- Tháng --</option>
+                @foreach (var thang in ViewBag.Thang)
+                {
+                    <option value="@thang" selected="@(selectedThang == thang)">@thang</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="selectedNam" class="form-label fw-semibold">📌 Chọn Năm:</label>
+            <select name="selectedNam" id="selectedNam" class="form-select">
+                <option value="">-- Năm --</option>
+                @foreach (var nam in ViewBag.Nam)
+                {
+                    <option value="@nam" selected="@(selectedNam == nam)">@nam</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100 fw-bold">🔍 Xem Doanh Thu</button>
+        </div>
+    </form>
+
+    @if (doanhThu != null && doanhThu.Any())
+    {
+        <div class="mt-4">
+            <h4 class="text-success fw-bold">
+                💰 Tổng Tiền: <span class="badge bg-danger fs-5">@string.Format("{0:N0}", ViewBag.TongTien) VNĐ</span>
+            </h4>
+
+            <div class="table-responsive mt-3">
+                <table class="table table-hover table-bordered shadow-sm">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th>Mã Đặt Hàng</th>
+                            <th>Tên Khách Hàng</th>
+                            <th>📞 Điện Thoại</th>
+                            <th>🏡 Địa Chỉ</th>
+                            <th>💵 Tổng Tiền</th>
+                            <th>📅 Ngày Đặt</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle text-center">
+                        @foreach (var item in doanhThu)
+                        {
+                            <tr class="table-light">
+                                <td class="fw-bold text-primary">#@item.ID</td>
+                                <td class="text-nowrap">@item.TenNguoiDat</td>
+                                <td>@item.DienThoaiNguoiDat</td>
+                                <td class="text-wrap">@item.DiaChiGiaoHang</td>
+                                <td class="text-danger fw-bold">
+                                    @item.DatHangChiTiet.Sum(ct => ct.DonGia * ct.SoLuong).ToString("N0") VNĐ
+                                </td>
+                                <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else if (ViewBag.DoanhThu != null)
+    {
+        <div class="alert alert-warning mt-4 text-center fw-bold">
+            ❌ Không có hóa đơn nào khớp với lựa chọn!
+        </div>
+    }
+</div>
