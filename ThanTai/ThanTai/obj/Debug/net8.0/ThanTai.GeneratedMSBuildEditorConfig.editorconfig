@@ -28,6 +28,26 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/BanTin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFuVGluXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/BanTin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFuVGluXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/BanTin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFuVGluXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/BanTin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFuVGluXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/BanTin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFuVGluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/DatHang/ChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGF0SGFuZ1xDaGlUaWV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -274,6 +294,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Views/BanTin/ChiTietBanTin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuVGluXENoaVRpZXRCYW5UaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Views/BanTin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFuVGluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/HocTap/DoAnTTCK - BackUpLoginXong/ThanTai/ThanTai/Views/GioHang/DatHangThanhCong.cshtml]

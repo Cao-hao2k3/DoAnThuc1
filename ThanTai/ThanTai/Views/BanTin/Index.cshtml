@@ -1,0 +1,32 @@
+﻿@model List<ThanTai.Models.BanTin>
+
+@{
+    ViewData["Title"] = "Bản Tin Khuyến Mãi";
+}
+
+<div class="container mt-4">
+    <h4><strong>Bản tin</strong></h4>
+
+    <div class="d-flex mb-3">
+        <button class="btn btn-primary me-2">Khuyến mãi</button>
+        <button class="btn btn-light">Tư vấn chọn mua</button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100 border-primary">
+                    <a href="@Url.Action("ChiTietBanTin", "BanTin", new { id = item.ID })">
+                        <img src="@item.Image" class="card-img-top border-bottom border-primary" alt="@item.Title">
+                    </a>
+                    <div class="card-body text-center">
+                        <a href="@Url.Action("ChiTietBanTin", "BanTin", new { id = item.ID })" class="text-decoration-none">
+                            <p class="fw-bold text-dark">@item.Title</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,131 @@
+﻿@model IEnumerable<ThanTai.Models.BanTin>
+
+@{
+    ViewData["Title"] = "Danh sách bản tin";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <a asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus"></i> Thêm mới</a>
+            </div>
+            <div class="col-md-6 text-end">
+                <div id="export-buttons"></div>
+            </div>
+        </div>
+
+        <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ID)</th>
+                    <th>@Html.DisplayNameFor(model => model.Title)</th>
+                    <th>@Html.DisplayNameFor(model => model.Slug)</th>
+                    <th>Ảnh</th>
+                    <th>Banner</th>
+                    <th>@Html.DisplayNameFor(model => model.Category)</th>
+                    <th>@Html.DisplayNameFor(model => model.CreatedAt)</th>
+                    <th>@Html.DisplayNameFor(model => model.Content)</th>
+                    <th width="5%">Sửa</th>
+                    <th width="5%">Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Slug)</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.Image))
+                            {
+                                <img src="@item.Image" alt="Ảnh thông số" class="img-thumbnail" style="width: 80px; height: 80px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <span class="text-muted">Chưa có ảnh</span>
+                            }
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.Banner))
+                            {
+                                <img src="@item.Banner" alt="Ảnh thông số" class="img-thumbnail" style="width: 80px; height: 80px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <span class="text-muted">Chưa có ảnh</span>
+                            }
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CreatedAt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Delete" asp-route-id="@item.ID"><i class="fa-solid fa-trash-can text-danger"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <script>
+        var table = $('#datatable').DataTable({
+            language: {
+                processing: 'Đang xử lý...',
+                lengthMenu: 'Hiển thị _MENU_ dòng',
+                zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+                info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+                infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+                emptyTable: 'Không có dữ liệu',
+                infoFiltered: '(được lọc từ _MAX_ dòng)',
+                search: 'Tìm kiếm:',
+                paginate: {
+                    first: '<i class="bi bi-skip-backward-fill"></i>',
+                    last: '<i class="bi bi-skip-forward-fill"></i>',
+                    next: '<i class="bi bi-chevron-right"></i>',
+                    previous: '<i class="bi bi-chevron-left"></i>'
+                },
+                buttons: {
+                    excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+                    copy: '<i class="bi bi-clipboard"></i> Sao chép',
+                    copyTitle: 'Đã sao chép',
+                    copySuccess: {
+                        _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+                        1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+                    }
+                }
+            },
+            buttons: [{
+                extend: 'excelHtml5',
+                title: null,
+                filename: 'DanhSachBanTin'
+            }, {
+                extend: 'copyHtml5',
+                title: null
+            }]
+        });
+
+        table.buttons().container().appendTo('#export-buttons');
+        $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+        $('#datatable').wrap('<div class="table-responsive"></div>');
+    </script>
+}
