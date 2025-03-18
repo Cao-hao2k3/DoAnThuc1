@@ -18,8 +18,9 @@
             <div class="col">
                 <div class="card h-100 border-primary">
                     <a href="@Url.Action("ChiTietBanTin", "BanTin", new { id = item.ID })">
-                        <img src="@item.Image" class="card-img-top border-bottom border-primary" alt="@item.Title">
+                        <img src="@Url.Content("~/uploads/" + item.Image)" class="card-img-top border-bottom border-primary" alt="@item.Title">
                     </a>
+
                     <div class="card-body text-center">
                         <a href="@Url.Action("ChiTietBanTin", "BanTin", new { id = item.ID })" class="text-decoration-none">
                             <p class="fw-bold text-dark">@item.Title</p>

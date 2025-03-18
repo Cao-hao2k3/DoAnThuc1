@@ -10638,12 +10638,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ThanTai</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ThanTai</BasePath>
-      <RelativePath>uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg</RelativePath>
+      <RelativePath>uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -10654,25 +10654,43 @@
       <Integrity>S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ThanTai</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ThanTai</BasePath>
-      <RelativePath>uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg</RelativePath>
+      <RelativePath>uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ti5jwjepk9</Fingerprint>
-      <Integrity>S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU=</Integrity>
+      <Fingerprint>o4u8rfffkv</Fingerprint>
+      <Integrity>eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ThanTai</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ThanTai</BasePath>
+      <RelativePath>uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gi6dccetq4</Fingerprint>
+      <Integrity>yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh.jpg'))">
       <SourceType>Package</SourceType>
@@ -10763,6 +10781,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zxcxzc_banner.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zxczxc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ThanTai</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ThanTai</BasePath>
+      <RelativePath>uploads/zxczxc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gi6dccetq4</Fingerprint>
+      <Integrity>yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zxczxc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zxczxc_banner.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ThanTai</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ThanTai</BasePath>
+      <RelativePath>uploads/zxczxc_banner.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o4u8rfffkv</Fingerprint>
+      <Integrity>eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zxczxc_banner.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\zzxzx.png'))">
       <SourceType>Package</SourceType>

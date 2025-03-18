@@ -46,21 +46,27 @@
                         <td>
                             @if (!string.IsNullOrEmpty(item.Image))
                             {
-                                <img src="@item.Image" alt="Ảnh thông số" class="img-thumbnail" style="width: 80px; height: 80px; object-fit: cover;" />
-                            }
-                            else
-                            {
-                                <span class="text-muted">Chưa có ảnh</span>
+                                var imagePath = Url.Content("~/uploads/" + item.Image);
+                                var fileExtension = System.IO.Path.GetExtension(item.Image).ToLower();
+                                var validExtensions = new List<string> { ".jpg", ".jpeg", ".png", ".gif" };
+
+                                if (validExtensions.Contains(fileExtension))
+                                {
+                                    <img src="@imagePath" alt="Ảnh" width="50" height="50" class="rounded-circle" />
+                                }
                             }
                         </td>
                         <td>
                             @if (!string.IsNullOrEmpty(item.Banner))
                             {
-                                <img src="@item.Banner" alt="Ảnh thông số" class="img-thumbnail" style="width: 80px; height: 80px; object-fit: cover;" />
-                            }
-                            else
-                            {
-                                <span class="text-muted">Chưa có ảnh</span>
+                                var imagePath = Url.Content("~/uploads/" + item.Banner);
+                                var fileExtension = System.IO.Path.GetExtension(item.Banner).ToLower();
+                                var validExtensions = new List<string> { ".jpg", ".jpeg", ".png", ".gif" };
+
+                                if (validExtensions.Contains(fileExtension))
+                                {
+                                    <img src="@imagePath" alt="Ảnh banner" width="50" height="50" class="rounded-circle" />
+                                }
                             }
                         </td>
                         <td>@Html.DisplayFor(modelItem => item.Category)</td>

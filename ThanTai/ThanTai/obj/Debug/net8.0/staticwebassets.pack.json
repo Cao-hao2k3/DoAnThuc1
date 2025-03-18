@@ -2365,12 +2365,12 @@
       "PackagePath": "staticwebassets\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg"
     },
     {
-      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg",
-      "PackagePath": "staticwebassets\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg"
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg",
+      "PackagePath": "staticwebassets\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg"
     },
     {
-      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg",
-      "PackagePath": "staticwebassets\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg"
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg",
+      "PackagePath": "staticwebassets\\uploads\\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg"
     },
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh.jpg",
@@ -2379,6 +2379,10 @@
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh_banner.jpg",
       "PackagePath": "staticwebassets\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh_banner.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg",
+      "PackagePath": "staticwebassets\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg"
     },
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\user1.png",
@@ -2391,6 +2395,14 @@
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxcxzc_banner.jpg",
       "PackagePath": "staticwebassets\\uploads\\zxcxzc_banner.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxczxc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zxczxc.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxczxc_banner.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zxczxc_banner.jpg"
     },
     {
       "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zzxzx.png",

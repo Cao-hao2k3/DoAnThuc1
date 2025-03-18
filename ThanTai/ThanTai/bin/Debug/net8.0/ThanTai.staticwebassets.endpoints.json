@@ -48547,8 +48547,8 @@
       ]
     },
     {
-      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg",
-      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg",
+      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg",
+      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -48573,7 +48573,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 06:09:18 GMT"
+          "Value": "Tue, 18 Mar 2025 03:51:07 GMT"
         }
       ],
       "EndpointProperties": [
@@ -48584,8 +48584,8 @@
       ]
     },
     {
-      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.ti5jwjepk9.jpg",
-      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg",
+      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.ti5jwjepk9.jpg",
+      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -48610,7 +48610,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 06:09:18 GMT"
+          "Value": "Tue, 18 Mar 2025 03:51:07 GMT"
         }
       ],
       "EndpointProperties": [
@@ -48624,13 +48624,13 @@
         },
         {
           "Name": "label",
-          "Value": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d.jpg"
+          "Value": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg"
         }
       ]
     },
     {
-      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg",
-      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg",
+      "Route": "uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg",
+      "AssetFile": "uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -48643,7 +48643,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "98476"
+          "Value": "105805"
         },
         {
           "Name": "Content-Type",
@@ -48651,23 +48651,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU=\""
+          "Value": "\"eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 06:09:18 GMT"
+          "Value": "Tue, 18 Mar 2025 03:51:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU="
+          "Value": "sha256-eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw="
         }
       ]
     },
     {
-      "Route": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.ti5jwjepk9.jpg",
-      "AssetFile": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg",
+      "Route": "uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.o4u8rfffkv.jpg",
+      "AssetFile": "uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -48680,7 +48680,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "98476"
+          "Value": "105805"
         },
         {
           "Name": "Content-Type",
@@ -48688,25 +48688,25 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU=\""
+          "Value": "\"eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 06:09:18 GMT"
+          "Value": "Tue, 18 Mar 2025 03:51:17 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ti5jwjepk9"
+          "Value": "o4u8rfffkv"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-S/FkDN5abWKrItat9n4oVX0PoWS8XVwCBqnFGrHItnU="
+          "Value": "sha256-eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw="
         },
         {
           "Name": "label",
-          "Value": "uploads/man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh-acer-gia-tot-chi-tu-1790000d_banner.jpg"
+          "Value": "uploads/tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg"
         }
       ]
     },
@@ -48865,6 +48865,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Mon, 17 Mar 2025 05:46:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.gi6dccetq4.jpg",
+      "AssetFile": "uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 03:50:15 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gi6dccetq4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg",
+      "AssetFile": "uploads/trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 03:50:15 GMT"
         }
       ],
       "EndpointProperties": [
@@ -49117,6 +49199,170 @@
         {
           "Name": "label",
           "Value": "uploads/zxcxzc_banner.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/zxczxc.gi6dccetq4.jpg",
+      "AssetFile": "uploads/zxczxc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 06:24:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gi6dccetq4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/zxczxc.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/zxczxc.jpg",
+      "AssetFile": "uploads/zxczxc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 06:24:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yEGpACJw8EnWAl9sntZuXuvd6HXrb/1S2cajMm6flAI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/zxczxc_banner.jpg",
+      "AssetFile": "uploads/zxczxc_banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105805"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 06:24:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/zxczxc_banner.o4u8rfffkv.jpg",
+      "AssetFile": "uploads/zxczxc_banner.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105805"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 06:24:47 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o4u8rfffkv"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eG7e1JyjkhyzdLKRF7Py/kmqRH8TKMDSS/PDwZECIHw="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/zxczxc_banner.jpg"
         }
       ]
     },

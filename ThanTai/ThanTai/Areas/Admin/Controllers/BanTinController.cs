@@ -122,7 +122,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Slug,Image,Banner,Category,Content,CreatedAt")] BanTin banTin)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Slug,DuLieuHinhAnhImage,Image,DuLieuHinhAnhBanner,Banner,Category,Content,CreatedAt")] BanTin_ChinhSua banTin)
         {
             if (id != banTin.ID)
             {
@@ -133,7 +133,75 @@ namespace ThanTai.Areas.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(banTin);
+                    var banTinCu = await _context.BanTin.AsNoTracking().FirstOrDefaultAsync(x => x.ID == id);
+                    if (banTinCu == null) return NotFound();
+
+                    string imagePath = banTinCu.Image; // Giữ ảnh cũ nếu không có ảnh mới
+                    string bannerPath = banTinCu.Banner;
+                    string wwwRootPath = _hostEnvironment.WebRootPath;
+                    string uploadFolder = Path.Combine(wwwRootPath, "uploads");
+
+                    if (!Directory.Exists(uploadFolder))
+                    {
+                        Directory.CreateDirectory(uploadFolder);
+                    }
+
+                    // Xử lý ảnh đại diện
+                    if (banTin.DuLieuHinhAnhImage != null)
+                    {
+                        string fileName = Path.GetFileNameWithoutExtension(banTin.DuLieuHinhAnhImage.FileName) + Path.GetExtension(banTin.DuLieuHinhAnhImage.FileName);
+                        string imageFilePath = Path.Combine(uploadFolder, fileName);
+
+                        if (!string.IsNullOrEmpty(banTinCu.Image))
+                        {
+                            string oldImagePath = Path.Combine(uploadFolder, banTinCu.Image);
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+                        }
+
+                        using (var fileStream = new FileStream(imageFilePath, FileMode.Create))
+                        {
+                            await banTin.DuLieuHinhAnhImage.CopyToAsync(fileStream);
+                        }
+                        imagePath = fileName;
+                    }
+
+                    // Xử lý ảnh banner
+                    if (banTin.DuLieuHinhAnhBanner != null)
+                    {
+                        string fileName = Path.GetFileNameWithoutExtension(banTin.DuLieuHinhAnhBanner.FileName) + Path.GetExtension(banTin.DuLieuHinhAnhBanner.FileName);
+                        string bannerFilePath = Path.Combine(uploadFolder, fileName);
+
+                        if (!string.IsNullOrEmpty(banTinCu.Banner))
+                        {
+                            string oldBannerPath = Path.Combine(uploadFolder, banTinCu.Banner);
+                            if (System.IO.File.Exists(oldBannerPath))
+                            {
+                                System.IO.File.Delete(oldBannerPath);
+                            }
+                        }
+
+                        using (var fileStream = new FileStream(bannerFilePath, FileMode.Create))
+                        {
+                            await banTin.DuLieuHinhAnhBanner.CopyToAsync(fileStream);
+                        }
+                        bannerPath = fileName;
+                    }
+
+                    // Cập nhật dữ liệu
+                    var b = await _context.BanTin.FindAsync(id);
+                    if (b == null) return NotFound();
+
+                    b.Title = banTin.Title;
+                    b.Slug = banTin.Slug;
+                    b.Category = banTin.Category;
+                    b.Content = banTin.Content;
+                    b.Image = imagePath;
+                    b.Banner = bannerPath;
+
+                    _context.Update(b);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

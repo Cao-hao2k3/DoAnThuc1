@@ -1,64 +1,64 @@
 ﻿@model ThanTai.Models.BanTin
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Chỉnh sửa tin tức";
 }
 
-<h1>Edit</h1>
+<h2>Chỉnh sửa tin tức</h2>
+<form asp-action="Edit" method="post" enctype="multipart/form-data" accept-charset="UTF-8"> 
+    <input type="hidden" asp-for="ID" />
 
-<h4>BanTin</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Slug" class="control-label"></label>
-                <input asp-for="Slug" class="form-control" />
-                <span asp-validation-for="Slug" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>
-                <input asp-for="Image" class="form-control" />
-                <span asp-validation-for="Image" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Banner" class="control-label"></label>
-                <input asp-for="Banner" class="form-control" />
-                <span asp-validation-for="Banner" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
-                <span asp-validation-for="Category" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedAt" class="control-label"></label>
-                <input asp-for="CreatedAt" class="form-control" />
-                <span asp-validation-for="CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="mb-3">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div class="mb-3">
+        <label asp-for="Slug" class="control-label"></label>
+        <input asp-for="Slug" class="form-control" />
+        <span asp-validation-for="Slug" class="text-danger"></span>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <div class="mb-3">
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <span class="d-block mb-2"><img src="~/uploads/@Model.Image" width="80" class="img-thumbnail" /></span>
+            <span class="d-block mb-2 mt-2 small text-danger">Bỏ trống nếu không muốn cập nhật ảnh mới!</span>
+        }
+        <label asp-for="DuLieuHinhAnhImage" class="control-label"></label>
+        <input asp-for="DuLieuHinhAnhImage" accept="image/jpeg,image/gif,image/png" class="form-control" />
+        <span asp-validation-for="DuLieuHinhAnhImage" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        @if (!string.IsNullOrEmpty(Model.Banner))
+        {
+            <span class="d-block mb-2"><img src="~/uploads/@Model.Banner" width="80" class="img-thumbnail" /></span>
+            <span class="d-block mb-2 mt-2 small text-danger">Bỏ trống nếu không muốn cập nhật ảnh mới!</span>
+        }
+        <label asp-for="DuLieuHinhAnhBanner" class="control-label"></label>
+        <input asp-for="DuLieuHinhAnhBanner" accept="image/jpeg,image/gif,image/png" class="form-control" />
+        <span asp-validation-for="DuLieuHinhAnhBanner" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Category" class="control-label"></label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Content">Nội dung:</label>
+        <textarea id="editor" asp-for="Content" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+</form>
+
+
+<script src="~/lib/ckeditor5/ckeditor.js"></script>
+<script>
+    ClassicEditor.create(document.querySelector('#editor'))
+        .catch(error => console.error(error));
+</script>
