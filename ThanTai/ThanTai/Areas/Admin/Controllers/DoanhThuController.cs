@@ -121,5 +121,20 @@ namespace ThanTai.Areas.Admin.Controllers
 
             return View();
         }
+
+        public IActionResult ChiTiet(int id)
+        {
+            var chiTietDonHang = _context.DatHangChiTiet
+                .Include(d => d.SanPham)
+                .Where(d => d.DatHangID == id)
+                .ToList();
+
+            if (chiTietDonHang == null || !chiTietDonHang.Any())
+            {
+                return NotFound();
+            }
+
+            return View(chiTietDonHang);
+        }
     }
 }

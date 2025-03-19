@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ThanTai.Models.DatHang>
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary text-center">Danh Sách Đơn Hàng</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning text-center" role="alert">
+            <i class="bi bi-exclamation-triangle"></i> Không có đơn hàng nào!
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow rounded p-3 bg-white">
+            <table class="table table-hover align-middle text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.ID)</th>
+                        <th>@Html.DisplayNameFor(model => model.TenNguoiDat)</th>
+                        <th>@Html.DisplayNameFor(model => model.DienThoaiNguoiDat)</th>
+                        <th>@Html.DisplayNameFor(model => model.DiaChiGiaoHang)</th>
+                        <th>@Html.DisplayNameFor(model => model.NgayDatHang)</th>
+                        <th>@Html.DisplayNameFor(model => model.TinhTrangThanhToan)</th>
+                        <th>@Html.DisplayNameFor(model => model.HinhThucGiaoHang)</th>
+                        <th>Tình trạng đơn hàng</th>
+                        <th>@Html.DisplayNameFor(model => model.TenNguoiNhanHangKhac)</th>
+                        <th>@Html.DisplayNameFor(model => model.SoDienThoaiNguoiNhanKhac)</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><span class="badge bg-info">#@item.ID</span></td>
+                            <td>@item.TenNguoiDat</td>
+                            <td>@item.DienThoaiNguoiDat</td>
+                            <td>@item.DiaChiGiaoHang</td>
+                            <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                            <td>@item.TinhTrangThanhToan</td>
+                            <td>@item.HinhThucGiaoHang</td>
+                            <td>@item.HinhThucThanhToan</td>
+                            <td>@item.TenNguoiNhanHangKhac</td>
+                            <td>@item.SoDienThoaiNguoiNhanKhac</td>
+                            <td>
+                                @if (item.TinhTrangID == 1) // Thành Công
+                                {
+                                    <button class="btn btn-success btn-sm" disabled>
+                                        <i class="bi bi-check-circle"></i> Hoàn thành
+                                    </button>
+                                }
+                                else if (item.TinhTrangID == 2) // Thất Bại
+                                {
+                                    <button class="btn btn-dark btn-sm" disabled>
+                                        <i class="bi bi-x-octagon"></i> Thất bại
+                                    </button>
+                                }
+                                else if (item.TinhTrangID == 6) // Đang Giao Hàng
+                                {
+                                    <button class="btn btn-warning btn-sm" disabled>
+                                        <i class="bi bi-truck"></i> Đang giao
+                                    </button>
+                                }
+                                else if (item.TinhTrangID == 7) // Đơn Bị Hủy
+                                {
+                                    <button class="btn btn-danger btn-sm" disabled>
+                                        <i class="bi bi-x-circle"></i> Đã hủy
+                                    </button>
+                                }
+                                else if (item.TinhTrangID == 3) // Đang Xử Lý (Có quyền hủy)
+                                {
+                                    <form action="@Url.Action("HuyDonHang", "ThongTinMuaHang")" method="post"
+                                          onsubmit="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này?');">
+                                        <input type="hidden" name="orderId" value="@item.ID" />
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <i class="bi bi-x-circle"></i> Hủy Đơn
+                                        </button>
+                                    </form>
+                                }
+                                else{
+                                    <span>Đơn hàng bị lõi</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

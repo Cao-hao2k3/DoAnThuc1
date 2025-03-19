@@ -7,6 +7,12 @@
     var selectedNam = ViewBag.SelectedNam as int?;
 }
 
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
+}
+
+
 <div class="container mt-5">
     <h2 class="text-center mb-4 text-primary fw-bold">📊 Quản Lý Doanh Thu</h2>
 
@@ -52,9 +58,29 @@
             <h4 class="text-success fw-bold">
                 💰 Tổng Tiền: <span class="badge bg-danger fs-5">@string.Format("{0:N0}", ViewBag.TongTien) VNĐ</span>
             </h4>
+            <h5 class="text-center text-muted">
+                @if (selectedNgay.HasValue || selectedThang.HasValue || selectedNam.HasValue)
+                {
+                    <span>
+                        📅 Xem doanh thu ngày
+                        @(selectedNgay.HasValue ? selectedNgay.Value.ToString() : "--")/
+                        @(selectedThang.HasValue ? selectedThang.Value.ToString() : "--")/
+                        @(selectedNam.HasValue ? selectedNam.Value.ToString() : "--")
+                    </span>
+                }
+                else
+                {
+                    <span>📅 Vui lòng chọn ngày, tháng hoặc năm để xem doanh thu.</span>
+                }
+            </h5>
+
+            <!-- Thêm khu vực cho các nút xuất -->
+            <div class="text-end mb-3">
+                <div id="export-buttons"></div>
+            </div>
 
             <div class="table-responsive mt-3">
-                <table class="table table-hover table-bordered shadow-sm">
+                <table id="datatable" class="table table-hover table-bordered shadow-sm">
                     <thead class="table-primary text-center">
                         <tr>
                             <th>Mã Đặt Hàng</th>
@@ -63,6 +89,7 @@
                             <th>🏡 Địa Chỉ</th>
                             <th>💵 Tổng Tiền</th>
                             <th>📅 Ngày Đặt</th>
+                            <th width="10%">Xem chi tiết</th>
                         </tr>
                     </thead>
                     <tbody class="align-middle text-center">
@@ -77,6 +104,11 @@
                                     @item.DatHangChiTiet.Sum(ct => ct.DonGia * ct.SoLuong).ToString("N0") VNĐ
                                 </td>
                                 <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                                <td class="text-center">
+                                    <a asp-area="Admin" asp-controller="DoanhThu" asp-action="ChiTiet" asp-route-id="@item.ID" class="btn btn-sm btn-info">
+                                        <i class="fa-solid fa-eye"></i> Xem
+                                    </a>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -91,3 +123,60 @@
         </div>
     }
 </div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#datatable').DataTable({
+                language: {
+                    processing: 'Đang xử lý...',
+                    lengthMenu: 'Hiển thị _MENU_ dòng',
+                    zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+                    info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+                    infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+                    emptyTable: 'Không có dữ liệu',
+                    infoFiltered: '(được lọc từ _MAX_ dòng)',
+                    infoPostFix: '',
+                    search: 'Tìm kiếm:',
+                    paginate: {
+                        first: '<i class="bi bi-skip-backward-fill"></i>',
+                        last: '<i class="bi bi-skip-forward-fill"></i>',
+                        next: '<i class="bi bi-chevron-right"></i>',
+                        previous: '<i class="bi bi-chevron-left"></i>'
+                    },
+                    buttons: {
+                        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+                        copy: '<i class="bi bi-clipboard"></i> Sao chép',
+                        copyTitle: 'Đã sao chép',
+                        copySuccess: {
+                            _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+                            1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+                        }
+                    }
+                },
+                buttons: [{
+                    extend: 'excelHtml5',
+                    title: null,
+                    filename: 'DoanhThu_' + (new Date().toISOString().slice(0,10)), // Tên file động theo ngày
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5] // Không xuất cột "Xem chi tiết"
+                    }
+                }, {
+                    extend: 'copyHtml5',
+                    title: null
+                }]
+            });
+
+            // Thêm các nút xuất vào #export-buttons
+            table.buttons().container().appendTo('#export-buttons');
+            $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+        });
+    </script>
+}
+

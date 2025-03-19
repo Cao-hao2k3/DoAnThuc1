@@ -30,13 +30,10 @@
                 </tr>
             </thead>
             <tbody>
-                @{
-                    var stt = 1;
-                }
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@stt</td>
+                        <td>@item.ID</td>
                         <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -45,7 +42,6 @@
                             <a asp-action="Delete" asp-route-id="@item.ID"><i class="fa-solid fa-trash-can text-danger"></i></a>
                         </td>
                     </tr>
-                    stt++;
                 }
             </tbody>
         </table>

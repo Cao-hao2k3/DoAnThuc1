@@ -23,7 +23,7 @@ namespace ThanTai.Areas.Admin.Controllers
         }
 
         // GET: DatHang
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()    
         {
             var thanTaiShopDbContext = _context.DatHang.Include(d => d.NguoiDung).Include(d => d.TinhTrang);
             return View(await thanTaiShopDbContext.ToListAsync());
@@ -50,7 +50,7 @@ namespace ThanTai.Areas.Admin.Controllers
         public IActionResult DonBiHuy()
         {
             var donHangs = _context.DatHang
-                .Where(d => d.TinhTrangID == 5)
+                .Where(d => d.TinhTrangID == 7)
                 .ToList();
 
             return View("~/Areas/Admin/Views/DatHang/DonBiHuy.cshtml", donHangs);

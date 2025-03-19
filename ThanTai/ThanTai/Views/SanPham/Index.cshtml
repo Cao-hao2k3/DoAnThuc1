@@ -46,9 +46,16 @@
                                     <p class="text-danger"><b>Giá: @giaGoc.ToString("N0") VNĐ</b></p>
                                 }
 
-                                <a asp-area="" asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-success">
-                                    <i class="fas fa-shopping-cart"></i> Xem Chi Tiết
-                                </a>
+                                @if (sanPham.SoLuong != 0)
+                                {
+                                    <a asp-area="" asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-success">
+                                        <i class="fas fa-shopping-cart"></i> Xem Chi Tiết
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="alert alert-warning d-inline-block p-1 m-0">Sản phẩm đã hết hàng</span>
+                                }
                             </div>
                         </div>
                     </div>

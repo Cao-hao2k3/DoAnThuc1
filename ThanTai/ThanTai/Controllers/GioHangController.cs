@@ -233,7 +233,7 @@ namespace ThanTai.Controllers
                     if (sanPham.SoLuong >= soLuongs[i])
                     {
                         sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
-                        sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
+                        sanPham.LuotBan += 1; //Tăng lượt bán lên
                     }
                     else
                     {

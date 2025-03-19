@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Giỏ Hàng Trống";
+}
+
+<style>
+    .container {
+        text-align: center;
+    }
+
+    .image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 150px;
+    }
+</style>
+
+
+<!-- Hình ảnh giỏ hàng trống -->
+<img class="image" src="@Url.Content("~/uploads/anh.png")" alt="Giỏ hàng trống">
+<h2 class="display-4 text-dark">Bạn chưa chọn sản phẩm.</h2>
+<p class="lead text-muted">Hãy nhanh tay chọn ngay sản phẩm yêu thích.</p>
+<!-- Nút quay lại chọn sản phẩm -->
+<a href="@Url.Action("Index", "LoadSanPham")" class="btn btn-success btn-lg">Chọn sản phẩm</a>
+
+

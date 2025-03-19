@@ -29,39 +29,58 @@
                     <th>@Html.DisplayNameFor(model => model.DiaChiGiaoHang)</th>
                     <th>@Html.DisplayNameFor(model => model.NgayDatHang)</th>
                     <th>@Html.DisplayNameFor(model => model.TinhTrangThanhToan)</th>
-                    <th>@Html.DisplayNameFor(model => model.NguoiDung.DiaChi)</th>
-                    <th>@Html.DisplayNameFor(model => model.TinhTrang.MoTa)</th>
+                    <th>@Html.DisplayNameFor(model => model.HinhThucGiaoHang)</th>
+                    <th>Tình trạng đơn hàng</th>
+                    <th>@Html.DisplayNameFor(model => model.TenNguoiNhanHangKhac)</th>
+                    <th>@Html.DisplayNameFor(model => model.SoDienThoaiNguoiNhanKhac)</th>
                     <th width="10%">Hành động</th>
                     <th width="10%">Xem chi tiết</th>
                 </tr>
             </thead>
             <tbody>
-                
                 @foreach (var item in Model)
-                {   if(item != null){
+                {
+                    if (item != null)
+                    {
                         <tr>
                             <td>@Html.DisplayFor(modelItem => item.TenNguoiDat)</td>
                             <td>@Html.DisplayFor(modelItem => item.DienThoaiNguoiDat)</td>
                             <td>@Html.DisplayFor(modelItem => item.DiaChiGiaoHang)</td>
                             <td>@Html.DisplayFor(modelItem => item.NgayDatHang)</td>
                             <td>
-                                @if (item.TinhTrangThanhToan == 1)
+                                @if (item.TinhTrangThanhToan != null && item.TinhTrangThanhToan == 1)
                                 {
                                     <span class="badge bg-danger">Chưa thanh toán</span>
                                 }
-                                else if (item.TinhTrangThanhToan == 2)
+                                else if (item.TinhTrangThanhToan != null && item.TinhTrangThanhToan == 2)
                                 {
                                     <span class="badge bg-success">Đã thanh toán</span>
                                 }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Không xác định</span>
+                                }
+                            </td>
+                            <td>
+                                @(item.HinhThucGiaoHang == 1 ? "Giao hàng tận nơi" : "Nhận tại cửa hàng")
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.TinhTrang.MoTa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TenNguoiNhanHangKhac)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoDienThoaiNguoiNhanKhac)</td>
+
+                            <td class="text-center">
+                                @if (item.TinhTrangID == 3)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning">
+                                        <i class="fa-solid fa-pen-to-square"></i> Sửa
+                                    </a>
+                                }
+                                else
+                                {
+                                    <span class="text-muted text-danger">Không thể chỉnh sửa</span>
+                                }
                             </td>
 
-                            <td>@Html.DisplayFor(modelItem => item.NguoiDung.DiaChi)</td>
-                            <td>@Html.DisplayFor(modelItem => item.TinhTrang.MoTa)</td>
-                            <td class="text-center">
-                                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning">
-                                    <i class="fa-solid fa-pen-to-square"></i> Sửa
-                                </a>
-                            </td>
                             <td class="text-center">
                                 <a asp-action="ChiTiet" asp-route-id="@item.ID" class="btn btn-sm btn-info">
                                     <i class="fa-solid fa-eye"></i> Xem
@@ -69,12 +88,18 @@
                             </td>
                         </tr>
                     }
-                   else{
-                        <div class="alert alert-warning text-center" role="alert">
-                            <i class="fa-solid fa-box-open"></i> Không có đơn hàng nào.
-                        </div>
-                   }
+                    else
+                    {
+                        <tr>
+                            <td colspan="10" class="text-center">
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="fa-solid fa-box-open"></i> Không có đơn hàng nào.
+                                </div>
+                            </td>
+                        </tr>
+                    }
                 }
+
             </tbody>
         </table>
     </div>

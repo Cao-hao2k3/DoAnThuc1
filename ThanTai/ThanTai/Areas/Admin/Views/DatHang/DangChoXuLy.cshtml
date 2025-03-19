@@ -29,8 +29,10 @@
                     <th>@Html.DisplayNameFor(model => model.DiaChiGiaoHang)</th>
                     <th>@Html.DisplayNameFor(model => model.NgayDatHang)</th>
                     <th>@Html.DisplayNameFor(model => model.TinhTrangThanhToan)</th>
-                    <th>@Html.DisplayNameFor(model => model.NguoiDung.DiaChi)</th>
-                    <th>@Html.DisplayNameFor(model => model.TinhTrang.MoTa)</th>
+                    <th>@Html.DisplayNameFor(model => model.HinhThucGiaoHang)</th>
+                    <th>Tình trạng đơn hàng</th>
+                    <th>@Html.DisplayNameFor(model => model.TenNguoiNhanHangKhac)</th>
+                    <th>@Html.DisplayNameFor(model => model.SoDienThoaiNguoiNhanKhac)</th>
                     <th width="10%">Hành động</th>
                     <th width="10%">Xem chi tiết</th>
                 </tr>
@@ -56,9 +58,27 @@
                                     <span class="badge bg-success">Đã thanh toán</span>
                                 }
                             </td>
-
-                            <td>@Html.DisplayFor(modelItem => item.NguoiDung.DiaChi)</td>
-                            <td>@Html.DisplayFor(modelItem => item.TinhTrang.MoTa)</td>
+                            <td>
+                                @if (item.HinhThucGiaoHang == 1)
+                                {
+                                    <span>Giao hàng tận nơi</span>
+                                }
+                                else
+                                {
+                                    <span>Nhận tại cửa hàng</span>
+                                }
+                            </td>
+                            <td>
+                                @if(item.TinhTrangID == 3){
+                                    <span>Đang xử lý</span>
+                                }
+                               else
+                                {
+                                    <span>Đơn hàng này không thuộc ở đây</span>
+                                }
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.TenNguoiNhanHangKhac)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoDienThoaiNguoiNhanKhac)</td>
                             <td class="text-center">
                                 <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning">
                                     <i class="fa-solid fa-pen-to-square"></i> Sửa
