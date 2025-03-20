@@ -59,6 +59,8 @@ namespace ThanTai.Models
         public ICollection<DatHang>? DatHang { get; set; }
 
         public ICollection<GioHang>? GioHang { get; set; }
+
+        public ICollection<QuanLyKhoHang>? QuanLyKhoHang { get;set; }
     }
 
     [NotMapped]

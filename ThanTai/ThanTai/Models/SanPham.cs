@@ -55,6 +55,7 @@ namespace ThanTai.Models
         public virtual ICollection<HinhAnhSanPham>? HinhAnhSanPham { get; set; } = new List<HinhAnhSanPham>();
         public virtual ICollection<GiaTriThuocTinh>? GiaTriThuocTinhs { get; set; } = new List<GiaTriThuocTinh>();
         public virtual ICollection<KhuyenMai>? KhuyenMais { get; set; } = new List<KhuyenMai>(); 
+        public virtual ICollection<QuanLyKhoHang>? QuanLyKhoHang { get; set;} = new List<QuanLyKhoHang>();
     }
 
     public class ThuocTinh

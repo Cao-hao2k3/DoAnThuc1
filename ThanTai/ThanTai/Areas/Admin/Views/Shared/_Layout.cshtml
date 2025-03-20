@@ -98,8 +98,13 @@
 					<li class="nav-item pcoded-menu-caption">
 						<label>Quản lý khác</label>
 					</li>
-					<li class="nav-item">
-						<a asp-area="Admin" asp-controller="QuanLyKhoHang" asp-action="Index"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Quản lý kho hàng</span></a>
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Quản lý kho hàng</span></a>
+						<ul class="pcoded-submenu">
+							<li><a asp-area="Admin" asp-controller="QuanLyKhoHang" asp-action="Index">Thống kê kho hàng</a></li>
+							<li><a asp-area="Admin" asp-controller="QuanLyKhoHang" asp-action="NhapHang">Yêu cầu nhập kho</a></li>
+							<li><a asp-area="Admin" asp-controller="QuanLyKhoHang" asp-action="HienThiLichSu">Lịch sử nhập/xuất kho</a></li>
+						</ul>
 					</li>
 					<li class="nav-item">
 						<a asp-area="Admin" asp-controller="KhuyenMai" asp-action="Index"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Khuyến Mãi</span></a>

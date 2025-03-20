@@ -1,0 +1,46 @@
+﻿@model ThanTai.Models.QuanLyKhoHang
+
+@{
+    ViewData["Title"] = "Nhập hàng vào kho";
+}
+
+<div class="card">
+    <h5 class="card-header bg-primary text-white">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <form asp-action="NhapHang">
+
+            <div class="mb-3">
+                <label asp-for="SanPhamID" class="form-label">Sản phẩm</label>
+                <select asp-for="SanPhamID" class="form-select" asp-items="ViewBag.SanPhamID">
+                    <option value="">-- Chọn sản phẩm --</option>
+                </select>
+                <span asp-validation-for="SanPhamID" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="NguoiDungID" />
+
+            <!-- Số lượng -->
+            <div class="mb-3">
+                <label asp-for="SoLuong" class="form-label">Số lượng</label>
+                <input asp-for="SoLuong" type="number" class="form-control" min="1" required />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div>
+
+            <!-- Ghi chú -->
+            <div class="mb-3">
+                <label asp-for="GhiChu" class="form-label">Ghi chú</label>
+                <textarea asp-for="GhiChu" class="form-control"></textarea>
+                <span asp-validation-for="GhiChu" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success"><i class="fa-solid fa-plus"></i> Lưu</button>
+                <a asp-action="Index" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Quay về</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

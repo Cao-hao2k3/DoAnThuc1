@@ -65,6 +65,7 @@ namespace ThanTai.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                sanPham.SoLuong = 0;
                 // Tính toán giá sau khi giảm
                 sanPham.GiaSauKhiGiam = sanPham.DonGia - (sanPham.DonGia * (sanPham.GiamGia ?? 0) / 100);
 

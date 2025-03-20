@@ -1,0 +1,129 @@
+﻿@model IEnumerable<ThanTai.Models.QuanLyKhoHang>
+
+@{
+    ViewData["Title"] = "Quản lý kho hàng";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
+}
+
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-12 text-end">
+                <div id="export-buttons"></div>
+            </div>
+        </div>
+
+        <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Sản Phẩm</th>
+                    <th>Người Thực Hiện</th>
+                    <th>Loại Giao Dịch</th>
+                    <th>Số Lượng</th>
+                    <th>Thời Gian</th>
+                    <th>Ghi Chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr class="@((item.LoaiGiaoDich == 1) ? "table-success" : "table-danger")">
+                            <td>@item.ID</td>
+                            <td>@(item.SanPham?.TenSanPham ?? "N/A")</td>
+                            <td>@(item.NguoiDung?.HoVaTen ?? "Không xác định")</td>
+                            <td>
+                                @if (item.LoaiGiaoDich == 1)
+                                {
+                                    <span class="badge bg-success">Nhập</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">Xuất</span>
+                                }
+                            </td>
+                            <td>@item.SoLuong</td>
+                            <td>@item.ThoiGian.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@(string.IsNullOrEmpty(item.GhiChu) ? "Không có" : item.GhiChu)</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="7" class="text-center text-muted">Chưa có dữ liệu</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@{
+    int tongGiaoDich = Model?.Count() ?? 0;
+    int tongNhap = Model?.Count(gd => gd.LoaiGiaoDich == 1) ?? 0;
+    int tongXuat = Model?.Count(gd => gd.LoaiGiaoDich == 2) ?? 0;
+}
+
+<div class="alert alert-info">
+    <strong>Tổng giao dịch:</strong> @tongGiaoDich |
+    <strong>Nhập hàng:</strong> <span class="text-success">@tongNhap</span> |
+    <strong>Xuất hàng:</strong> <span class="text-danger">@tongXuat</span>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#datatable').DataTable({
+                language: {
+                    processing: 'Đang xử lý...',
+                    lengthMenu: 'Hiển thị _MENU_ dòng',
+                    zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+                    info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+                    infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+                    emptyTable: 'Không có dữ liệu',
+                    infoFiltered: '(được lọc từ _MAX_ dòng)',
+                    search: 'Tìm kiếm:',
+                    paginate: {
+                        first: '<i class="bi bi-skip-backward-fill"></i>',
+                        last: '<i class="bi bi-skip-forward-fill"></i>',
+                        next: '<i class="bi bi-chevron-right"></i>',
+                        previous: '<i class="bi bi-chevron-left"></i>'
+                    },
+                    buttons: {
+                        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+                        copy: '<i class="bi bi-clipboard"></i> Sao chép',
+                        copyTitle: 'Đã sao chép',
+                        copySuccess: {
+                            _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+                            1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+                        }
+                    }
+                },
+                buttons: [{
+                    extend: 'excelHtml5',
+                    title: null,
+                    filename: 'LichSuKhoHang'
+                }, {
+                    extend: 'copyHtml5',
+                    title: null
+                }]
+            });
+
+            table.buttons().container().appendTo('#export-buttons');
+            $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+            $('#datatable').wrap('<div class="table-responsive"></div>');
+        });
+    </script>
+}

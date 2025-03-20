@@ -4,60 +4,117 @@
     ViewData["Title"] = "Quản lý kho sản phẩm";
 }
 
-<div class="container">
-    <h1 class="my-4">Quản lý kho sản phẩm</h1>
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
+}
 
-    <!-- Nút thêm sản phẩm -->
-    <p>
-        <a asp-action="Create" class="btn btn-primary">Thêm sản phẩm mới</a>
-    </p>
-
-    <!-- Bảng danh sách sản phẩm -->
-    <table class="table table-bordered table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>@Html.DisplayNameFor(model => model.ID)</th>
-                <th>@Html.DisplayNameFor(model => model.TenSanPham)</th>
-                <th>@Html.DisplayNameFor(model => model.DonGia)</th>
-                <th>@Html.DisplayNameFor(model => model.SoLuong)</th>
-                <th>@Html.DisplayNameFor(model => model.GiamGia)</th>
-                <th>@Html.DisplayNameFor(model => model.GiaSauKhiGiam)</th>
-                <th>@Html.DisplayNameFor(model => model.LoaiSanPham)</th>
-                <th>@Html.DisplayNameFor(model => model.ThuongHieu)</th>
-                <th>Thao tác</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<div class="card">
+    <h5 class="card-header">@ViewData["Title"]</h5>
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-12 text-end">
+                <div id="export-buttons"></div>
+            </div>
+        </div>
+        <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
+            <thead>
                 <tr>
-                    <td>@Html.DisplayFor(modelItem => item.ID)</td>
-                    <td>@Html.DisplayFor(modelItem => item.TenSanPham)</td>
-                    <td>@Html.DisplayFor(modelItem => item.DonGia)</td>
-                    <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
-                    <td>@Html.DisplayFor(modelItem => item.GiamGia)%</td>
-                    <td>@Html.DisplayFor(modelItem => item.GiaSauKhiGiam)</td>
-                    <td>@(item.LoaiSanPham)</td>
-                    <td>@(item.ThuongHieu?.TenThuongHieu ?? "Chưa xác định")</td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning">Sửa</a>
-                        <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-sm btn-info">Chi tiết</a>
-                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">Xóa</a>
-                    </td>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Thương hiệu</th>
+                    @* <th>Thao tác</th> *@
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr class="@((item.SoLuong <= 3) ? "table-danger" : "")">
+                            <td>@item.ID</td>
+                            <td>@item.TenSanPham</td>
+                            <td>@item.SoLuong</td>
+                            <td>@(item.ThuongHieu?.TenThuongHieu ?? "Chưa xác định")</td>
+                            @* <td class="text-center"> *@
+                            @*     <a asp-area="Admin" asp-controller="SanPham" asp-action="Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning"> *@
+                            @*         <i class="fa-solid fa-pen-to-square"></i> *@
+                            @*     </a> *@
+                            @*     <a asp-area="Admin" asp-controller="SanPham" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger"> *@
+                            @*         <i class="fa-solid fa-trash-can"></i> *@
+                            @*     </a> *@
+                            @* </td> *@
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="6" class="text-center">Không có sản phẩm nào</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<!-- CSS tùy chỉnh (tùy chọn) -->
-<style>
-    .table th, .table td {
-        vertical-align: middle;
-        text-align: center;
-    }
+@{
+    int tongSanPham = Model?.Count() ?? 0;
+    int sapHetHang = Model?.Count(sp => sp.SoLuong <= 3) ?? 0;
+}
 
-    .btn {
-        margin-right: 5px;
-    }
-</style>
+<div class="alert alert-info">
+    <strong>Tổng số sản phẩm:</strong> @tongSanPham |
+    <strong>Sản phẩm sắp hết hàng:</strong> <span class="text-danger">@sapHetHang</span>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script>
+               var table = $('#datatable').DataTable({
+         language: {
+         processing: 'Đang xử lý...',
+         lengthMenu: 'Hiển thị _MENU_ dòng',
+         zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+         info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+         infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+         emptyTable: 'Không có dữ liệu',
+         infoFiltered: '(được lọc từ _MAX_ dòng)',
+         infoPostFix: '',
+         search: 'Tìm kiếm:',
+         paginate: {
+                 first: '<i class="bi bi-skip-backward-fill"></i>',
+        last: '<i class="bi bi-skip-forward-fill"></i>',
+        next: '<i class="bi bi-chevron-right"></i>',
+        previous: '<i class="bi bi-chevron-left"></i>'
+         },
+         buttons: {
+        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+        copy: '<i class="bi bi-clipboard"></i> Sao chép',
+        copyTitle: 'Đã sao chép',
+        copySuccess: {
+         _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+         1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+         }
+         }
+         },
+         buttons: [{
+         extend: 'excelHtml5',
+         title: null,
+         filename: 'DanhSachSanPham'
+         }, {
+         extend: 'copyHtml5',
+         title: null
+         }]
+         });
+
+         table.buttons().container().appendTo('#export-buttons');
+         $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+         $('#datatable').wrap('<div class="table-responsive"></div>');
+    </script>
+}
