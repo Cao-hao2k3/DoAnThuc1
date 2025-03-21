@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
@@ -232,7 +232,7 @@ namespace ThanTai.Controllers
                 {
                     if (sanPham.SoLuong >= soLuongs[i])
                     {
-                        sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
+                        //sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
                         sanPham.LuotBan += 1; //Tăng lượt bán lên
                     }
                     else
@@ -347,7 +347,7 @@ namespace ThanTai.Controllers
                     {
                         if (sanPham.SoLuong >= soLuongs[i])
                         {
-                            sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
+                            //sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
                             sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
                         }
                         else

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\areas\\admin\\views\\quanlykhohang\\hienthilichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\areas\\admin\\views\\quanlykhohang\\hienthilichsu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\areas\\admin\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\areas\\admin\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,23 +30,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HienThiLichSu.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Views\\QuanLyKhoHang\\HienThiLichSu.cshtml",
-              "RelativeDocumentMoniker": "ThanTai\\Areas\\Admin\\Views\\QuanLyKhoHang\\HienThiLichSu.cshtml",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Views\\QuanLyKhoHang\\HienThiLichSu.cshtml",
-              "RelativeToolTip": "ThanTai\\Areas\\Admin\\Views\\QuanLyKhoHang\\HienThiLichSu.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAjwC0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T13:29:20.582Z",
+              "Title": "DatHangController.cs",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
+              "RelativeDocumentMoniker": "ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
+              "RelativeToolTip": "ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAcwMQAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T12:36:58.144Z",
               "EditorCaption": ""
             }
           ]

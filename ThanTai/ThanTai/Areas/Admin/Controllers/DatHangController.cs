@@ -16,10 +16,11 @@ namespace ThanTai.Areas.Admin.Controllers
     public class DatHangController : Controller
     {
         private readonly ThanTaiShopDbContext _context;
-
-        public DatHangController(ThanTaiShopDbContext context)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public DatHangController(ThanTaiShopDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: DatHang
@@ -139,6 +140,16 @@ namespace ThanTai.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiNguoiDat,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
         {
+            // Kiểm tra session UserID
+            int? userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserID");
+
+            // Nếu chưa đăng nhập, chuyển về trang Login
+            if (userId == null)
+            {
+                Console.WriteLine("⚠️ UserID trong session không tồn tại hoặc bị null!");
+                return RedirectToAction("Login", "Home");
+            }
+
             if (id != datHang.ID)
             {
                 return NotFound();
@@ -148,6 +159,56 @@ namespace ThanTai.Areas.Admin.Controllers
             {
                 try
                 {
+                    if (datHang.TinhTrangThanhToan == 1) // Nếu đơn hàng đã thanh toán thì xử lý xuất kho
+                    {
+                        // Lấy danh sách chi tiết đơn hàng
+                        var chiTietDonHang = _context.DatHangChiTiet.Where(d => d.DatHangID == datHang.ID).ToList();
+
+                        // Kiểm tra tất cả sản phẩm trước khi trừ
+                        foreach (var item in chiTietDonHang)
+                        {
+                            var sanPham = await _context.SanPham.FindAsync(item.SanPhamID);
+                            if (sanPham != null)
+                            {
+                                // Tính toán số lượng tồn kho thực tế
+                                var tongSoLuongKho = _context.QuanLyKhoHang
+                                    .Where(k => k.SanPhamID == sanPham.ID && k.LoaiGiaoDich == 1) // Tính số lượng nhập kho
+                                    .Sum(k => k.SoLuong)
+                                    - _context.QuanLyKhoHang
+                                    .Where(k => k.SanPhamID == sanPham.ID && k.LoaiGiaoDich == 2) // Trừ số lượng xuất kho
+                                    .Sum(k => k.SoLuong);
+
+                                if (tongSoLuongKho < item.SoLuong)
+                                {
+                                    ModelState.AddModelError("", $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.");
+                                    return View(datHang); // Báo lỗi và không cập nhật đơn hàng
+                                }
+                            }
+                        }
+
+                        // Nếu tất cả sản phẩm đều đủ số lượng, tiến hành trừ kho
+                        foreach (var item in chiTietDonHang)
+                        {
+                            var sanPham = await _context.SanPham.FindAsync(item.SanPhamID);
+                            if (sanPham != null)
+                            {
+                                // Trừ số lượng trong kho
+                                sanPham.SoLuong -= item.SoLuong;
+                                Console.WriteLine($"📌 Giá trị UserID: {userId}");
+                                // Ghi nhận lịch sử xuất kho
+                                _context.QuanLyKhoHang.Add(new QuanLyKhoHang
+                                {
+                                    SanPhamID = sanPham.ID,
+                                    NguoiDungID = userId.Value,
+                                    LoaiGiaoDich = 2, // Xuất kho
+                                    SoLuong = item.SoLuong,
+                                    ThoiGian = DateTime.Now,
+                                    GhiChu = $"Xuất kho do đơn hàng #{datHang.ID}"
+                                });
+                            }
+                        }
+                    }
+
                     _context.Update(datHang);
                     await _context.SaveChangesAsync();
                 }
@@ -164,9 +225,12 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["TinhTrangID"] = new SelectList(_context.TinhTrang, "ID", "MoTa", datHang.TinhTrangID);
             return View(datHang);
         }
+
+
 
         // GET: DatHang/Delete/5
         public async Task<IActionResult> Delete(int? id)
