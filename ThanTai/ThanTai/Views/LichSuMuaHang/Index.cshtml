@@ -69,13 +69,15 @@
                                 }
                                 else if (item.TinhTrangID == 3) // Đang Xử Lý (Có quyền hủy)
                                 {
-                                    <form action="@Url.Action("HuyDonHang", "ThongTinMuaHang")" method="post"
+                                    <form action="@Url.Action("HuyDonHang", "LichSuMuaHang")" method="post"
                                           onsubmit="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này?');">
+                                        @Html.AntiForgeryToken()
                                         <input type="hidden" name="orderId" value="@item.ID" />
                                         <button type="submit" class="btn btn-danger btn-sm">
                                             <i class="bi bi-x-circle"></i> Hủy Đơn
                                         </button>
                                     </form>
+
                                 }
                                 else{
                                     <span>Đơn hàng bị lõi</span>

@@ -175,7 +175,7 @@ namespace ThanTai.Controllers
                 DienThoaiNguoiDat = dienThoaiNguoiDat,
                 DiaChiGiaoHang = diaChiGiaoHang,
                 NgayDatHang = DateTime.Now,
-                TinhTrangThanhToan = 1, // Chưa thanh toán
+                TinhTrangThanhToan = 2, // Chưa thanh toán
                 HinhThucGiaoHang = hinhThucGiaoHang,
                 TenNguoiNhanHangKhac = otherName,
                 SoDienThoaiNguoiNhanKhac = otherPhone,
@@ -233,7 +233,7 @@ namespace ThanTai.Controllers
                     if (sanPham.SoLuong >= soLuongs[i])
                     {
                         //sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
-                        sanPham.LuotBan += 1; //Tăng lượt bán lên
+                        sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
                     }
                     else
                     {
@@ -311,7 +311,7 @@ namespace ThanTai.Controllers
                     NguoiDungID = userId.Value,
                     TinhTrangID = 3,
                     NgayDatHang = DateTime.Now,
-                    TinhTrangThanhToan = 2,
+                    TinhTrangThanhToan = 1,
                     HinhThucThanhToan = 3,
                     TenNguoiDat = orderData.TenNguoiDat,
                     DienThoaiNguoiDat = orderData.DienThoaiNguoiDat,

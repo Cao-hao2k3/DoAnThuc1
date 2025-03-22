@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\areas\\admin\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\areas\\admin\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\lichsumuahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\lichsumuahang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\controllers\\lichsumuahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\controllers\\lichsumuahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DatHangController.cs",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
-              "RelativeDocumentMoniker": "ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
-              "RelativeToolTip": "ThanTai\\Areas\\Admin\\Controllers\\DatHangController.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAiwLgAAAAhAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\LichSuMuaHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "ThanTai\\Views\\LichSuMuaHang\\Index.cshtml",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\LichSuMuaHang\\Index.cshtml",
+              "RelativeToolTip": "ThanTai\\Views\\LichSuMuaHang\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-22T06:46:13.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LichSuMuaHangController.cs",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\LichSuMuaHangController.cs",
+              "RelativeDocumentMoniker": "ThanTai\\Controllers\\LichSuMuaHangController.cs",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\LichSuMuaHangController.cs",
+              "RelativeToolTip": "ThanTai\\Controllers\\LichSuMuaHangController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwFsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:36:58.144Z",
+              "WhenOpened": "2025-03-22T06:34:32.093Z",
               "EditorCaption": ""
             }
           ]

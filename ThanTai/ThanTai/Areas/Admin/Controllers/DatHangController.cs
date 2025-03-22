@@ -138,7 +138,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // POST: DatHang/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiNguoiDat,DiaChiGiaoHang,NgayDatHang,TinhTrangThanhToan")] DatHang datHang)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,NguoiDungID,TinhTrangID,TenNguoiDat,DienThoaiNguoiDat,DiaChiGiaoHang,NgayDatHang")] DatHang datHang)
         {
             // Kiểm tra session UserID
             int? userId = _httpContextAccessor.HttpContext.Session.GetInt32("UserID");
@@ -155,6 +155,7 @@ namespace ThanTai.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            datHang.TinhTrangThanhToan = 1;
             if (ModelState.IsValid)
             {
                 try
@@ -177,7 +178,6 @@ namespace ThanTai.Areas.Admin.Controllers
                                     - _context.QuanLyKhoHang
                                     .Where(k => k.SanPhamID == sanPham.ID && k.LoaiGiaoDich == 2) // Trừ số lượng xuất kho
                                     .Sum(k => k.SoLuong);
-
                                 if (tongSoLuongKho < item.SoLuong)
                                 {
                                     ModelState.AddModelError("", $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.");
@@ -185,7 +185,7 @@ namespace ThanTai.Areas.Admin.Controllers
                                 }
                             }
                         }
-
+                   
                         // Nếu tất cả sản phẩm đều đủ số lượng, tiến hành trừ kho
                         foreach (var item in chiTietDonHang)
                         {
@@ -194,7 +194,7 @@ namespace ThanTai.Areas.Admin.Controllers
                             {
                                 // Trừ số lượng trong kho
                                 sanPham.SoLuong -= item.SoLuong;
-                                Console.WriteLine($"📌 Giá trị UserID: {userId}");
+                                
                                 // Ghi nhận lịch sử xuất kho
                                 _context.QuanLyKhoHang.Add(new QuanLyKhoHang
                                 {
@@ -208,7 +208,6 @@ namespace ThanTai.Areas.Admin.Controllers
                             }
                         }
                     }
-
                     _context.Update(datHang);
                     await _context.SaveChangesAsync();
                 }
@@ -229,7 +228,6 @@ namespace ThanTai.Areas.Admin.Controllers
             ViewData["TinhTrangID"] = new SelectList(_context.TinhTrang, "ID", "MoTa", datHang.TinhTrangID);
             return View(datHang);
         }
-
 
 
         // GET: DatHang/Delete/5

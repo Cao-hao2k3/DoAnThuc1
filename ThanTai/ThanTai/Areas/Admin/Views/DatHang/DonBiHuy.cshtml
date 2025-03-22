@@ -24,6 +24,7 @@
         <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
+                    <th>@Html.DisplayNameFor(model => model.ID)</th>
                     <th>@Html.DisplayNameFor(model => model.TenNguoiDat)</th>
                     <th>@Html.DisplayNameFor(model => model.DienThoaiNguoiDat)</th>
                     <th>@Html.DisplayNameFor(model => model.DiaChiGiaoHang)</th>
@@ -43,16 +44,17 @@
                     if (item != null)
                     {
                         <tr>
+                            <td>@Html.DisplayFor(modelItem => item.ID)</td>
                             <td>@Html.DisplayFor(modelItem => item.TenNguoiDat)</td>
                             <td>@Html.DisplayFor(modelItem => item.DienThoaiNguoiDat)</td>
                             <td>@Html.DisplayFor(modelItem => item.DiaChiGiaoHang)</td>
                             <td>@Html.DisplayFor(modelItem => item.NgayDatHang)</td>
                             <td>
-                                @if (item.TinhTrangThanhToan == 1)
+                                @if (item.TinhTrangThanhToan == 2)
                                 {
                                     <span class="badge bg-danger">Chưa thanh toán</span>
                                 }
-                                else if (item.TinhTrangThanhToan == 2)
+                                else if (item.TinhTrangThanhToan == 1)
                                 {
                                     <span class="badge bg-success">Đã thanh toán</span>
                                 }
