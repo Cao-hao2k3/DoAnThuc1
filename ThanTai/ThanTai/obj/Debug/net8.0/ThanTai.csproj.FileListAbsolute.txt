@@ -268,20 +268,18 @@ D:\HocTap\DoAnTTCK\ThanTai\ThanTai\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\HocTap\DoAnTTCK\ThanTai\ThanTai\bin\Debug\net8.0\SlugGenerator.dll
 D:\HocTap\DoAnTTCK\ThanTai\ThanTai\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 D:\HocTap\DoAnTTCK\ThanTai\ThanTai\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.exe
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\appsettings.Development.json
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\appsettings.json
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\libman.json
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.staticwebassets.endpoints.json
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.staticwebassets.runtime.json
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.exe
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.deps.json
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.runtimeconfig.json
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.pdb
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.staticwebassets.endpoints.json
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Azure.Core.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Azure.Identity.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Humanizer.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MailKit.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
@@ -332,6 +330,7 @@ D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MimeKit.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\NuGet.Common.dll
@@ -357,6 +356,7 @@ D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Lin
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Memory.Data.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Windows.Extensions.dll
@@ -508,6 +508,7 @@ D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\w
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.csproj.AssemblyReference.cache
@@ -537,10 +538,9 @@ D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.cs
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\refint\ThanTai.dll
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.pdb
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.deps.json
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.runtimeconfig.json
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.dll
+D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\ThanTai.pdb
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ThanTai.genruntimeconfig.cache
 D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\obj\Debug\net8.0\ref\ThanTai.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MailKit.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\MimeKit.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
-D:\HocTap\DoAnTTCK - BackUpLoginXong\ThanTai\ThanTai\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

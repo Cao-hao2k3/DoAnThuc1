@@ -22,7 +22,7 @@
                         <th>@Html.DisplayNameFor(model => model.NgayDatHang)</th>
                         <th>@Html.DisplayNameFor(model => model.TinhTrangThanhToan)</th>
                         <th>@Html.DisplayNameFor(model => model.HinhThucGiaoHang)</th>
-                        <th>Tình trạng đơn hàng</th>
+
                         <th>@Html.DisplayNameFor(model => model.TenNguoiNhanHangKhac)</th>
                         <th>@Html.DisplayNameFor(model => model.SoDienThoaiNguoiNhanKhac)</th>
                         <th>Hành Động</th>
@@ -37,9 +37,24 @@
                             <td>@item.DienThoaiNguoiDat</td>
                             <td>@item.DiaChiGiaoHang</td>
                             <td>@item.NgayDatHang.ToString("dd/MM/yyyy")</td>
-                            <td>@item.TinhTrangThanhToan</td>
-                            <td>@item.HinhThucGiaoHang</td>
-                            <td>@item.HinhThucThanhToan</td>
+                            <td>
+                                @if (item.TinhTrangThanhToan != null && item.TinhTrangThanhToan == 2)
+                                {
+                                    <span class="badge bg-danger">Chưa thanh toán</span>
+                                }
+                                else if (item.TinhTrangThanhToan != null && item.TinhTrangThanhToan == 1)
+                                {
+                                    <span class="badge bg-success">Đã thanh toán</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Không xác định</span>
+                                }
+                            </td>
+                            <td>
+                                @(item.HinhThucGiaoHang == 1 ? "Giao hàng tận nơi" : "Nhận tại cửa hàng")
+                            </td>
+   
                             <td>@item.TenNguoiNhanHangKhac</td>
                             <td>@item.SoDienThoaiNguoiNhanKhac</td>
                             <td>

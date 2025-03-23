@@ -1,0 +1,95 @@
+﻿@model ThanTai.Models.NguoiDung_ChinhSua
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h4>Cập Nhật Thông Tin Người Dùng</h4>
+        </div>
+        <div class="card-body">
+            <form asp-action="CapNhatThongTin" method="post" enctype="multipart/form-data">
+                <input type="hidden" asp-for="ID" />
+                <input type="hidden" asp-for="TenDangNhap" />
+                <input type="hidden" asp-for="Quyen" />
+
+                <div class="row">
+                    <!-- Họ và tên -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Họ và tên:</strong></label>
+                        <input asp-for="HoVaTen" class="form-control" required />
+                        <span asp-validation-for="HoVaTen" class="text-danger"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Email:</strong></label>
+                        <input asp-for="Email" class="form-control" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Điện thoại -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Điện thoại:</strong></label>
+                        <input asp-for="DienThoai" class="form-control" />
+                        <span asp-validation-for="DienThoai" class="text-danger"></span>
+                    </div>
+
+                    <!-- Địa chỉ -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Địa chỉ:</strong></label>
+                        <input asp-for="DiaChi" class="form-control" />
+                        <span asp-validation-for="DiaChi" class="text-danger"></span>
+                    </div>
+
+                    <!-- Mật khẩu mới -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Mật khẩu mới:</strong></label>
+                        <input asp-for="MatKhauMoi" type="password" class="form-control" />
+                        <span asp-validation-for="MatKhauMoi" class="text-danger"></span>
+                    </div>
+
+                    <!-- Xác nhận mật khẩu -->
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label"><strong>Xác nhận mật khẩu:</strong></label>
+                        <input asp-for="XacNhanMatKhau" type="password" class="form-control" />
+                        <span asp-validation-for="XacNhanMatKhau" class="text-danger"></span>
+                    </div>
+
+                    <!-- Ảnh đại diện -->
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label"><strong>Ảnh tài khoản:</strong></label>
+                        <input asp-for="DuLieuHinhAnh" type="file" class="form-control" />
+                        @if (!string.IsNullOrEmpty(Model.Anh))
+                        {
+                            <div class="mt-2">
+                                <img src="@Model.Anh" alt="Ảnh đại diện" class="img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;" />
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-success px-4"> Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3 text-center">
+        @TempData["SuccessMessage"]
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 2000);
+        }
+    </script>
+}

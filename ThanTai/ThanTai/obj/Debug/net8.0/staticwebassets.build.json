@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qVQfFZckDC9bVwMyWg08Asy1LIY3vGsNvNWqz+EwbFI=",
+  "Hash": "OaZSTTgzJj0qQqjr/lyZ2O0UpZD0dPhs8QNF/mpTayE=",
   "Source": "ThanTai",
   "BasePath": "_content/ThanTai",
   "Mode": "Default",
@@ -11817,6 +11817,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\639a67b5-83f7-4e85-9651-bd092fdbac0f.jpg"
+    },
+    {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\688015.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "uploads/688015#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vwb5dklpix",
+      "Integrity": "caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\688015.jpg"
     },
     {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\77a854a2-e9a4-48d0-8111-eb1dbf44a939.png",
@@ -56957,7 +56978,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 06:27:04 GMT"
+          "Value": "Sun, 23 Mar 2025 06:17:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -57002,7 +57023,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 06:27:04 GMT"
+          "Value": "Sun, 23 Mar 2025 06:17:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -57043,7 +57064,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 06:27:04 GMT"
+          "Value": "Sun, 23 Mar 2025 06:17:18 GMT"
         },
         {
           "Name": "Link",
@@ -57092,7 +57113,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 06:27:04 GMT"
+          "Value": "Sun, 23 Mar 2025 06:17:18 GMT"
         },
         {
           "Name": "Link",
@@ -58743,6 +58764,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Xg6trKo8tHNoDirHU7ZeRT3mmkbw3Jpc3+0MsUWUT+Q="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/688015.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\688015.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 05:31:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/688015.vwb5dklpix.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\688015.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2080761"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Mar 2025 05:31:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vwb5dklpix"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/688015.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-caez1ZvVZajaZmdkSq23VER0kjEMDivzqqnDUHVzHxo="
         }
       ]
     },
@@ -61393,7 +61496,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 03:51:07 GMT"
+          "Value": "Sun, 23 Mar 2025 05:15:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -61430,7 +61533,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Mar 2025 03:51:07 GMT"
+          "Value": "Sun, 23 Mar 2025 05:15:18 GMT"
         },
         {
           "Name": "Cache-Control",

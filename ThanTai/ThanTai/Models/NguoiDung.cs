@@ -115,7 +115,7 @@ namespace ThanTai.Models
 
         [NotMapped]
         [Display(Name = "Xác nhận mật khẩu")]
-        [Compare("MatKhauMoi", ErrorMessage = "Xác nhận mật khẩu không chính xác!")]
+        [Compare("MatKhauMoi", ErrorMessage = "Mật khẩu không trùng khớp với mật khẩu mới ! Vui lòng thử lại !")]
         [DataType(DataType.Password)]
         public string? XacNhanMatKhau { get; set; }
 
