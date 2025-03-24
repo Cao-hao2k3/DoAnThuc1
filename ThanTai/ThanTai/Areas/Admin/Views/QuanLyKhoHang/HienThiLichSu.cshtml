@@ -7,16 +7,33 @@
 @section Styles {
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 }
 
 <div class="card">
     <h5 class="card-header">@ViewData["Title"]</h5>
     <div class="card-body">
-        <div class="row mb-3">
-            <div class="col-md-12 text-end">
-                <div id="export-buttons"></div>
+        <!-- Thanh tìm kiếm -->
+        <form method="get" asp-action="HienThiLichSu">
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="fromDate" class="form-label">Từ ngày</label>
+                    <input type="date" id="fromDate" name="fromDate" class="form-control" value="@Context.Request.Query["fromDate"]">
+                </div>
+                <div class="col-md-4">
+                    <label for="loaiGiaoDich" class="form-label">Loại giao dịch</label>
+                    <select id="loaiGiaoDich" name="loaiGiaoDich" class="form-select">
+                        <option value="">Tất cả</option>
+                        <option value="1" selected="@(Context.Request.Query["loaiGiaoDich"] == "1")">Nhập hàng</option>
+                        <option value="2" selected="@(Context.Request.Query["loaiGiaoDich"] == "2")">Xuất hàng</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100">Lọc dữ liệu</button>
+                </div>
             </div>
-        </div>
+        </form>
+
 
         <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
             <thead class="table-dark">
@@ -64,18 +81,6 @@
     </div>
 </div>
 
-@{
-    int tongGiaoDich = Model?.Count() ?? 0;
-    int tongNhap = Model?.Count(gd => gd.LoaiGiaoDich == 1) ?? 0;
-    int tongXuat = Model?.Count(gd => gd.LoaiGiaoDich == 2) ?? 0;
-}
-
-<div class="alert alert-info">
-    <strong>Tổng giao dịch:</strong> @tongGiaoDich |
-    <strong>Nhập hàng:</strong> <span class="text-success">@tongNhap</span> |
-    <strong>Xuất hàng:</strong> <span class="text-danger">@tongXuat</span>
-</div>
-
 @section Scripts {
     <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
@@ -83,47 +88,59 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
     <script>
         $(document).ready(function () {
-            var table = $('#datatable').DataTable({
-                language: {
-                    processing: 'Đang xử lý...',
-                    lengthMenu: 'Hiển thị _MENU_ dòng',
-                    zeroRecords: 'Không tìm thấy dòng nào phù hợp',
-                    info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
-                    infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
-                    emptyTable: 'Không có dữ liệu',
-                    infoFiltered: '(được lọc từ _MAX_ dòng)',
-                    search: 'Tìm kiếm:',
-                    paginate: {
-                        first: '<i class="bi bi-skip-backward-fill"></i>',
-                        last: '<i class="bi bi-skip-forward-fill"></i>',
-                        next: '<i class="bi bi-chevron-right"></i>',
-                        previous: '<i class="bi bi-chevron-left"></i>'
-                    },
-                    buttons: {
-                        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
-                        copy: '<i class="bi bi-clipboard"></i> Sao chép',
-                        copyTitle: 'Đã sao chép',
-                        copySuccess: {
-                            _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
-                            1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+            // Kiểm tra nếu có dữ liệu thì mới khởi tạo DataTable
+            if ($("#datatable tbody tr").length > 1 || $("#datatable tbody tr td").length === 7) {
+                var table = $('#datatable').DataTable({
+                    language: {
+                        processing: 'Đang xử lý...',
+                        lengthMenu: 'Hiển thị _MENU_ dòng',
+                        zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+                        info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+                        infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+                        emptyTable: 'Không có dữ liệu',
+                        infoFiltered: '(được lọc từ _MAX_ dòng)',
+                        search: 'Tìm kiếm:',
+                        paginate: {
+                            first: '<i class="bi bi-skip-backward-fill"></i>',
+                            last: '<i class="bi bi-skip-forward-fill"></i>',
+                            next: '<i class="bi bi-chevron-right"></i>',
+                            previous: '<i class="bi bi-chevron-left"></i>'
+                        },
+                        buttons: {
+                            excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+                            copy: '<i class="bi bi-clipboard"></i> Sao chép',
+                            copyTitle: 'Đã sao chép',
+                            copySuccess: {
+                                _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+                                1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+                            }
                         }
-                    }
-                },
-                buttons: [{
-                    extend: 'excelHtml5',
-                    title: null,
-                    filename: 'LichSuKhoHang'
-                }, {
-                    extend: 'copyHtml5',
-                    title: null
-                }]
-            });
+                    },
+                    buttons: [
+                        {
+                            extend: 'excelHtml5',
+                            title: null,
+                            filename: 'DanhSachSanPham'
+                        },
+                        {
+                            extend: 'copyHtml5',
+                            title: null
+                        }
+                    ]
+                });
 
-            table.buttons().container().appendTo('#export-buttons');
-            $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
-            $('#datatable').wrap('<div class="table-responsive"></div>');
+                // Thêm nút xuất file Excel và sao chép vào giao diện
+                table.buttons().container().appendTo('#export-buttons');
+                $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+
+                // Bọc bảng trong div để cuộn ngang nếu cần
+                $('#datatable').wrap('<div class="table-responsive"></div>');
+            }
         });
     </script>
 }
+

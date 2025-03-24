@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using ThanTai.Libraries;
 using ThanTai.Models;
 
 namespace ThanTai.Areas.Admin.Controllers
@@ -42,11 +43,11 @@ namespace ThanTai.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(HinhAnhSanPham model, List<IFormFile> AnhSanPhamFiles, IFormFile? AnhThongSoFile)
+        public async Task<IActionResult> Create(HinhAnhSanPham model, List<IFormFile> AnhSanPhamFiles, IFormFile? AnhThongSoFile, string? Video)
         {
-            if (!AnhSanPhamFiles.Any() && AnhThongSoFile == null)
+            if (!AnhSanPhamFiles.Any() && AnhThongSoFile == null && string.IsNullOrEmpty(Video))
             {
-                ModelState.AddModelError("", "Vui lòng chọn ít nhất một ảnh.");
+                ModelState.AddModelError("", "Vui lòng chọn ít nhất một ảnh hoặc nhập video.");
             }
 
             if (!ModelState.IsValid)
@@ -58,7 +59,6 @@ namespace ThanTai.Areas.Admin.Controllers
             string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
             List<string> sanPhamImages = await SaveFiles(AnhSanPhamFiles, uploadsFolder);
 
-            //  Đảm bảo JSON đúng định dạng
             model.AnhSanPham = JsonConvert.SerializeObject(sanPhamImages);
 
             if (AnhThongSoFile != null)
@@ -66,11 +66,15 @@ namespace ThanTai.Areas.Admin.Controllers
                 model.AnhThongSo = await SaveFile(AnhThongSoFile, uploadsFolder);
             }
 
+            // Chuyển đổi Video thành URL nhúng
+            model.VideoReview = YouTubeHelper.GetYouTubeEmbedUrl(Video);
+
             _context.Add(model);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
 
 
         private async Task<string> SaveFile(IFormFile file, string uploadsFolder)
@@ -134,7 +138,6 @@ namespace ThanTai.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            // ✅ Đọc JSON danh sách ảnh
             List<string> imagePaths = string.IsNullOrEmpty(hinhAnhSanPham.AnhSanPham)
                 ? new List<string>()
                 : JsonConvert.DeserializeObject<List<string>>(hinhAnhSanPham.AnhSanPham) ?? new List<string>();
@@ -187,7 +190,7 @@ namespace ThanTai.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, HinhAnhSanPham model, IFormFile? AnhThongSoFile)
+        public async Task<IActionResult> Edit(int id, HinhAnhSanPham model, IFormFile? AnhThongSoFile, string? Video)
         {
             if (id != model.ID)
             {
@@ -211,15 +214,12 @@ namespace ThanTai.Areas.Admin.Controllers
                 string key = file.Name; // key sẽ có dạng "NewImages[1]", "NewImages[2]"
                 if (key.StartsWith("NewImages[") && key.EndsWith("]"))
                 {
-                    // Lấy index từ key
                     int startIndex = key.IndexOf("[") + 1;
                     int endIndex = key.IndexOf("]");
                     int index = int.Parse(key.Substring(startIndex, endIndex - startIndex));
 
-                    // Lưu ảnh mới vào thư mục
                     string newImagePath = await SaveFile(file, uploadsFolder);
 
-                    // Thay thế ảnh tại vị trí index
                     if (index < sanPhamImages.Count)
                     {
                         sanPhamImages[index] = newImagePath;
@@ -227,13 +227,17 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
             }
 
-            // Cập nhật lại JSON
             existingImage.AnhSanPham = JsonConvert.SerializeObject(sanPhamImages);
 
-            // Cập nhật ảnh thông số nếu có thay đổi
             if (AnhThongSoFile != null)
             {
                 existingImage.AnhThongSo = await SaveFile(AnhThongSoFile, uploadsFolder);
+            }
+
+            // Cập nhật Video nếu có thay đổi
+            if (!string.IsNullOrEmpty(Video))
+            {
+                existingImage.VideoReview = YouTubeHelper.GetYouTubeEmbedUrl(Video);
             }
 
             _context.Update(existingImage);

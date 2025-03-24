@@ -225,6 +225,10 @@ namespace ThanTai.Migrations
                     b.Property<int>("SanPhamID")
                         .HasColumnType("int");
 
+                    b.Property<string>("VideoReview")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.HasKey("ID");
 
                     b.HasIndex("SanPhamID");
@@ -352,7 +356,6 @@ namespace ThanTai.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("GhiChu")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("LoaiGiaoDich")

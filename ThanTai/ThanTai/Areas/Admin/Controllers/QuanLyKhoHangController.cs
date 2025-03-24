@@ -78,14 +78,31 @@ namespace ThanTai.Areas.Admin.Controllers
             return View(quanLyKhoHang);
         }
 
-        public async Task<IActionResult> HienThiLichSu()
+        public IActionResult HienThiLichSu(DateTime? fromDate, int? loaiGiaoDich)
         {
-            var danhSachKho = await _context.QuanLyKhoHang
-                .Include(q => q.SanPham)
-                .Include(q => q.NguoiDung)
-                .ToListAsync(); // Thêm await vào đây
+            var query = _context.QuanLyKhoHang
+                .Include(k => k.SanPham)
+                .Include(k => k.NguoiDung)
+                .AsQueryable();
 
-            return View(danhSachKho);
+            if (fromDate.HasValue)
+            {
+                DateTime startDate = fromDate.Value.Date;
+                DateTime endDate = startDate.AddDays(1).AddTicks(-1);
+
+                query = query.Where(k => k.ThoiGian >= startDate && k.ThoiGian <= endDate);
+            }
+
+            if (loaiGiaoDich.HasValue)
+            {
+                query = query.Where(k => k.LoaiGiaoDich == loaiGiaoDich.Value);
+            }
+
+            var data = query.OrderByDescending(k => k.ThoiGian).ToList();
+
+            return View(data);
         }
+
+
     }
 }

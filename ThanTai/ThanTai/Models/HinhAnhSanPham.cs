@@ -23,6 +23,10 @@ namespace ThanTai.Models
         [DisplayName("Ảnh thông số sản phẩm")]
         public string? AnhThongSo { get; set; }
 
+        [StringLength(500)]
+        [DisplayName("Link video review youtube")]
+        public string? VideoReview { get; set; }
+
         [ForeignKey("SanPhamID")]
         public virtual SanPham? SanPham { get; set; }
 
@@ -42,5 +46,19 @@ namespace ThanTai.Models
         [NotMapped]
         [DisplayName("Ảnh thông số sản phẩm")]
         public IFormFile? AnhThongSoFile { get; set; }
+
+        [NotMapped]
+        public string? VideoReviewEmbed
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(VideoReview) && VideoReview.Contains("watch?v="))
+                {
+                    return VideoReview.Replace("watch?v=", "embed/");
+                }
+                return VideoReview;
+            }
+        }
+
     }
 }

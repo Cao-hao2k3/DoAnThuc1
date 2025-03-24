@@ -1,0 +1,2441 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\ThanTai.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ThanTai.981nguhid8.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\.babelrc",
+      "PackagePath": "staticwebassets\\.babelrc"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\GioHang.css",
+      "PackagePath": "staticwebassets\\css\\GioHang.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\layout-dark.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\layout-dark.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\layout-rtl.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\layout-rtl.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\plugins\\animate.min.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\plugins\\animate.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\plugins\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\plugins\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\plugins\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\plugins\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\plugins\\prism-coy.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\plugins\\prism-coy.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\dist\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\feather.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\feather.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\feather.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\feather.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\feather.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\feather.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\feather.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\feather.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFUZ0bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFUZ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVZ0b.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVZ0b.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVp0bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVp0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFW50bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFW50bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWJ0bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWZ0bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWZ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWp0bbck.woff2",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWp0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\pct.eot",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\pct.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\pct.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\pct.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\pct.ttf",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\pct.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\fonts\\pct.woff",
+      "PackagePath": "staticwebassets\\dist\\assets\\fonts\\pct.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\auth\\auth-logo-dark.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\auth\\auth-logo-dark.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\auth\\auth-logo.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\auth\\auth-logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\auth\\img-auth-big.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\auth\\img-auth-big.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\browser\\chrome.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\browser\\chrome.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\browser\\firefox.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\browser\\firefox.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\browser\\ie.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\browser\\ie.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\browser\\opera.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\browser\\opera.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\browser\\safari.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\browser\\safari.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\cd-arrow.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\cd-arrow.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\close.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\close.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\complete.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\complete.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\img-grd-gal-6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\img-grd-gal-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-7.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\gallery-grid\\masonry-8.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\gallery-grid\\masonry-8.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\hover-effect\\triangle.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\hover-effect\\triangle.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\hover-effect\\triangle2.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\hover-effect\\triangle2.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\l6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\l6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\mixin.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\mixin.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\sl6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\sl6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\smixin.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\smixin.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\v1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\v1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\v2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\v2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\v3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\v3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\light-box\\v4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\light-box\\v4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo-dark.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo-dark.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo-docs.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo-docs.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo-icon.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo-icon.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo-old.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo-old.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo-thumb.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo-thumb.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\404.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\404.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\maintance.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\maintance.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\sark.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\sark.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\ship.svg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\ship.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\sparcle-1.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\sparcle-1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\maintance\\sparcle-2.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\maintance\\sparcle-2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\next.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\next.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\prev.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\prev.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\product\\prod-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\product\\prod-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\profile\\bg-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\profile\\bg-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\profile\\bg-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\profile\\bg-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\profile\\bg-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\profile\\bg-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\profile\\bg-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\profile\\bg-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\profile\\cover.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\profile\\cover.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\slider\\img-slide-7.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\slider\\img-slide-7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\ticket\\p1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\ticket\\p1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\ticket\\p2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\ticket\\p2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\ticket\\p3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\ticket\\p3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\ticket\\p4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\ticket\\p4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\ticket\\p5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\ticket\\p5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\avatar-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\avatar-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\cover.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\cover.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\img-avatar-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\img-avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\img-avatar-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\img-avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\user\\img-avatar-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\user\\img-avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\AUSTRALIA.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\AUSTRALIA.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\BRAZIL.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\BRAZIL.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\GERMANY.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\GERMANY.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\PHONE1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\PHONE1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\PHONE2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\PHONE2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\PHONE3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\PHONE3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\PHONE4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\PHONE4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\UK.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\UK.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\USA.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\USA.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\blur-bg.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\blur-bg.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\dashborad-1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\dashborad-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\dashborad-2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\dashborad-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\dashborad-3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\dashborad-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\dashborad-4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\dashborad-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\dashborad-5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\dashborad-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\emoticon.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\emoticon.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\img-round1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\img-round1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\p1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\p1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\p2.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\p2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\p3.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\p3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\p4.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\p4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\profile-person1.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\profile-person1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\slider5.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\slider5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\slider6.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\slider6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\slider7.jpg",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\slider7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\user-blur-bg.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\user-blur-bg.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\wather2bottom.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\wather2bottom.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\watherbottom.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\watherbottom.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\wathernature.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\wathernature.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\watherstar1.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\watherstar1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\images\\widget\\watherstar2.png",
+      "PackagePath": "staticwebassets\\dist\\assets\\images\\widget\\watherstar2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\analytics.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\analytics.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\analytics.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\analytics.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\horizontal-menu.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\horizontal-menu.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\pages\\chart-apex.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\pages\\chart-apex.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\pages\\dashboard-main.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\pages\\dashboard-main.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\pages\\google-maps.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\pages\\google-maps.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\pcoded.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\pcoded.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\pcoded.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\pcoded.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\apexcharts.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\plugins\\prism.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\plugins\\prism.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\uikit.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\uikit.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\uikit.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\uikit.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\vendor-all.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\vendor-all.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\js\\vendor-all.min.js",
+      "PackagePath": "staticwebassets\\dist\\assets\\js\\vendor-all.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\json\\2500.txt",
+      "PackagePath": "staticwebassets\\dist\\assets\\json\\2500.txt"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\json\\cities.json",
+      "PackagePath": "staticwebassets\\dist\\assets\\json\\cities.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\json\\citynames.json",
+      "PackagePath": "staticwebassets\\dist\\assets\\json\\citynames.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\assets\\json\\file-upload.php",
+      "PackagePath": "staticwebassets\\dist\\assets\\json\\file-upload.php"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\auth-signin.html",
+      "PackagePath": "staticwebassets\\dist\\auth-signin.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\auth-signup.html",
+      "PackagePath": "staticwebassets\\dist\\auth-signup.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_alert.html",
+      "PackagePath": "staticwebassets\\dist\\bc_alert.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_badges.html",
+      "PackagePath": "staticwebassets\\dist\\bc_badges.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_breadcrumb-pagination.html",
+      "PackagePath": "staticwebassets\\dist\\bc_breadcrumb-pagination.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_button.html",
+      "PackagePath": "staticwebassets\\dist\\bc_button.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_card.html",
+      "PackagePath": "staticwebassets\\dist\\bc_card.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_carousel.html",
+      "PackagePath": "staticwebassets\\dist\\bc_carousel.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_collapse.html",
+      "PackagePath": "staticwebassets\\dist\\bc_collapse.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_extra.html",
+      "PackagePath": "staticwebassets\\dist\\bc_extra.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_grid.html",
+      "PackagePath": "staticwebassets\\dist\\bc_grid.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_modal.html",
+      "PackagePath": "staticwebassets\\dist\\bc_modal.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_progress.html",
+      "PackagePath": "staticwebassets\\dist\\bc_progress.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_spinner.html",
+      "PackagePath": "staticwebassets\\dist\\bc_spinner.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_tabs.html",
+      "PackagePath": "staticwebassets\\dist\\bc_tabs.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_toasts.html",
+      "PackagePath": "staticwebassets\\dist\\bc_toasts.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_tooltip-popover.html",
+      "PackagePath": "staticwebassets\\dist\\bc_tooltip-popover.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\bc_typography.html",
+      "PackagePath": "staticwebassets\\dist\\bc_typography.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\chart-apex.html",
+      "PackagePath": "staticwebassets\\dist\\chart-apex.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\form_elements.html",
+      "PackagePath": "staticwebassets\\dist\\form_elements.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\index.html",
+      "PackagePath": "staticwebassets\\dist\\index.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\layout-horizontal.html",
+      "PackagePath": "staticwebassets\\dist\\layout-horizontal.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\layout-vertical.html",
+      "PackagePath": "staticwebassets\\dist\\layout-vertical.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\map-google.html",
+      "PackagePath": "staticwebassets\\dist\\map-google.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\sample-page.html",
+      "PackagePath": "staticwebassets\\dist\\sample-page.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\dist\\tbl_bootstrap.html",
+      "PackagePath": "staticwebassets\\dist\\tbl_bootstrap.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\gulpfile.js",
+      "PackagePath": "staticwebassets\\gulpfile.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\banner1.png",
+      "PackagePath": "staticwebassets\\img\\banner1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\banner2.png",
+      "PackagePath": "staticwebassets\\img\\banner2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\img\\vnpaylogo.jpg",
+      "PackagePath": "staticwebassets\\img\\vnpaylogo.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\GioHang.js",
+      "PackagePath": "staticwebassets\\js\\GioHang.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\ckeditor5\\ckeditor.js",
+      "PackagePath": "staticwebassets\\lib\\ckeditor5\\ckeditor.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\ckeditor5\\ckeditor.js.map",
+      "PackagePath": "staticwebassets\\lib\\ckeditor5\\ckeditor.js.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\ckeditor5\\index.html",
+      "PackagePath": "staticwebassets\\lib\\ckeditor5\\index.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\package-lock.json",
+      "PackagePath": "staticwebassets\\package-lock.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\package.json",
+      "PackagePath": "staticwebassets\\package.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\feather.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\feather.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\feather.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\feather.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\feather.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\feather.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\feather.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\feather.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFUZ0bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFUZ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVZ0b.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVZ0b.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVp0bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFVp0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFW50bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFW50bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWJ0bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWJ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWZ0bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWZ0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWp0bbck.woff2",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\opensans\\mem8YaGs126MiZpBA-UFWp0bbck.woff2"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\pct.eot",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\pct.eot"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\pct.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\pct.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\pct.ttf",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\pct.ttf"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\fonts\\pct.woff",
+      "PackagePath": "staticwebassets\\src\\assets\\fonts\\pct.woff"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\auth\\auth-logo-dark.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\auth\\auth-logo-dark.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\auth\\auth-logo.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\auth\\auth-logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\auth\\img-auth-big.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\auth\\img-auth-big.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\browser\\chrome.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\browser\\chrome.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\browser\\firefox.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\browser\\firefox.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\browser\\ie.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\browser\\ie.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\browser\\opera.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\browser\\opera.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\browser\\safari.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\browser\\safari.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\cd-arrow.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\cd-arrow.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\close.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\close.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\complete.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\complete.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\img-grd-gal-6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\img-grd-gal-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-7.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\gallery-grid\\masonry-8.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\gallery-grid\\masonry-8.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\hover-effect\\triangle.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\hover-effect\\triangle.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\hover-effect\\triangle2.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\hover-effect\\triangle2.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\l6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\l6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\mixin.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\mixin.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\sl6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\sl6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\smixin.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\smixin.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\v1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\v1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\v2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\v2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\v3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\v3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\light-box\\v4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\light-box\\v4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo-dark.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo-dark.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo-docs.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo-docs.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo-icon.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo-icon.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo-old.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo-old.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo-thumb.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo-thumb.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\404.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\404.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\maintance.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\maintance.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\sark.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\sark.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\ship.svg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\ship.svg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\sparcle-1.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\sparcle-1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\maintance\\sparcle-2.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\maintance\\sparcle-2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\next.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\next.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\prev.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\prev.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\product\\prod-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\product\\prod-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\profile\\bg-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\profile\\bg-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\profile\\bg-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\profile\\bg-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\profile\\bg-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\profile\\bg-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\profile\\bg-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\profile\\bg-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\profile\\cover.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\profile\\cover.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\slider\\img-slide-7.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\slider\\img-slide-7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\ticket\\p1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\ticket\\p1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\ticket\\p2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\ticket\\p2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\ticket\\p3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\ticket\\p3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\ticket\\p4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\ticket\\p4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\ticket\\p5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\ticket\\p5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\avatar-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\avatar-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\cover.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\cover.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\img-avatar-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\img-avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\img-avatar-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\img-avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\user\\img-avatar-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\user\\img-avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\AUSTRALIA.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\AUSTRALIA.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\BRAZIL.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\BRAZIL.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\GERMANY.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\GERMANY.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\PHONE1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\PHONE1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\PHONE2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\PHONE2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\PHONE3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\PHONE3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\PHONE4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\PHONE4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\UK.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\UK.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\USA.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\USA.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\blur-bg.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\blur-bg.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\dashborad-1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\dashborad-1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\dashborad-2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\dashborad-2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\dashborad-3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\dashborad-3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\dashborad-4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\dashborad-4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\dashborad-5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\dashborad-5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\emoticon.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\emoticon.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\img-round1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\img-round1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\p1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\p1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\p2.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\p2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\p3.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\p3.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\p4.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\p4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\profile-person1.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\profile-person1.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\slider5.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\slider5.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\slider6.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\slider6.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\slider7.jpg",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\slider7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\user-blur-bg.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\user-blur-bg.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\wather2bottom.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\wather2bottom.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\watherbottom.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\watherbottom.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\wathernature.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\wathernature.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\watherstar1.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\watherstar1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\images\\widget\\watherstar2.png",
+      "PackagePath": "staticwebassets\\src\\assets\\images\\widget\\watherstar2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\analytics.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\analytics.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\analytics.min.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\analytics.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\horizontal-menu.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\horizontal-menu.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\pages\\chart-apex.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\pages\\chart-apex.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\pages\\dashboard-main.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\pages\\dashboard-main.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\pages\\google-maps.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\pages\\google-maps.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\pcoded.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\pcoded.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\pcoded.min.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\pcoded.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\uikit.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\uikit.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\uikit.min.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\uikit.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\vendor-all.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\vendor-all.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\js\\vendor-all.min.js",
+      "PackagePath": "staticwebassets\\src\\assets\\js\\vendor-all.min.js"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\json\\2500.txt",
+      "PackagePath": "staticwebassets\\src\\assets\\json\\2500.txt"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\json\\cities.json",
+      "PackagePath": "staticwebassets\\src\\assets\\json\\cities.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\json\\citynames.json",
+      "PackagePath": "staticwebassets\\src\\assets\\json\\citynames.json"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\json\\file-upload.php",
+      "PackagePath": "staticwebassets\\src\\assets\\json\\file-upload.php"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\layout-dark.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\layout-dark.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\layout-rtl.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\layout-rtl.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\settings\\_custom-variables.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\settings\\_custom-variables.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\settings\\_theme-variables.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\settings\\_theme-variables.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\style.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\_general.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\_general.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\_generic.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\_generic.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\bootstrap-overlay\\_badge.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\bootstrap-overlay\\_badge.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\bootstrap-overlay\\_button.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\bootstrap-overlay\\_button.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\bootstrap-overlay\\_card.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\bootstrap-overlay\\_card.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\bootstrap-overlay\\_radiobox-checkbox.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\bootstrap-overlay\\_radiobox-checkbox.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\bootstrap-overlay\\_switches.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\bootstrap-overlay\\_switches.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\dashboard\\_widget.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\dashboard\\_widget.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\font\\_datta-icon.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\font\\_datta-icon.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\font\\_feather.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\font\\_feather.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\font\\_flaticon.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\font\\_flaticon.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\font\\_fontawesome.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\font\\_fontawesome.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\font\\_theme-font.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\font\\_theme-font.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\layouts\\_menu-lite.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\layouts\\_menu-lite.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_authentication.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_authentication.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_fullcalender.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_fullcalender.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_help-desk.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_help-desk.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_icon-lauouts.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_icon-lauouts.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_image-cropper.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_image-cropper.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_maintaince.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_maintaince.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_pages.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_pages.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\pages\\_user.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\pages\\_user.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_bar-rating.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_bar-rating.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_data-tables.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_data-tables.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_daterange.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_daterange.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_highcharts.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_highcharts.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_lightbox.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_lightbox.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_maxlength.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_maxlength.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_notification.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_notification.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_peitychart.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_peitychart.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_perfect-scrollbar.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_perfect-scrollbar.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_pnotify.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_pnotify.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_rangeslider.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_rangeslider.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_select2.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_select2.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_sweatalert.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_sweatalert.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_tags-input.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_tags-input.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\assets\\scss\\themes\\plugins\\_wizard.scss",
+      "PackagePath": "staticwebassets\\src\\assets\\scss\\themes\\plugins\\_wizard.scss"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\auth-signin.html",
+      "PackagePath": "staticwebassets\\src\\html\\auth-signin.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\auth-signup.html",
+      "PackagePath": "staticwebassets\\src\\html\\auth-signup.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_alert.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_alert.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_badges.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_badges.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_breadcrumb-pagination.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_breadcrumb-pagination.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_button.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_button.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_card.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_card.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_carousel.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_carousel.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_collapse.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_collapse.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_extra.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_extra.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_grid.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_grid.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_modal.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_modal.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_progress.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_progress.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_spinner.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_spinner.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_tabs.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_tabs.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_toasts.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_toasts.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_tooltip-popover.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_tooltip-popover.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\bc_typography.html",
+      "PackagePath": "staticwebassets\\src\\html\\bc_typography.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\chart-apex.html",
+      "PackagePath": "staticwebassets\\src\\html\\chart-apex.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\form_elements.html",
+      "PackagePath": "staticwebassets\\src\\html\\form_elements.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\index.html",
+      "PackagePath": "staticwebassets\\src\\html\\index.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layout-horizontal.html",
+      "PackagePath": "staticwebassets\\src\\html\\layout-horizontal.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layout-vertical.html",
+      "PackagePath": "staticwebassets\\src\\html\\layout-vertical.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\footer-bottom-link.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\footer-bottom-link.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\footer.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\footer.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\head-bottom-link.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\head-bottom-link.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\head.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\head.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\main.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\main.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\layouts\\menu-list.html",
+      "PackagePath": "staticwebassets\\src\\html\\layouts\\menu-list.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\map-google.html",
+      "PackagePath": "staticwebassets\\src\\html\\map-google.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\sample-page.html",
+      "PackagePath": "staticwebassets\\src\\html\\sample-page.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\src\\html\\tbl_bootstrap.html",
+      "PackagePath": "staticwebassets\\src\\html\\tbl_bootstrap.html"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\05c24d19-b9cc-4b3e-9847-5b4e32ca969c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\05c24d19-b9cc-4b3e-9847-5b4e32ca969c.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\0bb3c8c7-7be3-4a94-8866-81204c63c79b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0bb3c8c7-7be3-4a94-8866-81204c63c79b.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\0de2eaec-aad7-4012-b6b6-1145fa3952ed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0de2eaec-aad7-4012-b6b6-1145fa3952ed.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\0e8e89dc-4881-4197-817c-a237c45af28f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\0e8e89dc-4881-4197-817c-a237c45af28f.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\1628d900-1e27-4bd3-a113-ac95b773e9cd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1628d900-1e27-4bd3-a113-ac95b773e9cd.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\185927bf-f000-41a9-9f96-36472f71cf1d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\185927bf-f000-41a9-9f96-36472f71cf1d.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\20cece5d-f1dd-4c6c-9806-a7712d8b0483.png",
+      "PackagePath": "staticwebassets\\uploads\\20cece5d-f1dd-4c6c-9806-a7712d8b0483.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\45a25840-145a-4375-bdee-1aa163fd264e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\45a25840-145a-4375-bdee-1aa163fd264e.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\495a475f-0623-4247-ac6e-1a4224867490.jpg",
+      "PackagePath": "staticwebassets\\uploads\\495a475f-0623-4247-ac6e-1a4224867490.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\5334aaef-db9a-4404-ac4e-003b5c3c0c11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5334aaef-db9a-4404-ac4e-003b5c3c0c11.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\59c73f82-ec96-47fd-8a4f-292f1efc1d8f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\59c73f82-ec96-47fd-8a4f-292f1efc1d8f.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\5a9c6b3a-1cd3-436b-8c2f-877fde0221e4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5a9c6b3a-1cd3-436b-8c2f-877fde0221e4.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\5ccf07d8-f700-4493-820a-a7276b5c06c9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5ccf07d8-f700-4493-820a-a7276b5c06c9.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\5e5e9f97-14ac-46c7-b45a-ec3532ea64f9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5e5e9f97-14ac-46c7-b45a-ec3532ea64f9.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\624adac5-8658-4532-b2d0-5946fc8a1080.jpg",
+      "PackagePath": "staticwebassets\\uploads\\624adac5-8658-4532-b2d0-5946fc8a1080.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62b1f241-5669-4f74-8884-e3da134e6b3f.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\62e8023f-41d7-4166-8806-981e324feff7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62e8023f-41d7-4166-8806-981e324feff7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\6346799b-abfb-4848-838e-d88e6651ac4b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6346799b-abfb-4848-838e-d88e6651ac4b.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\6369362d-0316-478a-b20b-02a983beb5eb.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6369362d-0316-478a-b20b-02a983beb5eb.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\639a67b5-83f7-4e85-9651-bd092fdbac0f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\639a67b5-83f7-4e85-9651-bd092fdbac0f.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\688015.jpg",
+      "PackagePath": "staticwebassets\\uploads\\688015.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\77a854a2-e9a4-48d0-8111-eb1dbf44a939.png",
+      "PackagePath": "staticwebassets\\uploads\\77a854a2-e9a4-48d0-8111-eb1dbf44a939.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\7c996336-b9f5-4094-974b-5d1c05637181.png",
+      "PackagePath": "staticwebassets\\uploads\\7c996336-b9f5-4094-974b-5d1c05637181.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\80149a1e-907b-4a8d-a4fc-fde06a4b3a49.jpg",
+      "PackagePath": "staticwebassets\\uploads\\80149a1e-907b-4a8d-a4fc-fde06a4b3a49.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\814b205b-847b-4059-9fe9-4ef95b88073e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\814b205b-847b-4059-9fe9-4ef95b88073e.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\87d393ae-3678-4613-ab58-ab88f44f7788.jpg",
+      "PackagePath": "staticwebassets\\uploads\\87d393ae-3678-4613-ab58-ab88f44f7788.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\94c286ab-f023-4b4e-ad6d-62dffe1fd0ed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\94c286ab-f023-4b4e-ad6d-62dffe1fd0ed.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\9ccab4ca-5162-404f-ab5c-c808f2bbd620.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9ccab4ca-5162-404f-ab5c-c808f2bbd620.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\a23c8b15-5fe5-4ba6-9af6-2a3d00bcb96a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a23c8b15-5fe5-4ba6-9af6-2a3d00bcb96a.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\aab2f480-589a-4121-8f8d-1ab404a52035.png",
+      "PackagePath": "staticwebassets\\uploads\\aab2f480-589a-4121-8f8d-1ab404a52035.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\admin.jpg",
+      "PackagePath": "staticwebassets\\uploads\\admin.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\aeec37cb-fc19-4005-a175-d9ea5dc10366.jpg",
+      "PackagePath": "staticwebassets\\uploads\\aeec37cb-fc19-4005-a175-d9ea5dc10366.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\af7a697d-19c8-4def-894b-15fbc1551315.jpg",
+      "PackagePath": "staticwebassets\\uploads\\af7a697d-19c8-4def-894b-15fbc1551315.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\b2ec46fc-61b4-4602-9a3e-d859e8e64b82.png",
+      "PackagePath": "staticwebassets\\uploads\\b2ec46fc-61b4-4602-9a3e-d859e8e64b82.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\b48c1c76-a23f-4a37-96c4-0d54c456f711.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b48c1c76-a23f-4a37-96c4-0d54c456f711.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\b4b9bbf9-8319-4994-9d09-a1880362e033.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b4b9bbf9-8319-4994-9d09-a1880362e033.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\bfc536c3-6a6e-4a5a-87db-ba59d22f52a2.png",
+      "PackagePath": "staticwebassets\\uploads\\bfc536c3-6a6e-4a5a-87db-ba59d22f52a2.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\c1ac080d-8ed7-4363-910d-63f7b8f456bc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c1ac080d-8ed7-4363-910d-63f7b8f456bc.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\c392231e-fb3b-45e6-b266-564f88bf2443.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c392231e-fb3b-45e6-b266-564f88bf2443.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\c4e3224f-d497-415b-829f-532181e96b1d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c4e3224f-d497-415b-829f-532181e96b1d.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\ca4af31a-6857-48a9-8cbd-c4d69b034e7b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ca4af31a-6857-48a9-8cbd-c4d69b034e7b.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\caohao.jpg",
+      "PackagePath": "staticwebassets\\uploads\\caohao.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d368e649-ae56-4715-b45a-1fe9a347b66c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d368e649-ae56-4715-b45a-1fe9a347b66c.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d54cd16c-775e-4a31-801a-24264f7b86ae.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d54cd16c-775e-4a31-801a-24264f7b86ae.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d57c7e6d-6e21-4003-9708-e60c1820d7b2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d57c7e6d-6e21-4003-9708-e60c1820d7b2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d6fa40b4-2a23-4add-a325-3451d523a218.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d6fa40b4-2a23-4add-a325-3451d523a218.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\d83dd368-cab5-410b-84b3-0424d48db6ce.png",
+      "PackagePath": "staticwebassets\\uploads\\d83dd368-cab5-410b-84b3-0424d48db6ce.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\dd42a29f-4526-4da8-97ba-e672cf3b6c27.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dd42a29f-4526-4da8-97ba-e672cf3b6c27.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e17a987f-4e1e-45cb-a7d5-c8109cf5fe8e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e17a987f-4e1e-45cb-a7d5-c8109cf5fe8e.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e6d3720c-dfe0-4fae-90c7-d8dfd5a81012.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\e9c35cfb-f665-4cdd-91da-37f1e39ad3ed.jpg",
+      "PackagePath": "staticwebassets\\uploads\\e9c35cfb-f665-4cdd-91da-37f1e39ad3ed.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f588f1d4-da0b-4bdf-89f9-0297bd89e5f2.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg",
+      "PackagePath": "staticwebassets\\uploads\\man-hinh-chuan-dep-lam-viec-chuan-chinh-man-hinh.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg",
+      "PackagePath": "staticwebassets\\uploads\\tang-phieu-mua-hang-mua-loa-thanh-lg-khi-mua-tivi-lg.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh.jpg",
+      "PackagePath": "staticwebassets\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh_banner.jpg",
+      "PackagePath": "staticwebassets\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai-website-dien-may-xanh_banner.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg",
+      "PackagePath": "staticwebassets\\uploads\\trieu-loi-tri-an-muon-van-uu-dai-khi-mua-tivi-tai.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\user1.png",
+      "PackagePath": "staticwebassets\\uploads\\user1.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxcxzc.png",
+      "PackagePath": "staticwebassets\\uploads\\zxcxzc.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxcxzc_banner.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zxcxzc_banner.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxczxc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zxczxc.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zxczxc_banner.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zxczxc_banner.jpg"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zzxzx.png",
+      "PackagePath": "staticwebassets\\uploads\\zzxzx.png"
+    },
+    {
+      "Id": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\zzxzx_banner.jpg",
+      "PackagePath": "staticwebassets\\uploads\\zzxzx_banner.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ThanTai.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.ThanTai.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.ThanTai.props",
+      "PackagePath": "build\\ThanTai.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ThanTai.props",
+      "PackagePath": "buildMultiTargeting\\ThanTai.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.ThanTai.props",
+      "PackagePath": "buildTransitive\\ThanTai.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -49,7 +49,7 @@
                         <td>@Html.DisplayFor(modelItem => item.TenSanPham)</td>
                         <td>@Html.DisplayFor(modelItem => item.DonGia)</td>
                         <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
-                        <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
+                        <td class="ellipsis">@Html.DisplayFor(modelItem => item.MoTa)</td>
                         <td>@Html.DisplayFor(modelItem => item.LoaiSanPham.Tenloai)</td>
                         <td>@Html.DisplayFor(modelItem => item.ThuongHieu.TenThuongHieu)</td>
                         <td>@Html.DisplayFor(modelItem => item.GiamGia)</td>
@@ -120,3 +120,13 @@
          $('#datatable').wrap('<div class="table-responsive"></div>');
 </script>
 }
+
+<style>
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px; /* Thay đổi chiều rộng theo ý muốn */
+        display: inline-block;
+    }
+</style>

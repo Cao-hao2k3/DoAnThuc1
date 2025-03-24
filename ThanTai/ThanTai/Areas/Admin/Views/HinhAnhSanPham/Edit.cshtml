@@ -57,6 +57,22 @@
                 <input type="file" name="AnhThongSoFile" class="form-control" accept="image/*" onchange="previewThongSo(event)" />
             </div>
 
+
+            <div class="mb-3">
+                <label class="form-label">Video hiện tại</label>
+                <div>
+                    @if (!string.IsNullOrEmpty(Model.VideoReview))
+                    {
+                        <input type="text" name="Video" class="form-control" value="@Model.VideoReview" />
+                    }
+                    else
+                    {
+                        <input type="text" name="Video" class="form-control" placeholder="Nhập link video mới" />
+                    }
+                </div>
+            </div>
+
+
             <div class="mb-3">
                 <button type="submit" class="btn btn-success">
                     <i class="fa-solid fa-circle-check"></i> Lưu thay đổi

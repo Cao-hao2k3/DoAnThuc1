@@ -39,7 +39,7 @@
 
             <div class="mb-3">
                 <label asp-for="MoTa" class="control-label"></label>
-                <textarea asp-for="MoTa" class="form-control"></textarea>
+                <textarea id="editor" asp-for="MoTa" class="form-control"></textarea>
                 <span asp-validation-for="MoTa" class="text-danger"></span>
             </div>
 
@@ -75,4 +75,11 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-} 
+}
+
+
+<script src="~/lib/ckeditor5/ckeditor.js"></script>
+<script>
+    ClassicEditor.create(document.querySelector('#editor'))
+        .catch(error => console.error(error));
+</script>

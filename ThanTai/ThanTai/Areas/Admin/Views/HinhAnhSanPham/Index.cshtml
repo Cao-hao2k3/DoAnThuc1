@@ -28,6 +28,7 @@
                     <th>Ảnh sản phẩm</th>
                     <th>Ảnh thông số</th>
                     <th>Sản phẩm</th>
+                    <th>Video</th>
                     <th width="5%">Sửa</th>
                     <th width="5%">Xóa</th>
                 </tr>
@@ -76,6 +77,7 @@
                         <!-- Hiển thị tên sản phẩm -->
                         <td>@Html.DisplayFor(modelItem => item.SanPham.TenSanPham)</td>
 
+                        <td>@Html.DisplayFor(modelItem => item.VideoReview)</td>
                         <!-- Nút sửa -->
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID">

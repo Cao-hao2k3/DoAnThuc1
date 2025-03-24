@@ -439,5 +439,46 @@ body {
         color: #ff4d4d;
     }
 
-/* Home CSS */
+/*Layout css*/
 
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80vw;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.nav-item:hover .mega-menu {
+    display: block;
+}
+
+.category-list {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+}
+
+    .category-list .category-item {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+        .category-list .category-item.active {
+            background: #007bff;
+            color: white;
+        }
+
+.product-list {
+    padding-left: 15px;
+}
+
+.category-content {
+    display: none;
+}
+
+    .category-content.active {
+        display: block;
+    }

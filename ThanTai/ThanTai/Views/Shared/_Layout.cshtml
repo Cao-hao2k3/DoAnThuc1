@@ -52,17 +52,42 @@
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">TRANG CHỦ</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white custom-dropdown" href="#" id="sanPhamDropdown" role="button" data-bs-toggle="dropdown">
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle text-white custom-dropdown" href="#" id="sanPhamDropdown" role="button">
                             SẢN PHẨM
                         </a>
-                        <ul class="dropdown-menu bg-black" aria-labelledby="sanPhamDropdown">
-                            @foreach (var loai in _context.LoaiSanPham.ToList())
-                            {
-                                <li><a class="dropdown-item text-white dropdown-item-custom" asp-controller="SanPham" asp-action="Index" asp-route-loai="@loai.ID">@loai.Tenloai</a></li>
-                            }
-                        </ul>
+
+                        <!-- Danh sách danh mục sản phẩm -->
+                        <div style="margin-top: -5px; margin-left: 115px;" class="dropdown-menu mega-menu" aria-labelledby="sanPhamDropdown">
+                            <div class="row">
+                                <div class="col-3 category-list">
+                                    <ul>
+                                        <li class="category-item active" data-category="dien-tu">Điện tử, điện máy</li>
+                                        <li class="category-item" data-category="gia-dung">Điện gia dụng</li>
+                                    </ul>
+                                </div>
+                                <div class="col-9 product-list">
+                                    <div class="category-content dien-tu active">
+                                        <div class="row">
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Máy lạnh</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Tủ lạnh</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Tivi</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Máy giặt</p></div>
+                                        </div>
+                                    </div>
+                                    <div class="category-content gia-dung">
+                                        <div class="row">
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Nồi cơm điện</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Quạt máy</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Lò vi sóng</p></div>
+                                            <div class="col-3"><img src="link_hinh" alt=""><p>Bếp gas</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link nav-link-custom" asp-area="" asp-controller="BanTin" asp-action="Index">TIN TỨC</a>
                     </li>

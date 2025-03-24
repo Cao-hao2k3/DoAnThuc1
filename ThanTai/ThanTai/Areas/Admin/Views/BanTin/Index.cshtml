@@ -71,7 +71,7 @@
                         </td>
                         <td>@Html.DisplayFor(modelItem => item.Category)</td>
                         <td>@Html.DisplayFor(modelItem => item.CreatedAt)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Content)</td>
+                        <td class="ellipsis">@Html.DisplayFor(modelItem => item.Content)</td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>
@@ -135,3 +135,12 @@
         $('#datatable').wrap('<div class="table-responsive"></div>');
     </script>
 }
+<style>
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px; /* Thay đổi chiều rộng theo ý muốn */
+        display: inline-block;
+    }
+</style>

@@ -19,7 +19,7 @@ namespace ThanTai.Controllers
         public IActionResult Index(int id)
         {
             var sanPham = _context.SanPham
-                .Include(sp => sp.HinhAnhSanPham)
+                .Include(sp => sp.HinhAnhSanPham) // Đảm bảo load HinhAnhSanPham
                 .Include(sp => sp.LoaiSanPham)
                 .Include(sp => sp.ThuongHieu)
                 .Include(sp => sp.GiaTriThuocTinhs)
@@ -33,6 +33,7 @@ namespace ThanTai.Controllers
 
             return View(sanPham);
         }
+
 
         [HttpPost]
         public IActionResult ThemVaoGioHang(int sanPhamID, int soLuong = 1)

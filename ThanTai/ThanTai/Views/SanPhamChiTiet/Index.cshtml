@@ -10,6 +10,18 @@
                         @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any())
                         {
                             var isFirst = true;
+
+                            // Ưu tiên hiển thị video review nếu có
+                            var videoReview = Model.HinhAnhSanPham.FirstOrDefault(h => !string.IsNullOrEmpty(h.VideoReviewEmbed))?.VideoReviewEmbed;
+                            if (!string.IsNullOrEmpty(videoReview))
+                            {
+                                <div class="carousel-item active">
+                                    <iframe width="100%" height="400" src="@videoReview" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                isFirst = false; // Đánh dấu rằng video đã là phần tử đầu tiên
+                            }
+
+                            // Hiển thị ảnh sản phẩm
                             @foreach (var hinhAnh in Model.HinhAnhSanPham)
                             {
                                 @foreach (var anh in hinhAnh.AnhSanPhamList)
@@ -28,6 +40,7 @@
                             </div>
                         }
                     </div>
+
                     <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
@@ -61,7 +74,6 @@
                 <p><strong>Giá:</strong> <span class="text-danger">@Model.GiaSauKhiGiam.ToString("N0") VNĐ</span></p>
                 <p><strong>Lượt đánh giá: </strong> <span class="text-danger">@Model.LuotDanhGia <i class="fa-solid fa-star" style="color: gold;"></i></span></p>
                 <p><strong>Sản phẩm đã bán: </strong><span class="text-danger">@Model.LuotBan</span></p>
-                <p><strong>Mô tả:</strong> @Model.MoTa</p>
                 <form asp-controller="SanPhamChiTiet" asp-action="ThemVaoGioHang" method="post">
                     <input type="hidden" name="sanPhamID" value="@Model.ID" />
                     <button type="submit" class="btn btn-primary">Thêm vào giỏ hàng</button>
@@ -101,45 +113,57 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <!-- Ảnh thông số -->
-    <div class="row mt-4">
-        <div class="col-md-12">
-            <!-- Ảnh thông số kỹ thuật -->
-            @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any(h => !string.IsNullOrEmpty(h.AnhThongSo)))
-            {
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <h5>Thông số kỹ thuật</h5>
-                        @foreach (var hinhAnh in Model.HinhAnhSanPham)
-                        {
-                            if (!string.IsNullOrEmpty(hinhAnh.AnhThongSo))
-                            {
-                                <img src="@hinhAnh.AnhThongSo" class="img-fluid rounded shadow-sm thong-so-ky-thuat" alt="Thông số kỹ thuật của @Model.TenSanPham">
-                            }
-                        }
-                    </div>
-                </div>
-            }
-        </div>
+    <!-- Tabs điều hướng -->
+    <div class="d-flex gap-2 mt-4">
+        <button class="btn btn-outline-primary active" id="btnThongSo" onclick="showTab('thongSo')">Thông số kỹ thuật</button>
+        <button class="btn btn-outline-primary" id="btnBaiViet" onclick="showTab('baiViet')">Bài viết đánh giá</button>
     </div>
 
-    <!-- Thuộc tính sản phẩm -->
-    @if (Model.GiaTriThuocTinhs != null && Model.GiaTriThuocTinhs.Any())
-    {
-        <h5>Thông số kỹ thuật:</h5>
-        <table class="table table-bordered border-secondary">
-            <tbody>
-                @foreach (var gt in Model.GiaTriThuocTinhs)
-                {
-                    <tr>
-                        <th>@gt.ThuocTinh?.TenThuocTinh</th>
-                        <td>@gt.GiaTri</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
+    <!-- Nội dung -->
+    <div id="thongSo" class="mt-3">
+        @if (Model.HinhAnhSanPham != null && Model.HinhAnhSanPham.Any(h => !string.IsNullOrEmpty(h.AnhThongSo)))
+        {
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5>Thông số kỹ thuật</h5>
+                    @foreach (var hinhAnh in Model.HinhAnhSanPham)
+                    {
+                        if (!string.IsNullOrEmpty(hinhAnh.AnhThongSo))
+                        {
+                            <img src="@hinhAnh.AnhThongSo" class="img-fluid rounded shadow-sm thong-so-ky-thuat" alt="Thông số kỹ thuật của @Model.TenSanPham">
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+        @if (Model.GiaTriThuocTinhs != null && Model.GiaTriThuocTinhs.Any())
+        {
+            <h5>Thông số kỹ thuật:</h5>
+            <table class="table table-bordered border-secondary">
+                <tbody>
+                    @foreach (var gt in Model.GiaTriThuocTinhs)
+                    {
+                        <tr>
+                            <th>@gt.ThuocTinh?.TenThuocTinh</th>
+                            <td>@gt.GiaTri</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    <!-- Div này sẽ chứa nội dung bài viết đánh giá -->
+    <div id="baiViet" class="mt-3 d-none">
+        <div class="mt-3">
+            <div class="border p-3">
+                @Html.Raw(Model.MoTa) <!-- Hiển thị nội dung mô tả có thể chứa HTML -->
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -174,6 +198,19 @@
             }, 3000);
         }
     });
+       function showTab(tab) {
+        if (tab === 'thongSo') {
+            document.getElementById('thongSo').classList.remove('d-none');
+            document.getElementById('baiViet').classList.add('d-none');
+            document.getElementById('btnThongSo').classList.add('active');
+            document.getElementById('btnBaiViet').classList.remove('active');
+        } else {
+            document.getElementById('thongSo').classList.add('d-none');
+            document.getElementById('baiViet').classList.remove('d-none');
+            document.getElementById('btnThongSo').classList.remove('active');
+            document.getElementById('btnBaiViet').classList.add('active');
+        }
+    }
 </script>
 
 <style>
