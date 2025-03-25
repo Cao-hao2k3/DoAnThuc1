@@ -46,6 +46,9 @@ namespace ThanTai.Models
         [DisplayName("Giá sau khi giảm")]
         public decimal GiaSauKhiGiam { get; set; }
 
+        [DisplayName("Thông tin thông số")]
+        public string? ThongTinThongSo { get; set; }
+
         [ForeignKey("LoaiSanPhamID")]
         public virtual LoaiSanPham? LoaiSanPham { get; set; }
 

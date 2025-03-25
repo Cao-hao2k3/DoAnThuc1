@@ -1,0 +1,102 @@
+﻿@model List<ThanTai.Models.SanPham>
+
+<div class="container mt-4">
+    <h2 class="text-center">Tủ lạnh</h2>
+
+    <!-- Nút lọc -->
+    <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
+        <i class="bi bi-funnel"></i> Lọc
+    </button>
+
+    <div class="row">
+        @foreach (var sanPham in Model)
+        {
+            var hinhAnhDauTien = sanPham.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
+            var giaGoc = sanPham.DonGia;
+            var giamGia = sanPham.GiamGia ?? 0;
+            var giaSauGiam = giaGoc - (giaGoc * giamGia / 100);
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">@sanPham.TenSanPham</h6>
+                        @if (giamGia > 0)
+                        {
+                            <p class="text-muted">
+                                <del class="text-danger">@giaGoc.ToString("N0") VNĐ</del>
+                                <span class="badge bg-danger">-@giamGia%</span>
+                            </p>
+                            <p class="text-danger fw-bold">@giaSauGiam.ToString("N0") VNĐ</p>
+                        }
+                        else
+                        {
+                            <p class="text-danger fw-bold">@giaGoc.ToString("N0") VNĐ</p>
+                        }
+                        <p class="text-warning">⭐ @sanPham.LuotDanhGia | Đã bán @sanPham.LuotBan</p>
+                        <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-primary w-100">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal Lọc -->
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="filterModalLabel">Lọc sản phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Hãng</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-secondary">Samsung</button>
+                        <button class="btn btn-outline-secondary">LG</button>
+                        <button class="btn btn-outline-secondary">Aqua</button>
+                        <button class="btn btn-outline-secondary">Toshiba</button>
+                        <button class="btn btn-outline-secondary">Panasonic</button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Số cánh cửa</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-secondary">1 cánh</button>
+                        <button class="btn btn-outline-secondary">2 cánh</button>
+                        <button class="btn btn-outline-secondary">3 cánh</button>
+                        <button class="btn btn-outline-secondary">4 cánh</button>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Giá</label>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-outline-secondary">Dưới 8 triệu</button>
+                        <button class="btn btn-outline-secondary">8-12 triệu</button>
+                        <button class="btn btn-outline-secondary">12-15 triệu</button>
+                        <button class="btn btn-outline-secondary">15-20 triệu</button>
+                        <button class="btn btn-outline-secondary">20-30 triệu</button>
+                        <button class="btn btn-outline-secondary">Trên 30 triệu</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bỏ chọn</button>
+                <button type="button" class="btn btn-primary">Xem kết quả</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-card {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+</style>

@@ -61,13 +61,20 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan")] SanPham sanPham)
+        public async Task<IActionResult> Create([Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan,ThongTinThongSo")] SanPham sanPham)
         {
             if (ModelState.IsValid)
             {
                 sanPham.SoLuong = 0;
-                // Tính toán giá sau khi giảm
+
+                // Tính giá sau khi giảm
                 sanPham.GiaSauKhiGiam = sanPham.DonGia - (sanPham.DonGia * (sanPham.GiamGia ?? 0) / 100);
+
+                // Kiểm tra dữ liệu nhập vào trường ThongTinThongSo
+                if (string.IsNullOrWhiteSpace(sanPham.ThongTinThongSo))
+                {
+                    sanPham.ThongTinThongSo = "Không có thông tin."; // Gán giá trị mặc định nếu trống
+                }
 
                 _context.Add(sanPham);
                 await _context.SaveChangesAsync();
@@ -78,7 +85,6 @@ namespace ThanTai.Areas.Admin.Controllers
             ViewData["ThuongHieuID"] = new SelectList(_context.ThuongHieu, "ID", "TenThuongHieu", sanPham.ThuongHieuID);
             return View(sanPham);
         }
-
 
         // GET: SanPham/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -103,7 +109,7 @@ namespace ThanTai.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan")] SanPham sanPham)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,LoaiSanPhamID,ThuongHieuID,TenSanPham,DonGia,SoLuong,MoTa,GiamGia,LuotDanhGia,LuotBan,ThongTinThongSo")] SanPham sanPham)
         {
             if (id != sanPham.ID)
             {

@@ -32,10 +32,9 @@
                 <span asp-validation-for="DonGia" class="text-danger"></span>
             </div>
 
-
             <div class="mb-3">
                 <label asp-for="MoTa" class="control-label"></label>
-                <textarea id="editor" asp-for="MoTa" class="form-control"></textarea>
+                <textarea id="editorMoTa" asp-for="MoTa" class="form-control"></textarea>
                 <span asp-validation-for="MoTa" class="text-danger"></span>
             </div>
 
@@ -45,6 +44,13 @@
                 <span asp-validation-for="GiamGia" class="text-danger"></span>
             </div>
 
+            <div class="mb-3">
+                <label asp-for="ThongTinThongSo" class="control-label"></label>
+                <textarea id="editorThongSo" asp-for="ThongTinThongSo" class="form-control"></textarea>
+                <span asp-validation-for="ThongTinThongSo" class="text-danger"></span>
+            </div>
+
+
             <div class="mb-0">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Thêm mới</button> hoặc <a asp-action="Index">Quay về danh sách</a>
             </div>
@@ -52,14 +58,11 @@
     </div>
 </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
 <script src="~/lib/ckeditor5/ckeditor.js"></script>
 <script>
-    ClassicEditor.create(document.querySelector('#editor'))
+    ClassicEditor.create(document.querySelector('#editorMoTa'))
+        .catch(error => console.error(error));
+
+    ClassicEditor.create(document.querySelector('#editorThongSo'))
         .catch(error => console.error(error));
 </script>
-

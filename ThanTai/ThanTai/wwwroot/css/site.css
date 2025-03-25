@@ -482,3 +482,16 @@ body {
     .category-content.active {
         display: block;
     }
+
+.product-list img {
+    width: 50px; /* Điều chỉnh kích thước theo ảnh "Tủ lạnh" */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-list p {
+    font-size: 12px; /* Thu nhỏ chữ để phù hợp với kích thước ảnh */
+    text-align: center;
+    margin-top: 5px;
+}

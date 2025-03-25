@@ -87,6 +87,7 @@ namespace ThanTai.Controllers
             return RedirectToAction("Index", "SanPhamChiTiet", new { id = sanPhamID });
         }
 
+       
 
     }
 }

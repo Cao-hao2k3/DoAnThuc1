@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r7ZgQ58yyNG4rYe12MimjtByDCDib8Co+wlOXywMan8=",
+  "Hash": "+3k5aZi4yZ3RNzec3G09TDLcX0sXE1eP5+HbH/2sU5o=",
   "Source": "ThanTai",
   "BasePath": "_content/ThanTai",
   "Mode": "Default",
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9ufob8iyr5",
-      "Integrity": "z+48nAyavVqYD9VteEy+aXYa2fhVNfkttJDEg+OVY88=",
+      "Fingerprint": "hiy942p26y",
+      "Integrity": "Bw1q4wyEpLHcIm16+VugJPiXZcxV35cEidzbTew+I9Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -13571,51 +13571,6 @@
       ]
     },
     {
-      "Route": "css/site.9ufob8iyr5.css",
-      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8885"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"z+48nAyavVqYD9VteEy+aXYa2fhVNfkttJDEg+OVY88=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 09:06:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9ufob8iyr5"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-z+48nAyavVqYD9VteEy+aXYa2fhVNfkttJDEg+OVY88="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -13626,7 +13581,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8885"
+          "Value": "9211"
         },
         {
           "Name": "Content-Type",
@@ -13634,11 +13589,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z+48nAyavVqYD9VteEy+aXYa2fhVNfkttJDEg+OVY88=\""
+          "Value": "\"Bw1q4wyEpLHcIm16+VugJPiXZcxV35cEidzbTew+I9Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Mar 2025 09:06:42 GMT"
+          "Value": "Tue, 25 Mar 2025 06:54:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13648,7 +13603,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z+48nAyavVqYD9VteEy+aXYa2fhVNfkttJDEg+OVY88="
+          "Value": "sha256-Bw1q4wyEpLHcIm16+VugJPiXZcxV35cEidzbTew+I9Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.hiy942p26y.css",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9211"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bw1q4wyEpLHcIm16+VugJPiXZcxV35cEidzbTew+I9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 06:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hiy942p26y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bw1q4wyEpLHcIm16+VugJPiXZcxV35cEidzbTew+I9Q="
         }
       ]
     },

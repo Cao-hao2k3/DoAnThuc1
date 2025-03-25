@@ -22,5 +22,16 @@ namespace ThanTai.Controllers
             return View(sanPhams);
         }
 
+        public IActionResult TuLanhView()
+        {
+            var tuLanh = _context.SanPham
+                .Include(sp => sp.HinhAnhSanPham) // Load hình ảnh sản phẩm
+                .Where(sp => sp.LoaiSanPhamID == 5)
+                .ToList();
+
+            return View(tuLanh);
+        }
+
+
     }
 }
