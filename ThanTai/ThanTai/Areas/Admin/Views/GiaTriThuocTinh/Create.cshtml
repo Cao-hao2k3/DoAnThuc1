@@ -16,9 +16,22 @@
             </div>
 
             <div class="mb-3">
-                <label asp-for="ThuocTinhID" class="control-label"></label>
-                <select asp-for="ThuocTinhID" class="form-control" asp-items="ViewBag.ThuocTinhID"></select>
+                <label for="LoaiSanPhamID" class="control-label">Loại Sản Phẩm</label>
+                <select id="LoaiSanPhamID" class="form-control">
+                    <option value="">-- Chọn Loại Sản Phẩm --</option>
+                    @foreach (var loai in ViewBag.LoaiSanPham)
+                    {
+                        <option value="@loai.ID">@loai.Tenloai</option>
+                    }
+                </select>
             </div>
+
+            <div class="mb-3">
+                <label asp-for="ThuocTinhID" class="control-label"></label>
+                <select asp-for="ThuocTinhID" class="form-control">
+                    <option value="">-- Chọn Thuộc Tính --</option>
+                </select>
+            </div>  
 
             <div class="mb-3">
                 <label asp-for="GiaTri" class="control-label"></label>
@@ -39,4 +52,35 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+              $(document).ready(function () {
+            $('#LoaiSanPhamID').change(function () {
+                var loaiSanPhamId = $(this).val();
+                if (loaiSanPhamId) {
+                          $.getJSON('@Url.Action("GetThuocTinhByLoai", "GiaTriThuocTinh")', { loaiSanPhamId: loaiSanPhamId }, function (data) {
+                        console.log("Dữ liệu nhận được:", data); // Debug
+
+                        var $thuocTinhDropdown = $('#ThuocTinhID');
+                        $thuocTinhDropdown.empty();
+                        $thuocTinhDropdown.append('<option value="">-- Chọn Thuộc Tính --</option>');
+
+                        if (data.message) {
+                            alert(data.message);
+                        } else {
+                            $.each(data, function (index, item) {
+                                $thuocTinhDropdown.append('<option value="' + item.id + '">' + item.tenThuocTinh + '</option>');
+                            });
+                        }
+                    }).fail(function () {
+                        alert("Lỗi khi tải danh sách thuộc tính!");
+                    });
+                } else {
+                    $('#ThuocTinhID').empty().append('<option value="">-- Chọn Thuộc Tính --</option>');
+                }
+            });
+        });
+
+    </script>
 }
+

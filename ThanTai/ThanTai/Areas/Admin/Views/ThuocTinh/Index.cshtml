@@ -25,19 +25,18 @@
             <thead>
                 <tr>
                     <th width="10%">Mã thuộc tính</th>
+                    <th>@Html.DisplayNameFor(model => model.LoaiSanPhamID)</th>
                     <th>@Html.DisplayNameFor(model => model.TenThuocTinh)</th>
                     <th width="5%">Sửa</th>
                     <th width="5%">Xóa</th>
                 </tr>
             </thead>
             <tbody>
-                @{
-                    var stt = 1;
-                }
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@stt</td>
+                        <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                        <td>@(item.LoaiSanPham != null ? item.LoaiSanPham.Tenloai : "Không có")</td>
                         <td>@Html.DisplayFor(modelItem => item.TenThuocTinh)</td>
                         <td class="text-center">
                             <a asp-action="Edit" asp-route-id="@item.ID"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -46,7 +45,6 @@
                             <a asp-action="Delete" asp-route-id="@item.ID"><i class="fa-solid fa-trash-can text-danger"></i></a>
                         </td>
                     </tr>
-                    stt++;
                 }
             </tbody>
         </table>

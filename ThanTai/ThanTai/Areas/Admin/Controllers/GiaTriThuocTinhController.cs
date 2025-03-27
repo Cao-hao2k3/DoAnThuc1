@@ -66,7 +66,32 @@ namespace ThanTai.Areas.Admin.Controllers
         {
             ViewData["SanPhamID"] = new SelectList(_context.SanPham, "ID", "TenSanPham");
             ViewData["ThuocTinhID"] = new SelectList(_context.ThuocTinh, "ID", "TenThuocTinh");
+            ViewBag.LoaiSanPham = _context.LoaiSanPham.Select(l => new { l.ID, l.Tenloai }).ToList();
             return View();
+
+        }
+
+        [HttpGet]
+        public JsonResult GetThuocTinhByLoai(int loaiSanPhamId)
+        {
+            try
+            {
+                var thuocTinhs = _context.ThuocTinh
+                    .Where(t => t.LoaiSanPhamID == loaiSanPhamId)
+                    .Select(t => new { id = t.ID, tenThuocTinh = t.TenThuocTinh })
+                    .ToList();
+
+                if (!thuocTinhs.Any())
+                {
+                    return Json(new { message = "Không có thuộc tính nào cho loại sản phẩm này." });
+                }
+
+                return Json(thuocTinhs);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { error = "Lỗi server: " + ex.Message });
+            }
         }
 
         // POST: GiaTriThuocTinh/Create

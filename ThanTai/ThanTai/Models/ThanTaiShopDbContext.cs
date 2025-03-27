@@ -26,5 +26,16 @@ namespace ThanTai.Models
         
         public DbSet<QuanLyKhoHang> QuanLyKhoHang { get; set; }
         public DbSet<ThanTai.Models.HinhAnhSanPham> HinhAnhSanPham { get; set; } = default!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ThuocTinh>()
+                .HasOne(t => t.LoaiSanPham)
+                .WithMany(l => l.ThuocTinh)
+                .HasForeignKey(t => t.LoaiSanPhamID)
+                .OnDelete(DeleteBehavior.NoAction); // Không cascade xóa
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

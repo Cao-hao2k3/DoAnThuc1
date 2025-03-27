@@ -18,13 +18,14 @@ namespace ThanTai.Models
         [DisplayName("Mã sản phẩm cha")]
         public int? ParentID { get; set; }
 
-        // Quan hệ 1 - N (một danh mục cha có nhiều danh mục con)
-        // Liên kết đến danh mục cha
         [ForeignKey("ParentID")]
         public virtual LoaiSanPham? ParentCategory { get; set; }
-        // Danh sách các danh mục con
+
         public virtual ICollection<LoaiSanPham>? SubCategories { get; set; } = new List<LoaiSanPham>();
+
         public virtual ICollection<SanPham>? SanPham { get; set; } = new List<SanPham>();
 
+        public virtual ICollection<ThuocTinh>? ThuocTinh { get; set; } = new List<ThuocTinh>(); // Liên kết với thuộc tính
     }
+
 }

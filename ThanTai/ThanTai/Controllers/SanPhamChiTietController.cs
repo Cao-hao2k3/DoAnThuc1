@@ -22,7 +22,7 @@ namespace ThanTai.Controllers
                 .Include(sp => sp.HinhAnhSanPham) // Đảm bảo load HinhAnhSanPham
                 .Include(sp => sp.LoaiSanPham)
                 .Include(sp => sp.ThuongHieu)
-                .Include(sp => sp.GiaTriThuocTinhs)
+                .Include(sp => sp.GiaTriThuocTinh)
                 .ThenInclude(gt => gt.ThuocTinh)
                 .FirstOrDefault(sp => sp.ID == id);
 

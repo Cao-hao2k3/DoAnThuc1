@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ThanTai.Models;
 
@@ -11,9 +12,11 @@ using ThanTai.Models;
 namespace ThanTai.Migrations
 {
     [DbContext(typeof(ThanTaiShopDbContext))]
-    partial class ThanTaiShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250325121003_CSDL31")]
+    partial class CSDL31
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -442,17 +445,12 @@ namespace ThanTai.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("LoaiSanPhamID")
-                        .HasColumnType("int");
-
                     b.Property<string>("TenThuocTinh")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("LoaiSanPhamID");
 
                     b.ToTable("ThuocTinh");
                 });
@@ -638,17 +636,6 @@ namespace ThanTai.Migrations
                     b.Navigation("ThuongHieu");
                 });
 
-            modelBuilder.Entity("ThanTai.Models.ThuocTinh", b =>
-                {
-                    b.HasOne("ThanTai.Models.LoaiSanPham", "LoaiSanPham")
-                        .WithMany("ThuocTinhs")
-                        .HasForeignKey("LoaiSanPhamID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("LoaiSanPham");
-                });
-
             modelBuilder.Entity("ThanTai.Models.DatHang", b =>
                 {
                     b.Navigation("DatHangChiTiet");
@@ -659,8 +646,6 @@ namespace ThanTai.Migrations
                     b.Navigation("SanPham");
 
                     b.Navigation("SubCategories");
-
-                    b.Navigation("ThuocTinhs");
                 });
 
             modelBuilder.Entity("ThanTai.Models.NguoiDung", b =>

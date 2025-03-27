@@ -24,7 +24,11 @@ namespace ThanTai.Areas.Admin.Controllers
         // GET: ThuocTinh
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ThuocTinh.ToListAsync());
+            var thuocTinhList = await _context.ThuocTinh
+                                              .Include(t => t.LoaiSanPham) // Load dữ liệu quan hệ
+                                              .ToListAsync();
+
+            return View(thuocTinhList);
         }
 
         // GET: ThuocTinh/Details/5
@@ -48,22 +52,29 @@ namespace ThanTai.Areas.Admin.Controllers
         // GET: ThuocTinh/Create
         public IActionResult Create()
         {
+            ViewBag.LoaiSanPhamID = new SelectList(_context.LoaiSanPham, "ID", "Tenloai");
             return View();
         }
 
         // POST: ThuocTinh/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,TenThuocTinh")] ThuocTinh thuocTinh)
+        public async Task<IActionResult> Create([Bind("ID,LoaiSanPhamID,TenThuocTinh")] ThuocTinh thuocTinh)
         {
+            if (thuocTinh.LoaiSanPhamID == 0) // Kiểm tra nếu LoaiSanPhamID chưa được chọn
+            {
+                ModelState.AddModelError("LoaiSanPhamID", "Bạn chưa chọn loại sản phẩm.");
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(thuocTinh);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            // Load lại danh sách LoaiSanPham khi ModelState không hợp lệ
+            ViewBag.LoaiSanPhamID = new SelectList(_context.LoaiSanPham, "ID", "Tenloai", thuocTinh.LoaiSanPhamID);
             return View(thuocTinh);
         }
 
@@ -80,15 +91,17 @@ namespace ThanTai.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+
+            // Load danh sách Loại Sản Phẩm vào ViewBag
+            ViewBag.LoaiSanPhamID = new SelectList(_context.LoaiSanPham, "ID", "Tenloai", thuocTinh.LoaiSanPhamID);
+
             return View(thuocTinh);
         }
 
         // POST: ThuocTinh/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,TenThuocTinh")] ThuocTinh thuocTinh)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,LoaiSanPhamID,TenThuocTinh")] ThuocTinh thuocTinh)
         {
             if (id != thuocTinh.ID)
             {
@@ -115,6 +128,10 @@ namespace ThanTai.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            // Load lại danh sách LoaiSanPham nếu ModelState không hợp lệ
+            ViewBag.LoaiSanPhamID = new SelectList(_context.LoaiSanPham, "ID", "Tenloai", thuocTinh.LoaiSanPhamID);
+
             return View(thuocTinh);
         }
 

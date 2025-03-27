@@ -4,8 +4,11 @@ using WebBanHang.Logic;
 using ThanTai.Models;
 using WebBanHang.Services.VNPAY;
 using ThanTai.Logic;
+using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
+
+ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 // 1️ Thêm dịch vụ Session vào ứng dụng
 builder.Services.AddSession(options =>

@@ -53,7 +53,7 @@
                         <a class="nav-link nav-link-custom" asp-area="" asp-controller="Home" asp-action="Index">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle text-white custom-dropdown" href="#" id="sanPhamDropdown" role="button">
+                        <a class="nav-link dropdown-toggle text-white custom-dropdown" asp-area="" asp-controller="SanPham" asp-action="Index" id="sanPhamDropdown" role="button">
                             SẢN PHẨM
                         </a>
 
@@ -70,7 +70,7 @@
                                     <div class="category-content dien-tu active">
                                         <div class="row">
                                             <div class="col-3">
-                                                <a href="#">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="MayLanhView">
                                                     <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/82/ab/82ab6158a6b5e938c11e9ebf1d05aae3.png" alt="Máy lạnh">
                                                     <p>Máy lạnh</p>
                                                 </a>

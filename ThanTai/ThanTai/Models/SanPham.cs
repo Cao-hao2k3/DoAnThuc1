@@ -56,8 +56,8 @@ namespace ThanTai.Models
         public virtual ICollection<DatHangChiTiet>? DatHangChiTiet { get; set; } = new List<DatHangChiTiet>();
         public virtual ICollection<GioHang>? GioHang { get; set; } = new List<GioHang>();
         public virtual ICollection<HinhAnhSanPham>? HinhAnhSanPham { get; set; } = new List<HinhAnhSanPham>();
-        public virtual ICollection<GiaTriThuocTinh>? GiaTriThuocTinhs { get; set; } = new List<GiaTriThuocTinh>();
-        public virtual ICollection<KhuyenMai>? KhuyenMais { get; set; } = new List<KhuyenMai>(); 
+        public virtual ICollection<GiaTriThuocTinh>? GiaTriThuocTinh { get; set; } = new List<GiaTriThuocTinh>();
+        public virtual ICollection<KhuyenMai>? KhuyenMai { get; set; } = new List<KhuyenMai>(); 
         public virtual ICollection<QuanLyKhoHang>? QuanLyKhoHang { get; set;} = new List<QuanLyKhoHang>();
     }
 
@@ -71,8 +71,15 @@ namespace ThanTai.Models
         [DisplayName("Tên thuộc tính")]
         public string TenThuocTinh { get; set; }
 
-        public virtual ICollection<GiaTriThuocTinh>? GiaTriThuocTinhs { get; set; } = new List<GiaTriThuocTinh>();
+        [DisplayName("Mã loại sản phẩm")]
+        public int LoaiSanPhamID { get; set; } // Thêm khóa ngoại
+
+        [ForeignKey("LoaiSanPhamID")]
+        public virtual LoaiSanPham? LoaiSanPham { get; set; } // Liên kết với LoaiSanPham
+
+        public virtual ICollection<GiaTriThuocTinh>? GiaTriThuocTinh { get; set; } = new List<GiaTriThuocTinh>();
     }
+
 
     public class GiaTriThuocTinh
     {
