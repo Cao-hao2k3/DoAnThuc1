@@ -3,42 +3,54 @@
 <div class="container mt-4">
     <h2 class="text-center">Tủ lạnh</h2>
 
-    <!-- Nút lọc -->
+    <!-- Nút mở modal lọc -->
     <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
         <i class="bi bi-funnel"></i> Lọc
     </button>
 
-    <div class="row">
-        @foreach (var sanPham in Model)
-        {
-            var hinhAnhDauTien = sanPham.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
-            var giaGoc = sanPham.DonGia;
-            var giamGia = sanPham.GiamGia ?? 0;
-            var giaSauGiam = giaGoc - (giaGoc * giamGia / 100);
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
-                    <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
-                    <div class="card-body text-center">
-                        <h6 class="card-title">@sanPham.TenSanPham</h6>
-                        @if (giamGia > 0)
-                        {
-                            <p class="text-muted">
-                                <del class="text-danger">@giaGoc.ToString("N0") VNĐ</del>
-                                <span class="badge bg-danger">-@giamGia%</span>
-                            </p>
-                            <p class="text-danger fw-bold">@giaSauGiam.ToString("N0") VNĐ</p>
-                        }
-                        else
-                        {
-                            <p class="text-danger fw-bold">@giaGoc.ToString("N0") VNĐ</p>
-                        }
-                        <p class="text-warning">⭐ @sanPham.LuotDanhGia | Đã bán @sanPham.LuotBan</p>
-                        <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-primary w-100">Xem Chi Tiết</a>
+    @if (Model.Any())
+    {
+        <div class="row">
+            @foreach (var sanPham in Model)
+            {
+                var hinhAnhDauTien = sanPham.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
+                var giaGoc = sanPham.DonGia;
+                var giamGia = sanPham.GiamGia ?? 0;
+                var giaSauGiam = giaGoc - (giaGoc * giamGia / 100);
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card product-card">
+                        <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">@sanPham.TenSanPham</h6>
+                            @if (giamGia > 0)
+                            {
+                                <p class="text-muted">
+                                    <del class="text-danger">@giaGoc.ToString("N0") VNĐ</del>
+                                    <span class="badge bg-danger">-@giamGia%</span>
+                                </p>
+                                <p class="text-danger fw-bold">@giaSauGiam.ToString("N0") VNĐ</p>
+                            }
+                            else
+                            {
+                                <p class="text-danger fw-bold">@giaGoc.ToString("N0") VNĐ</p>
+                            }
+                            <p class="text-warning">⭐ @sanPham.LuotDanhGia | Đã bán @sanPham.LuotBan</p>
+                            <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-primary w-100">Xem Chi Tiết</a>
+                        </div>
                     </div>
                 </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div style="margin-top: 100px" class="alert alert-warning text-center" role="alert">
+            <div>
+                Không có sản phẩm nào thỏa mãn điều kiện lọc.
             </div>
-        }
-    </div>
+        </div>
+    }
 </div>
 
 <!-- Modal Lọc -->
@@ -49,54 +61,90 @@
                 <h5 class="modal-title" id="filterModalLabel">Lọc sản phẩm</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label class="form-label">Hãng</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-outline-secondary">Samsung</button>
-                        <button class="btn btn-outline-secondary">LG</button>
-                        <button class="btn btn-outline-secondary">Aqua</button>
-                        <button class="btn btn-outline-secondary">Toshiba</button>
-                        <button class="btn btn-outline-secondary">Panasonic</button>
+            <form asp-action="MayLanhView" method="get">
+                <div class="modal-body">
+                    <label>Công suất làm lạnh</label>
+                    <div>
+                        @foreach (var congSuat in new[] { "1HP", "1.5HP", "2HP", "3HP" })
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="CongSuat" value="@congSuat"> @congSuat
+                            </label>
+                        }
+                    </div>
+
+                    <label>Giá</label>
+                    <div>
+                        @foreach (var gia in new[] { "Dưới 8 triệu", "8-12 triệu", "12-15 triệu", "Trên 15 triệu" })
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="Gia" value="@GetGiaMin(gia)-@GetGiaMax(gia)"> @gia
+                            </label>
+                        }
+                    </div>
+
+                    <label>Loại Máy</label>
+                    <div>
+                        @foreach (var loaiMay in new[] { "Máy 1 chiều", "Máy 2 chiều" })
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="LoaiMay" value="@loaiMay"> @loaiMay
+                            </label>
+                        }
+                    </div>
+
+                    <label>Kiểu dáng</label>
+                    <div>
+                        @foreach (var kieuDang in new[] { "Máy treo tường", "Máy lạnh âm trần", "Máy lạnh tủ đứng" })
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="KieuDang" value="@kieuDang"> @kieuDang
+                            </label>
+                        }
+                    </div>
+
+                    <label>Thương hiệu</label>
+                    <div>
+                        @foreach (var thuongHieu in ViewBag.ThuongHieus)
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="ThuongHieuID" value="@thuongHieu.ID"> @thuongHieu.TenThuongHieu
+                            </label>
+                        }
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Số cánh cửa</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-outline-secondary">1 cánh</button>
-                        <button class="btn btn-outline-secondary">2 cánh</button>
-                        <button class="btn btn-outline-secondary">3 cánh</button>
-                        <button class="btn btn-outline-secondary">4 cánh</button>
-                    </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Xem kết quả</button>
+                    <button type="reset" class="btn btn-danger">Bỏ chọn</button>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Giá</label>
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-outline-secondary">Dưới 8 triệu</button>
-                        <button class="btn btn-outline-secondary">8-12 triệu</button>
-                        <button class="btn btn-outline-secondary">12-15 triệu</button>
-                        <button class="btn btn-outline-secondary">15-20 triệu</button>
-                        <button class="btn btn-outline-secondary">20-30 triệu</button>
-                        <button class="btn btn-outline-secondary">Trên 30 triệu</button>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Bỏ chọn</button>
-                <button type="button" class="btn btn-primary">Xem kết quả</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 
-<style>
-    .product-card {
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
+@functions {
+    decimal? GetGiaMin(string gia)
+    {
+        return gia switch
+        {
+            "Dưới 8 triệu" => 0,
+            "8-12 triệu" => 8000000,
+            "12-15 triệu" => 12000000,
+            "Trên 15 triệu" => 15000000,
+            _ => null
+        };
     }
 
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-</style>
+    decimal? GetGiaMax(string gia)
+    {
+        return gia switch
+        {
+            "Dưới 8 triệu" => 8000000,
+            "8-12 triệu" => 12000000,
+            "12-15 triệu" => 15000000,
+            "Trên 15 triệu" => null,
+            _ => null
+        };
+    }
+}

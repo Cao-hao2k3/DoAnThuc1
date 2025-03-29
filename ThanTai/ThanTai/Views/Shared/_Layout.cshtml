@@ -77,37 +77,47 @@
                                             </div>
 
                                             <div class="col-3">
-                                                <a asp-area="" asp-controller="SanPham" asp-action="TuLanhView" >
-                                                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/fe/04/fe04b1635dc68b0ec71d9982b1dc8960.png"
-                                                         alt="Tủ lạnh">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="TuLanhView">
+                                                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/fe/04/fe04b1635dc68b0ec71d9982b1dc8960.png" alt="Tủ lạnh">
                                                     <p>Tủ lạnh</p>
                                                 </a>
                                             </div>
 
                                             <div class="col-3">
-                                                <a href="#">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="TiviView">
                                                     <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/b2/94/b29491c0fa65ea5a6c08856cc17b15a0.png" alt="Tivi">
                                                     <p>Tivi</p>
                                                 </a>
                                             </div>
 
                                             <div class="col-3">
-                                                <a href="#">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="MayGiatView">
                                                     <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/36/c9/36c96df469724206fb6f36b4fc519e65.png" alt="Máy giặt">
                                                     <p>Máy giặt</p>
                                                 </a>
                                             </div>
-                                        </div
-                                    </div>
+                                        </div>
+                                    </div> <!-- ✅ Đóng đúng thẻ <div> -->
+
                                     <div class="category-content gia-dung">
                                         <div class="row">
-                                            <div class="col-3"><img src="link_hinh" alt=""><p>Máy lọc không khí</p></div>
-                                            <div class="col-3"><img src="link_hinh" alt=""><p>Quạt máy</p></div>
-                                            <div class="col-3"><img src="link_hinh" alt=""><p>Lò vi sóng</p></div>
-                                            <div class="col-3"><img src="link_hinh" alt=""><p>Bếp gas</p></div>
+                                            <div class="col-3">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="MayLocKhongKhiView">
+                                                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/86/b7/86b7d200bdd564e597ca6ab06204d83f.png" alt="Máy lọc không khí">
+                                                    <p>Máy lọc không khí</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <a asp-area="" asp-controller="SanPham" asp-action="QuatMayView">
+                                                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/43/03/430374ebb8aa83838d66a5e6733d3697.png" alt="Quạt máy">
+                                                    <p>Quạt máy</p>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </li>

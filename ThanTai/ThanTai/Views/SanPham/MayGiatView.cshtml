@@ -1,9 +1,7 @@
 ﻿@model List<ThanTai.Models.SanPham>
 
 <div class="container mt-4">
-    <h2 class="text-center">Tủ lạnh</h2>
-
-    <!-- Nút mở modal lọc -->
+    <h2 class="text-center">Máy Giặt</h2>
     <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#filterModal">
         <i class="bi bi-funnel"></i> Lọc
     </button>
@@ -53,7 +51,6 @@
     }
 </div>
 
-
 <!-- Modal Lọc -->
 <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -62,31 +59,21 @@
                 <h5 class="modal-title" id="filterModalLabel">Lọc sản phẩm</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form asp-action="TuLanhView" method="get">
+            <form asp-action="MayGiatView" method="get">
                 <div class="modal-body">
-                    <label>Hãng</label>
+                    <label>Loại máy giặt</label>
                     <div>
-                        @foreach (var thuongHieu in ViewBag.ThuongHieus)
+                        @foreach (var loaiMay in new[] { "Cửa ngang", "Cửa trên" })
                         {
                             <label class="btn btn-outline-secondary">
-                                <input type="radio" name="ThuongHieuID" value="@thuongHieu.ID"> @thuongHieu.TenThuongHieu
-                            </label>
-                        }
-                    </div>
-
-                    <label>Số cánh cửa</label>
-                    <div>
-                        @foreach (var soCanh in new[] { 1, 2, 3 })
-                        {
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="SoCanhCua" value="@soCanh"> @soCanh cánh
+                                <input type="radio" name="LoaiMay" value="@loaiMay"> @loaiMay
                             </label>
                         }
                     </div>
 
                     <label>Giá</label>
                     <div>
-                        @foreach (var gia in new[] { "Dưới 8 triệu", "8-12 triệu", "12-15 triệu" })
+                        @foreach (var gia in new[] { "Dưới 8 triệu", "8-12 triệu", "12-15 triệu", "Trên 15 triệu" })
                         {
                             <label class="btn btn-outline-secondary">
                                 <input type="radio" name="Gia" value="@GetGiaMin(gia)-@GetGiaMax(gia)"> @gia
@@ -94,12 +81,22 @@
                         }
                     </div>
 
-                    <label>Công nghệ Inverter</label>
+                    <label>Khối lượng giặt</label>
                     <div>
-                        @foreach (var congNghe in new[] { "Tủ lạnh thường", "Inverter" })
+                        @foreach (var khoiLuong in new[] { "Dưới 8 kg", "Từ 8-9 kg", "Từ 9 kg trở lên" })
                         {
                             <label class="btn btn-outline-secondary">
-                                <input type="radio" name="CongNgheInverter" value="@congNghe"> @congNghe
+                                <input type="radio" name="KhoiLuong" value="@khoiLuong"> @khoiLuong
+                            </label>
+                        }
+                    </div>
+
+                    <label>Thương hiệu</label>
+                    <div>
+                        @foreach (var thuongHieu in ViewBag.ThuongHieus)
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="ThuongHieuID" value="@thuongHieu.ID"> @thuongHieu.TenThuongHieu
                             </label>
                         }
                     </div>
@@ -114,71 +111,6 @@
     </div>
 </div>
 
-
-<!-- CSS -->
-<style>
-    .product-card {
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-    }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-</style>
-
-<!-- JavaScript -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let selectedFilters = {
-            ThuongHieuIDs: null,
-            SoCanhCua: null,
-            GiaMin: null,
-            GiaMax: null
-        };
-
-        document.querySelectorAll(".filter-btn").forEach(button => {
-            button.addEventListener("click", function () {
-                const field = this.getAttribute("data-field");
-                const value = this.getAttribute("data-value");
-
-                if (field === "Gia") {
-                    let [min, max] = value.split("-").map(Number);
-                    if (selectedFilters.GiaMin === min && selectedFilters.GiaMax === max) {
-                        selectedFilters.GiaMin = null;
-                        selectedFilters.GiaMax = null;
-                        this.classList.remove("active");
-                    } else {
-                        selectedFilters.GiaMin = min;
-                        selectedFilters.GiaMax = max;
-                        document.querySelectorAll(".filter-btn[data-field='Gia']").forEach(btn => btn.classList.remove("active"));
-                        this.classList.add("active");
-                    }
-                } else {
-                    document.querySelectorAll(`.filter-btn[data-field="${field}"]`).forEach(btn => btn.classList.remove("active"));
-                    if (selectedFilters[field] === value) {
-                        selectedFilters[field] = null;
-                    } else {
-                        selectedFilters[field] = value;
-                        this.classList.add("active");
-                    }
-                }
-            });
-        });
-
-        document.getElementById("resetFilters").addEventListener("click", function () {
-            selectedFilters = { ThuongHieuIDs: null, SoCanhCua: null, GiaMin: null, GiaMax: null };
-            document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-        });
-
-        document.getElementById("filterForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            this.submit();
-        });
-    });
-</script>
-
 @functions {
     decimal? GetGiaMin(string gia)
     {
@@ -187,6 +119,7 @@
             "Dưới 8 triệu" => 0,
             "8-12 triệu" => 8000000,
             "12-15 triệu" => 12000000,
+            "Trên 15 triệu" => 15000000,
             _ => null
         };
     }
@@ -198,7 +131,9 @@
             "Dưới 8 triệu" => 8000000,
             "8-12 triệu" => 12000000,
             "12-15 triệu" => 15000000,
+            "Trên 15 triệu" => null,
             _ => null
         };
     }
 }
+

@@ -62,7 +62,7 @@
                 <h5 class="modal-title" id="filterModalLabel">Lọc sản phẩm</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form asp-action="TuLanhView" method="get">
+            <form asp-action="TiviView" method="get">
                 <div class="modal-body">
                     <label>Hãng</label>
                     <div>
@@ -73,17 +73,7 @@
                             </label>
                         }
                     </div>
-
-                    <label>Số cánh cửa</label>
-                    <div>
-                        @foreach (var soCanh in new[] { 1, 2, 3 })
-                        {
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="SoCanhCua" value="@soCanh"> @soCanh cánh
-                            </label>
-                        }
-                    </div>
-
+     
                     <label>Giá</label>
                     <div>
                         @foreach (var gia in new[] { "Dưới 8 triệu", "8-12 triệu", "12-15 triệu" })
@@ -94,12 +84,22 @@
                         }
                     </div>
 
-                    <label>Công nghệ Inverter</label>
+                    <label>Độ phân giải</label>
                     <div>
-                        @foreach (var congNghe in new[] { "Tủ lạnh thường", "Inverter" })
+                        @foreach (var doPhanGiai in new[] { "HD", "Full HD", "4K", "8K" })
                         {
                             <label class="btn btn-outline-secondary">
-                                <input type="radio" name="CongNgheInverter" value="@congNghe"> @congNghe
+                                <input type="radio" name="DoPhanGiai" value="@doPhanGiai"> @doPhanGiai
+                            </label>
+                        }
+                    </div>
+
+                    <label>Loại Tivi</label>
+                    <div>
+                        @foreach (var loaiTivi in new[] { "Smart Tivi", "Tivi OLED", "Tivi Android" })
+                        {
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="LoaiTivi" value="@loaiTivi"> @loaiTivi
                             </label>
                         }
                     </div>

@@ -102,24 +102,63 @@ namespace ThanTai.Controllers
         // POST: Register
         [HttpPost]
         [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public IActionResult Register(NguoiDung model)
         {
-            if (ModelState.IsValid)
+            try
             {
-                // Kiểm tra tên đăng nhập đã tồn tại chưa
-                if (_context.NguoiDung.Any(x => x.TenDangNhap == model.TenDangNhap))
+                if (ModelState.IsValid)
                 {
-                    TempData["ThongBaoLoi"] = "Tên đăng nhập đã tồn tại!";
-                    return View(model);
+                    // Kiểm tra tên đăng nhập đã tồn tại chưa
+                    if (_context.NguoiDung.Any(x => x.TenDangNhap == model.TenDangNhap))
+                    {
+                        TempData["ThongBaoLoi"] = "Tên đăng nhập đã tồn tại!";
+                        return View(model);
+                    }
+
+                    // Kiểm tra email đã tồn tại chưa
+                    if (_context.NguoiDung.Any(x => x.Email == model.Email))
+                    {
+                        TempData["ThongBaoLoi"] = "Email này đã được sử dụng!";
+                        return View(model);
+                    }
+
+                    // Mã hóa mật khẩu trước khi lưu
+                    model.MatKhau = BCrypt.Net.BCrypt.HashPassword(model.MatKhau);
+
+                    // Xử lý ảnh đại diện nếu có
+                    if (model.DuLieuHinhAnh != null)
+                    {
+                        var fileName = Path.GetFileName(model.DuLieuHinhAnh.FileName);
+                        var filePath = Path.Combine("wwwroot/uploads", fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            model.DuLieuHinhAnh.CopyTo(stream);
+                        }
+
+                        model.Anh = "/uploads/" + fileName;
+                    }
+                    else
+                    {
+                        // Gán ảnh mặc định nếu không có ảnh tải lên
+                        model.Anh = "/uploads/anhmacdinh.jpg";
+                    }
+
+                    _context.NguoiDung.Add(model);
+                    _context.SaveChanges();
+
+                    ViewBag.ThongBaoThanhCong = "Đăng ký thành công! Đang chuyển hướng đến trang đăng nhập...";
+                    return View();
                 }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi để kiểm tra sau (tùy vào cách bạn lưu log)
+                Console.WriteLine("Lỗi đăng ký tài khoản: " + ex.Message);
 
-                // Mã hóa mật khẩu bằng BCrypt trước khi lưu vào CSDL
-                model.MatKhau = BC.HashPassword(model.MatKhau);
-                _context.NguoiDung.Add(model);
-                _context.SaveChanges();
-
-                TempData["ThongBao"] = "Đăng ký thành công! Vui lòng đăng nhập.";
-                return RedirectToAction("Login");
+                // Hiển thị thông báo lỗi chung cho người dùng
+                TempData["ThongBaoLoi"] = "Hệ thống đang lỗi, vui lòng thử lại sau!";
             }
 
             return View(model);
