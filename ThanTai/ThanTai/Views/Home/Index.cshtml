@@ -1,4 +1,7 @@
-﻿@{
+﻿@model ThanTai.ViewModels.TrangChuViewModels
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 <!-- Import Bootstrap và Font Awesome nếu cần -->
@@ -37,50 +40,126 @@
     ĐIỆN MÁY KHẢI DUYÊN
 </div>
 
+<!-- Hiển thị danh sách Khuyến mãi -->
 <div class="container mt-4">
-    <h4><strong>Khuyến mãi Online</strong></h4>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-3">
-        <!-- Sản phẩm 1 -->
-        <div class="col">
-            <div class="card h-100 p-2">
-                <!-- Ảnh sản phẩm -->
-                <img src="https://via.placeholder.com/250x200.png?text=Product+Image" class="card-img-top" alt="Daikin Inverter 1 HP">
-                <!-- Thân card -->
-                <div class="card-body text-center">
-                    <!-- Tên sản phẩm -->
-                    <h6 class="card-title text-truncate">Daikin Inverter 1 HP ATK25SVMV</h6>
+    <h4><strong>Chương trình khuyến mãi</strong></h4>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+        @foreach (var km in Model.DanhSachKhuyenMai)
+        {
+            var ngayKetThuc = km.NgayKetThuc.ToString("yyyy/MM/dd HH:mm:ss");
+            var sanPham = km.SanPham;
+            var hinhAnh = "/uploads/default.jpg";
 
-                    <!-- Giá cũ & Giá mới -->
-                    <p class="mb-0 text-muted">
-                        <s>10.390.000đ</s>
-                    </p>
-                    <p class="fw-bold text-danger">
-                        9.750.000đ
-                        <span class="badge bg-danger">-6%</span>
-                    </p>
+            if (sanPham?.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPham != null)
+            {
+                var danhSachAnh = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(sanPham.HinhAnhSanPham.First().AnhSanPham);
+                hinhAnh = danhSachAnh?.FirstOrDefault() ?? hinhAnh;
+            }
 
-                    <!-- Số suất còn lại (icon vàng hoặc lửa) -->
-                    <p class="mb-2 text-warning">
-                        <i class="fa-solid fa-fire"></i> Còn 22/50 suất
-                    </p>
+            decimal giaGoc = sanPham?.DonGia ?? 0;
+            decimal giaSauGiam = giaGoc;
+            string loaiKhuyenMai = "";
 
-                    <!-- Nút mua -->
-                    <a href="#" class="btn btn-primary btn-sm">Mua ngay</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h4><strong>Bản tin</strong></h4>
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card promo-card">
-                    <img src="image.png" alt="Khuyến mãi Điện Máy Xanh">
-                    <div class="promo-text">
-                        Đón hè mát lạnh!! Điện máy XANH tung triệu DEAL bất ngờ qua app QUÀ TẶNG VIP
+            switch (km.KieuKhuyenMai)
+            {
+                case 0: // Giảm theo %
+                    giaSauGiam = giaGoc * (1 - (km.GiaTriGiam / 100));
+                    loaiKhuyenMai = $"-{km.GiaTriGiam}%";
+                    break;
+                case 1: // Giảm theo số tiền
+                    giaSauGiam = giaGoc - km.GiaTriGiam;
+                    loaiKhuyenMai = $"-{km.GiaTriGiam:N0}đ";
+                    break;
+                default:
+                    loaiKhuyenMai = "Khuyến mãi";
+                    break;
+            }
+
+            <div class="col">
+                <div class="card h-100 p-2">
+                    <img src="@Url.Content(hinhAnh)" class="card-img-top" alt="@sanPham?.TenSanPham">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h6 class="card-title text-truncate">@sanPham?.TenSanPham</h6>
+
+                        @if (km.KieuKhuyenMai == 2)
+                        {
+                            <p class="fw-bold text-danger">@loaiKhuyenMai</p>
+                        }
+                        else
+                        {
+                            <p class="text-muted mb-1">
+                                <s>@giaGoc.ToString("N0") đ</s>
+                            </p>
+                            <p class="fw-bold text-danger">
+                                @giaSauGiam.ToString("N0") đ
+                                <span class="badge bg-danger">@loaiKhuyenMai</span>
+                            </p>
+                        }
+
+                        <p class="text-warning"><i class="fa-solid fa-fire"></i> Còn @km.SoLuong suất</p>
+                        <p id="countdown-@km.ID" class="fw-bold text-danger" data-endtime="@ngayKetThuc"></p>
+
+                        <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham?.ID" class="btn btn-primary mt-auto">
+                            Xem Chi Tiết
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
 </div>
+
+
+
+<!-- Hiển thị danh sách Bản tin -->
+<div class="container mt-4">
+    <h4><strong>Bản tin</strong></h4>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+        @foreach (var banTin in Model.DanhSachBanTin)
+        {
+            <div class="col">
+                <div class="card h-100 p-2">
+                    <img src="@Url.Content("/uploads/"+banTin.Image ?? "/img/no-image.png")" class="card-img-top" alt="@banTin.Title">
+                    <div class="card-body text-center">
+                        <h6 class="card-title text-truncate">@banTin.Title</h6>
+                        <p class="text-muted">@banTin.CreatedAt.ToString("dd/MM/yyyy")</p>
+                        <a asp-controller="BanTin" asp-action="ChiTietBanTin" asp-route-id="@banTin.ID" class="btn btn-info">Xem Chi Tiết</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+        function startCountdown(element) {
+            var endTime = new Date(element.getAttribute("data-endtime")).getTime();
+
+            function updateCountdown() {
+                var now = new Date().getTime();
+                var timeLeft = endTime - now;
+
+                if (timeLeft > 0) {
+                    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    element.innerHTML = `⏳ ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`;
+                } else {
+                    element.innerHTML = "🔥 Đã hết hạn!";
+                    element.classList.add("text-muted");
+                    clearInterval(interval);
+                }
+            }
+
+            updateCountdown();
+            var interval = setInterval(updateCountdown, 1000);
+        }
+
+        document.querySelectorAll("[id^='countdown-']").forEach(startCountdown);
+    });
+
+</script>

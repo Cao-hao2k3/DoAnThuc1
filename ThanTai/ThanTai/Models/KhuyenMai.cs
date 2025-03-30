@@ -27,7 +27,7 @@ namespace ThanTai.Models
         public string? MoTa { get; set; }  // Mô tả khuyến mãi
 
         [DisplayName("Kiểu khuyến mãi")]
-        public int KieuKhuyenMai { get; set; } // 0 = %, 1 = số tiền, 2 = Mua 1 tặng 1
+        public int KieuKhuyenMai { get; set; } // 0 = %, 1 = số tiền
 
         [Column(TypeName = "decimal(18,2)")]
         [DisplayName("Giá trị giảm")]

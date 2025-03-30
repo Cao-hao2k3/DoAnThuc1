@@ -6,6 +6,8 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using ThanTai.Models;
 using BC = BCrypt.Net.BCrypt;
+using Microsoft.EntityFrameworkCore;
+using ThanTai.ViewModels;
 
 namespace ThanTai.Controllers
 {
@@ -25,8 +27,26 @@ namespace ThanTai.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var danhSachKhuyenMai = _context.KhuyenMai
+                .Include(km => km.SanPham)
+                .ThenInclude(sp => sp.HinhAnhSanPham)
+                .Where(km => km.TrangThai == 1)
+                .ToList();
+
+            var danhSachBanTin = _context.BanTin
+                 .OrderByDescending(bt => bt.CreatedAt)
+                 .Take(5) // Chỉ lấy 5 bản tin mới nhất
+                 .ToList();
+
+            var viewModel = new TrangChuViewModels
+            {
+                DanhSachKhuyenMai = danhSachKhuyenMai,
+                DanhSachBanTin = danhSachBanTin
+            };
+
+            return View(viewModel);
         }
+
 
         // GET: Login
         [AllowAnonymous]
