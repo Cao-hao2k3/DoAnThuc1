@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" />
 }
 
-
 <div class="card">
     <h5 class="card-header">@ViewData["Title"]</h5>
     <div class="card-body">
@@ -24,7 +23,7 @@
         <table id="datatable" class="table table-sm table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
-                    <th width="10%">Mã sản phẩm</th>
+                    <th>@Html.DisplayNameFor(model => model.ID)</th>
                     <th>@Html.DisplayNameFor(model => model.Tenloai)</th>
                     <th>@Html.DisplayNameFor(model => model.ParentID)</th>
                     <th width="5%">Sửa</th>
@@ -59,45 +58,47 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script>
-               var table = $('#datatable').DataTable({
-         language: {
-         processing: 'Đang xử lý...',
-         lengthMenu: 'Hiển thị _MENU_ dòng',
-         zeroRecords: 'Không tìm thấy dòng nào phù hợp',
-         info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
-         infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
-         emptyTable: 'Không có dữ liệu',
-         infoFiltered: '(được lọc từ _MAX_ dòng)',
-         infoPostFix: '',
-         search: 'Tìm kiếm:',
-         paginate: {
-                 first: '<i class="bi bi-skip-backward-fill"></i>',
-        last: '<i class="bi bi-skip-forward-fill"></i>',
-        next: '<i class="bi bi-chevron-right"></i>',
-        previous: '<i class="bi bi-chevron-left"></i>'
-         },
-         buttons: {
-        excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
-        copy: '<i class="bi bi-clipboard"></i> Sao chép',
-        copyTitle: 'Đã sao chép',
-        copySuccess: {
-         _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
-         1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
-         }
-         }
-         },
-         buttons: [{
-         extend: 'excelHtml5',
-         title: null,
-         filename: 'DanhSachSanPham'
-         }, {
-         extend: 'copyHtml5',
-         title: null
-         }]
-         });
+        var table = $('#datatable').DataTable({
+            language: {
+                processing: 'Đang xử lý...',
+                lengthMenu: 'Hiển thị _MENU_ dòng',
+                zeroRecords: 'Không tìm thấy dòng nào phù hợp',
+                info: 'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+                infoEmpty: 'Đang xem 0 đến 0 trong tổng số 0 dòng',
+                emptyTable: 'Không có dữ liệu',
+                infoFiltered: '(được lọc từ _MAX_ dòng)',
+                search: 'Tìm kiếm:',
+                paginate: {
+                    first: '<i class="bi bi-skip-backward-fill"></i>',
+                    last: '<i class="bi bi-skip-forward-fill"></i>',
+                    next: '<i class="bi bi-chevron-right"></i>',
+                    previous: '<i class="bi bi-chevron-left"></i>'
+                },
+                buttons: {
+                    excel: '<i class="bi bi-file-earmark-excel-fill"></i> Xuất Excel',
+                    copy: '<i class="bi bi-clipboard"></i> Sao chép',
+                    copyTitle: 'Đã sao chép',
+                    copySuccess: {
+                        _: 'Đã sao chép %d dòng vào bộ nhớ tạm.',
+                        1: 'Đã sao chép 1 dòng vào bộ nhớ tạm.'
+                    }
+                }
+            },
+            buttons: [
+                {
+                    extend: 'excelHtml5',
+                    title: null,
+                    filename: 'DanhSachLoaiSanPham'
+                },
+                {
+                    extend: 'copyHtml5',
+                    title: null
+                }
+            ]
+        });
 
-         table.buttons().container().appendTo('#export-buttons');
-         $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
-         $('#datatable').wrap('<div class="table-responsive"></div>');
+        table.buttons().container().appendTo('#export-buttons');
+        $('#export-buttons .btn').removeClass('btn-secondary').addClass('btn-info');
+        $('#datatable').wrap('<div class="table-responsive"></div>');
     </script>
 }

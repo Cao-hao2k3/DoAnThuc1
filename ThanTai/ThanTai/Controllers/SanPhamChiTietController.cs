@@ -19,11 +19,13 @@ namespace ThanTai.Controllers
         public IActionResult Index(int id)
         {
             var sanPham = _context.SanPham
-                .Include(sp => sp.HinhAnhSanPham) // Đảm bảo load HinhAnhSanPham
+                .Include(sp => sp.HinhAnhSanPham)
                 .Include(sp => sp.LoaiSanPham)
                 .Include(sp => sp.ThuongHieu)
                 .Include(sp => sp.GiaTriThuocTinh)
-                .ThenInclude(gt => gt.ThuocTinh)
+                    .ThenInclude(gt => gt.ThuocTinh)
+                .Include(sp => sp.DanhGiaSanPham) // Load đánh giá
+                    .ThenInclude(dg => dg.NguoiDung) // Load thông tin người đánh giá
                 .FirstOrDefault(sp => sp.ID == id);
 
             if (sanPham == null)
@@ -33,6 +35,7 @@ namespace ThanTai.Controllers
 
             return View(sanPham);
         }
+
 
 
         [HttpPost]

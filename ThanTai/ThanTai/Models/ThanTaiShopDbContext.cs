@@ -23,9 +23,12 @@ namespace ThanTai.Models
         public DbSet<KhuyenMai> KhuyenMai { get; set; }
         public DbSet<ThuongHieu> ThuongHieu { get; set; }
         public DbSet<BanTin> BanTin { get; set; }
-        
+
+        public DbSet<DanhGiaSanPham> DanhGiaSanPham { get; set; }
+
         public DbSet<QuanLyKhoHang> QuanLyKhoHang { get; set; }
         public DbSet<ThanTai.Models.HinhAnhSanPham> HinhAnhSanPham { get; set; } = default!;
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
