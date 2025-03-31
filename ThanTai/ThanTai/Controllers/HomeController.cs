@@ -30,13 +30,13 @@ namespace ThanTai.Controllers
             var danhSachKhuyenMai = _context.KhuyenMai
                 .Include(km => km.SanPham)
                 .ThenInclude(sp => sp.HinhAnhSanPham)
-                .Where(km => km.TrangThai == 1)
+                .Where(km => km.TrangThai == 1 && km.NgayKetThuc > DateTime.Now && km.SoLuong > 0)
                 .ToList();
 
             var danhSachBanTin = _context.BanTin
-                 .OrderByDescending(bt => bt.CreatedAt)
-                 .Take(5) // Chỉ lấy 5 bản tin mới nhất
-                 .ToList();
+                .OrderByDescending(bt => bt.CreatedAt)
+                .Take(5) // Chỉ lấy 5 bản tin mới nhất
+                .ToList();
 
             var viewModel = new TrangChuViewModels
             {
@@ -46,7 +46,6 @@ namespace ThanTai.Controllers
 
             return View(viewModel);
         }
-
 
         // GET: Login
         [AllowAnonymous]

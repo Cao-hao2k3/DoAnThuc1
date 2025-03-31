@@ -61,6 +61,13 @@ namespace ThanTai.Models
         public virtual ICollection<QuanLyKhoHang>? QuanLyKhoHang { get; set;} = new List<QuanLyKhoHang>();
 
         public virtual ICollection<DanhGiaSanPham>? DanhGiaSanPham { get; set; } = new List<DanhGiaSanPham>();
+
+        [NotMapped]
+        public int SoLuongBinhLuan => DanhGiaSanPham?.Count ?? 0;
+
+        [NotMapped]
+        public double SoSaoTrungBinh => DanhGiaSanPham?.Count > 0 ? DanhGiaSanPham.Average(d => d.SoSao) : 0;
+
     }
 
     public class ThuocTinh
@@ -107,5 +114,6 @@ namespace ThanTai.Models
         [ForeignKey("ThuocTinhID")]
         public virtual ThuocTinh? ThuocTinh { get; set; }
     }
+
 
 }

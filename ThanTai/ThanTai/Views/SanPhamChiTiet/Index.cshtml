@@ -72,7 +72,14 @@
                 <p><strong>Thương hiệu:</strong> @Model.ThuongHieu?.TenThuongHieu</p>
                 <p><strong>Loại sản phẩm:</strong> @Model.LoaiSanPham?.Tenloai</p>
                 <p><strong>Giá:</strong> <span class="text-danger">@Model.GiaSauKhiGiam.ToString("N0") VNĐ</span></p>
-                <p><strong>Lượt đánh giá: </strong> <span class="text-danger">@Model.LuotDanhGia <i class="fa-solid fa-star" style="color: gold;"></i></span></p>
+                <p>
+                    <strong>Lượt đánh giá: </strong>
+                    <span class="text-danger">
+                        @Model.SoLuongBinhLuan đánh giá
+                        - ⭐ @Model.SoSaoTrungBinh.ToString("0.0")
+                        <i class="fa-solid fa-star" style="color: gold;"></i>
+                    </span>
+                </p>
                 <p><strong>Sản phẩm đã bán: </strong><span class="text-danger">@Model.LuotBan</span></p>
                 <form asp-controller="SanPhamChiTiet" asp-action="ThemVaoGioHang" method="post">
                     <input type="hidden" name="sanPhamID" value="@Model.ID" />
@@ -268,14 +275,15 @@
         background: #f8f9fa;
         border-radius: 8px;
         padding: 15px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: 3px solid #adb5bd; /* Viền đậm hơn */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .commitment-item {
         display: flex;
         align-items: center;
-        padding: 8px 0;
-        border-bottom: 1px solid #e0e0e0;
+        padding: 12px 0;
+        border-bottom: 2px solid #6c757d; /* Viền rõ hơn */
     }
 
         .commitment-item:last-child {
@@ -283,35 +291,57 @@
         }
 
     .commitment-icon {
-        font-size: 20px;
+        font-size: 22px;
         color: #1e88e5;
-        width: 30px;
+        width: 40px;
     }
 
     .commitment-text {
         flex: 1;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 500;
     }
 
         .commitment-text a {
             color: #1e88e5;
             text-decoration: none;
+            font-weight: 600;
         }
 
+    /* Cải thiện bảng thông số */
     table {
         width: 100%;
+        border-collapse: collapse;
+        border: 3px solid #6c757d; /* Viền bảng rõ hơn */
+    }
+
+    th, td {
+        border: 2px solid #6c757d; /* Viền ô rõ hơn */
+        padding: 14px;
     }
 
     th {
-        background-color: #f8f9fa;
+        background-color: #f1f3f5;
         text-align: left;
-        padding: 10px;
-        width: 30%; /* Điều chỉnh độ rộng cột tên */
+        font-weight: bold;
+        border-bottom: 3px solid #495057; /* Viền tiêu đề rõ hơn */
     }
 
-    td {
-        padding: 10px;
+    /* Viền bình luận */
+    .list-group-item {
+        border: 3px solid #adb5bd !important; /* Viền đậm hơn */
+        border-radius: 8px !important;
+        padding: 15px !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
+
+        .list-group-item h5 {
+            font-weight: bold;
+        }
+
+        .list-group-item i {
+            font-size: 18px;
+        }
 </style>
 
 
