@@ -24,11 +24,26 @@ namespace ThanTai.Areas.Admin.Controllers
         }
 
         // GET: DatHang
-        public async Task<IActionResult> Index()    
+        public async Task<IActionResult> Index()
         {
-            var thanTaiShopDbContext = _context.DatHang.Include(d => d.NguoiDung).Include(d => d.TinhTrang);
-            return View(await thanTaiShopDbContext.ToListAsync());
+            // Lấy tất cả đơn hàng và bao gồm các dữ liệu liên quan
+            var datHangList = await _context.DatHang.Include(d => d.NguoiDung).Include(d => d.TinhTrang).ToListAsync();
+
+            // Thống kê số lượng đơn hàng theo TinhTrangID
+            var tinhTrangStats = datHangList
+                .GroupBy(d => d.TinhTrangID)
+                .Select(g => new
+                {
+                    TinhTrangID = g.Key,
+                    Count = g.Count()
+                }).ToList();
+
+            // Trả về View và truyền cả danh sách đơn hàng và thống kê
+            ViewBag.TinhTrangStats = tinhTrangStats;
+
+            return View(datHangList);
         }
+
 
         public IActionResult DangChoXuLy()
         {

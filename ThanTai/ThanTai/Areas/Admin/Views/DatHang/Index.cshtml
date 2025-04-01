@@ -105,6 +105,44 @@
             </tbody>
         </table>
     </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="alert alert-primary d-flex align-items-center">
+                <i class="fa-solid fa-chart-bar me-2"></i>
+                <strong class="me-2">Thống kê tình trạng đơn hàng:</strong>
+                <div>
+                    @foreach (var stat in ViewBag.TinhTrangStats)
+                    {
+                        <span class="badge bg-info text-dark me-2 px-3 py-2">
+                            @switch (stat.TinhTrangID)
+                            {
+                                case 1:
+                                    @:✅ Thành công: @stat.Count
+                                    break;
+                                case 2:
+                                    @:❌ Thất bại: @stat.Count
+                                    break;
+                                case 3:
+                                    @:⏳ Đang xử lý: @stat.Count
+                                    break;
+                                case 6:
+                                    @:🚚 Đang giao hàng: @stat.Count
+                                    break;
+                                case 7:
+                                    @:🛑 Bị hủy: @stat.Count
+                                    break;
+                                default:
+                                    @:❔ Khác (@stat.TinhTrangID): @stat.Count
+                                    break;
+                            }
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 @section Scripts {

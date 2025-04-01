@@ -43,70 +43,78 @@
 <!-- Hiển thị danh sách Khuyến mãi -->
 <div class="container mt-4">
     <h4><strong>Chương trình khuyến mãi</strong></h4>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
-        @foreach (var km in Model.DanhSachKhuyenMai)
-        {
-            var ngayKetThuc = km.NgayKetThuc.ToString("yyyy/MM/dd HH:mm:ss");
-            var sanPham = km.SanPham;
-            var hinhAnh = "/uploads/default.jpg";
 
-            if (sanPham?.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPham != null)
+    @if (Model.DanhSachKhuyenMai != null && Model.DanhSachKhuyenMai.Any())
+    {
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
+            @foreach (var km in Model.DanhSachKhuyenMai)
             {
-                var danhSachAnh = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(sanPham.HinhAnhSanPham.First().AnhSanPham);
-                hinhAnh = danhSachAnh?.FirstOrDefault() ?? hinhAnh;
-            }
+                var ngayKetThuc = km.NgayKetThuc.ToString("yyyy/MM/dd HH:mm:ss");
+                var sanPham = km.SanPham;
+                var hinhAnh = "/uploads/default.jpg";
 
-            decimal giaGoc = sanPham?.DonGia ?? 0;
-            decimal giaSauGiam = giaGoc;
-            string loaiKhuyenMai = "";
+                if (sanPham?.HinhAnhSanPham?.FirstOrDefault()?.AnhSanPham != null)
+                {
+                    var danhSachAnh = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(sanPham.HinhAnhSanPham.First().AnhSanPham);
+                    hinhAnh = danhSachAnh?.FirstOrDefault() ?? hinhAnh;
+                }
 
-            switch (km.KieuKhuyenMai)
-            {
-                case 0: // Giảm theo %
-                    giaSauGiam = giaGoc * (1 - (km.GiaTriGiam / 100));
-                    loaiKhuyenMai = $"-{km.GiaTriGiam}%";
-                    break;
-                case 1: // Giảm theo số tiền
-                    giaSauGiam = giaGoc - km.GiaTriGiam;
-                    loaiKhuyenMai = $"-{km.GiaTriGiam:N0}đ";
-                    break;
-                default:
-                    loaiKhuyenMai = "Khuyến mãi";
-                    break;
-            }
+                decimal giaGoc = sanPham?.DonGia ?? 0;
+                decimal giaSauGiam = giaGoc;
+                string loaiKhuyenMai = "";
 
-            <div class="col">
-                <div class="card h-100 p-2">
-                    <img src="@Url.Content(hinhAnh)" class="card-img-top" alt="@sanPham?.TenSanPham">
-                    <div class="card-body d-flex flex-column text-center">
-                        <h6 class="card-title text-truncate">@sanPham?.TenSanPham</h6>
+                switch (km.KieuKhuyenMai)
+                {
+                    case 0: // Giảm theo %
+                        giaSauGiam = giaGoc * (1 - (km.GiaTriGiam / 100));
+                        loaiKhuyenMai = $"-{km.GiaTriGiam}%";
+                        break;
+                    case 1: // Giảm theo số tiền
+                        giaSauGiam = giaGoc - km.GiaTriGiam;
+                        loaiKhuyenMai = $"-{km.GiaTriGiam:N0}đ";
+                        break;
+                    default:
+                        loaiKhuyenMai = "Khuyến mãi";
+                        break;
+                }
 
-                        @if (km.KieuKhuyenMai == 2)
-                        {
-                            <p class="fw-bold text-danger">@loaiKhuyenMai</p>
-                        }
-                        else
-                        {
-                            <p class="text-muted mb-1">
-                                <s>@giaGoc.ToString("N0") đ</s>
-                            </p>
-                            <p class="fw-bold text-danger">
-                                @giaSauGiam.ToString("N0") đ
-                                <span class="badge bg-danger">@loaiKhuyenMai</span>
-                            </p>
-                        }
+                <div class="col">
+                    <div class="card h-100 p-2">
+                        <img src="@Url.Content(hinhAnh)" class="card-img-top" alt="@sanPham?.TenSanPham">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h6 class="card-title text-truncate">@sanPham?.TenSanPham</h6>
 
-                        <p class="text-warning"><i class="fa-solid fa-fire"></i> Còn @km.SoLuong suất</p>
-                        <p id="countdown-@km.ID" class="fw-bold text-danger" data-endtime="@ngayKetThuc"></p>
+                            @if (km.KieuKhuyenMai == 2)
+                            {
+                                <p class="fw-bold text-danger">@loaiKhuyenMai</p>
+                            }
+                            else
+                            {
+                                <p class="text-muted mb-1">
+                                    <s>@giaGoc.ToString("N0") đ</s>
+                                </p>
+                                <p class="fw-bold text-danger">
+                                    @giaSauGiam.ToString("N0") đ
+                                    <span class="badge bg-danger">@loaiKhuyenMai</span>
+                                </p>
+                            }
 
-                        <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham?.ID" class="btn btn-primary mt-auto">
-                            Xem Chi Tiết
-                        </a>
+                            <p class="text-warning"><i class="fa-solid fa-fire"></i> Còn @km.SoLuong suất</p>
+                            <p id="countdown-@km.ID" class="fw-bold text-danger" data-endtime="@ngayKetThuc"></p>
+
+                            <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham?.ID" class="btn btn-primary mt-auto">
+                                Xem Chi Tiết
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-center text-muted">Hiện tại chưa có chương trình khuyến mãi nào.</p>
+    }
 </div>
 
 

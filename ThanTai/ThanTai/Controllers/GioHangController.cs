@@ -365,27 +365,63 @@ namespace ThanTai.Controllers
                 var sanPhamIDs = ((JArray)orderData.SanPhamIDs).Select(id => int.Parse(id.ToString())).ToList();
                 var soLuongs = ((JArray)orderData.SoLuongs).Select(sl => (short)sl).ToList();
 
+                // Cập nhật số lượng tồn kho và số lượng khuyến mãi
                 for (int i = 0; i < sanPhamIDs.Count; i++)
                 {
-                    var sanPham = await _context.SanPham.FirstOrDefaultAsync(s => s.ID == sanPhamIDs[i]);
+                    int sanPhamID = sanPhamIDs[i];
+                    int soLuongMua = soLuongs[i];
+
+                    var sanPham = await _context.SanPham.FirstOrDefaultAsync(s => s.ID == sanPhamID);
+                    var khuyenMai = await _context.KhuyenMai
+                        .Where(km => km.SanPhamID == sanPhamID && km.NgayBatDau <= DateTime.Now && km.NgayKetThuc >= DateTime.Now && km.SoLuong > 0)
+                        .OrderBy(km => km.NgayBatDau) // Ưu tiên khuyến mãi sớm nhất
+                        .FirstOrDefaultAsync();
 
                     if (sanPham != null)
                     {
-                        if (sanPham.SoLuong >= soLuongs[i])
+                        int soLuongDaTru = 0;
+
+                        if (khuyenMai != null)
                         {
-                            //sanPham.SoLuong -= soLuongs[i]; // Trừ số lượng tồn kho
-                            sanPham.LuotBan += soLuongs[i]; //Tăng lượt bán lên
+                            if (khuyenMai.SoLuong >= soLuongMua)
+                            {
+                                khuyenMai.SoLuong -= soLuongMua;
+                                soLuongDaTru = soLuongMua;
+                            }
+                            else
+                            {
+                                soLuongDaTru = khuyenMai.SoLuong;
+                                khuyenMai.SoLuong = 0;
+                            }
                         }
-                        else
+
+                        // Nếu khuyến mãi không đủ hoặc không có, trừ vào kho chính
+                        int soLuongConLai = soLuongMua - soLuongDaTru;
+                        if (soLuongConLai > 0)
                         {
-                            TempData["ThongBaoLoi"] = $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.";
-                            return RedirectToAction("DatHangThatBai", "GioHang");
+                            if (sanPham.SoLuong >= soLuongConLai)
+                            {
+                                sanPham.SoLuong -= soLuongConLai;
+                            }
+                            else
+                            {
+                                TempData["ThongBaoLoi"] = $"Sản phẩm {sanPham.TenSanPham} không đủ số lượng trong kho.";
+                                return RedirectToAction("DatHangThatBai", "GioHang");
+                            }
                         }
+
+                        sanPham.LuotBan += soLuongMua;
+                    }
+                    else
+                    {
+                        TempData["ThongBaoLoi"] = $"Sản phẩm không tồn tại hoặc không đủ số lượng trong kho.";
+                        return RedirectToAction("DatHangThatBai", "GioHang");
                     }
                 }
 
                 // Lưu thay đổi vào database
                 await _context.SaveChangesAsync();
+
 
 
                 // Xóa giỏ hàng
