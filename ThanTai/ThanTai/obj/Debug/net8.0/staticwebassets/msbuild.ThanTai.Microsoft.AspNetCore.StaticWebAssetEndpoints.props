@@ -27,14 +27,14 @@
     <StaticWebAssetEndpoint Include="_content/ThanTai/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Bw1q4wyEpLHcIm16\u002BVugJPiXZcxV35cEidzbTew\u002BI9Q="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9211"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Bw1q4wyEpLHcIm16\u002BVugJPiXZcxV35cEidzbTew\u002BI9Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 06:54:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Q\u002BuGsvn3xVj5m3p\u002BUJhKELR5dPLJUWIV7sZtSfrOn4Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9765"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Q\u002BuGsvn3xVj5m3p\u002BUJhKELR5dPLJUWIV7sZtSfrOn4Y=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 03:01:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/ThanTai/css/site.hiy942p26y.css">
+    <StaticWebAssetEndpoint Include="_content/ThanTai/css/site.p1g6eo9vt4.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hiy942p26y"},{"Name":"integrity","Value":"sha256-Bw1q4wyEpLHcIm16\u002BVugJPiXZcxV35cEidzbTew\u002BI9Q="},{"Name":"label","Value":"_content/ThanTai/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9211"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Bw1q4wyEpLHcIm16\u002BVugJPiXZcxV35cEidzbTew\u002BI9Q=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 06:54:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p1g6eo9vt4"},{"Name":"integrity","Value":"sha256-Q\u002BuGsvn3xVj5m3p\u002BUJhKELR5dPLJUWIV7sZtSfrOn4Y="},{"Name":"label","Value":"_content/ThanTai/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9765"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Q\u002BuGsvn3xVj5m3p\u002BUJhKELR5dPLJUWIV7sZtSfrOn4Y=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 03:01:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ThanTai/dist/assets/css/layout-dark.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\dist\assets\css\layout-dark.css'))</AssetFile>

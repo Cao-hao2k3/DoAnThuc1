@@ -1,0 +1,58 @@
+﻿@using Newtonsoft.Json
+@model List<ThanTai.Models.SanPham>
+
+<div class="container mt-4">
+    <h3 class="mb-3">Kết quả tìm kiếm cho: <span class="text-primary">@ViewBag.Keyword</span></h3>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var sanPham in Model)
+            {
+                var hinhAnhDauTien = sanPham.HinhAnhSanPham?
+                .FirstOrDefault()?.AnhSanPhamList?.FirstOrDefault() ?? "https://via.placeholder.com/300";
+
+                var giaGoc = sanPham.DonGia;
+                var giamGia = sanPham.GiamGia ?? 0;
+                var giaSauGiam = giaGoc - (giaGoc * giamGia / 100);
+
+                <div class="col-md-2 mb-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <img src="@hinhAnhDauTien" class="card-img-top" alt="@sanPham.TenSanPham">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">@sanPham.TenSanPham</h6>
+
+                            @if (giamGia > 0)
+                            {
+                                <p class="text-muted">
+                                    <del class="text-danger">@giaGoc.ToString("N0") VNĐ</del>
+                                    <span class="badge bg-danger">@giamGia% OFF</span>
+                                </p>
+                                <p class="text-danger"><b>Giá: @giaSauGiam.ToString("N0") VNĐ</b></p>
+                            }
+                            else
+                            {
+                                <p class="text-danger"><b>Giá: @giaGoc.ToString("N0") VNĐ</b></p>
+                            }
+
+                            @if (sanPham.SoLuong > 0)
+                            {
+                                <a asp-controller="SanPhamChiTiet" asp-action="Index" asp-route-id="@sanPham.ID" class="btn btn-success">
+                                    <i class="fas fa-shopping-cart"></i> Xem Chi Tiết
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="alert alert-warning d-inline-block p-1 m-0">Sản phẩm đã hết hàng</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="alert alert-warning">Không tìm thấy sản phẩm nào phù hợp.</p>
+    }
+</div>

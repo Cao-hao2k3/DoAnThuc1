@@ -287,38 +287,60 @@ body {
 .search-box {
     display: flex;
     align-items: center;
-    background: white;
-    border: 1px solid #ddd;
+    background: #fff;
+    border: 2px solid #ddd;
     border-radius: 30px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     width: 400px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     position: absolute;
     left: 50%;
+    bottom: -2px;
     transform: translateX(-50%);
+    transition: all 0.3s ease;
 }
+
+    /* Khi ô tìm kiếm được focus */
+    .search-box:focus-within {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    }
 
     /* Icon tìm kiếm */
     .search-box i {
-        font-size: 18px;
+        font-size: 20px;
         color: #666;
-        margin-right: 8px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: color 0.3s ease;
     }
+
+        /* Hiệu ứng hover icon */
+        .search-box i:hover {
+            color: #007bff;
+        }
 
     /* Input */
     .search-box input {
         border: none;
         outline: none;
         width: 100%;
-        font-size: 14px;
-        color: #666;
+        font-size: 16px;
+        color: #333;
         background: transparent;
     }
 
-        /* Hiệu ứng khi focus */
+        /* Hiệu ứng khi nhập */
         .search-box input:focus {
             color: black;
         }
+
+    /* Nút tìm kiếm (ẩn nhưng có thể dùng nếu cần) */
+    .search-box button {
+        display: none;
+    }
+
 
 /* Khi hover vào "SẢN PHẨM" thì đổi nền xám */
 .custom-dropdown:hover {

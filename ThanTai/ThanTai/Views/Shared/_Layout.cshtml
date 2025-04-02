@@ -130,11 +130,14 @@
                     </li>
                 </ul>
 
-                <!-- Ô tìm kiếm -->
-                <div class="search-box">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Tìm kiếm sản phẩm, bài viết...">
-                </div>
+                <form asp-controller="SanPham" asp-action="TimKiem" method="get">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm, bài viết..." required>
+                        <button type="submit">Tìm</button>
+                    </div>
+                </form>
+
 
                 <!-- Biểu tượng và dropdown -->
                 <div class="d-flex align-items-center">

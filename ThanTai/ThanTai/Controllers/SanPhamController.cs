@@ -398,5 +398,16 @@ namespace ThanTai.Controllers
             return View(mayLocList);
         }
 
+        public IActionResult TimKiem(string keyword)
+        {
+            var sanPhams = _context.SanPham
+                .Include(sp => sp.HinhAnhSanPham) // Load danh sách hình ảnh
+                .Where(sp => sp.TenSanPham.Contains(keyword))
+                .ToList();
+
+            ViewBag.Keyword = keyword;
+            return View("TimKiem", sanPhams);
+        }
+
     }
 }
