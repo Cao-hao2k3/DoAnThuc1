@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N/4scaIXPJDWh8YaD5ZFRpjZYKJQaE8tbP5pLERXB+0=",
+  "Hash": "SdVnu1t9PP7YnKR6DWVbKNSVtbIjE4B44SvJlszw5p8=",
   "Source": "ThanTai",
   "BasePath": "_content/ThanTai",
   "Mode": "Default",
@@ -12741,6 +12741,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\ca4af31a-6857-48a9-8cbd-c4d69b034e7b.jpg"
+    },
+    {
+      "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\caohao.jpg",
+      "SourceId": "ThanTai",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\",
+      "BasePath": "_content/ThanTai",
+      "RelativePath": "uploads/caohao#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uj27rtctfx",
+      "Integrity": "qpdSOH16b2kF6GCK9k8lDo+BSkiZTCNwryWvUZZtSmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\caohao.jpg"
     },
     {
       "Identity": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\cart-empty.png",
@@ -58907,7 +58928,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 29 Mar 2025 13:49:31 GMT"
+          "Value": "Wed, 09 Apr 2025 03:02:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -58944,7 +58965,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 29 Mar 2025 13:49:31 GMT"
+          "Value": "Wed, 09 Apr 2025 03:02:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -60301,7 +60322,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 05:31:49 GMT"
+          "Value": "Fri, 04 Apr 2025 13:53:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -60338,7 +60359,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Mar 2025 05:31:49 GMT"
+          "Value": "Fri, 04 Apr 2025 13:53:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -62981,6 +63002,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4SZy0c3ykoC9Ehxm6DG/wuGVobJHlEwaC6Uw7qH9uSA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/caohao.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\caohao.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpdSOH16b2kF6GCK9k8lDo+BSkiZTCNwryWvUZZtSmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 03:05:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpdSOH16b2kF6GCK9k8lDo+BSkiZTCNwryWvUZZtSmU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/caohao.uj27rtctfx.jpg",
+      "AssetFile": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\wwwroot\\uploads\\caohao.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpdSOH16b2kF6GCK9k8lDo+BSkiZTCNwryWvUZZtSmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Apr 2025 03:05:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uj27rtctfx"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/caohao.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpdSOH16b2kF6GCK9k8lDo+BSkiZTCNwryWvUZZtSmU="
         }
       ]
     },

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ThanTai.Models;
 
@@ -11,9 +12,11 @@ using ThanTai.Models;
 namespace ThanTai.Migrations
 {
     [DbContext(typeof(ThanTaiShopDbContext))]
-    partial class ThanTaiShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250409021250_CSDL34")]
+    partial class CSDL34
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

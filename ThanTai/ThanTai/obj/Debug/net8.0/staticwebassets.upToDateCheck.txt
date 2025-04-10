@@ -600,6 +600,7 @@ wwwroot\uploads\c392231e-fb3b-45e6-b266-564f88bf2443.jpg
 wwwroot\uploads\c4e3224f-d497-415b-829f-532181e96b1d.jpg
 wwwroot\uploads\c954906d-7622-4e52-98f7-e3ae1009d070.jpg
 wwwroot\uploads\ca4af31a-6857-48a9-8cbd-c4d69b034e7b.jpg
+wwwroot\uploads\caohao.jpg
 wwwroot\uploads\cart-empty.png
 wwwroot\uploads\d1931f88-5990-4d28-b00d-9d0bbdcb6223.jpg
 wwwroot\uploads\d1c36f07-8d01-4760-a8b5-96a951fe8dd7.jpg

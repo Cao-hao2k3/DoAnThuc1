@@ -2,7 +2,7 @@
 using WebBanHang.Models.VNPAY;
 
 namespace WebBanHang.Services.VNPAY
-{
+{ 
     public class VnPayService : IVnPayService
     {
         private readonly IConfiguration _configuration;

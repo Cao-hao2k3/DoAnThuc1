@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\sanpham\\timkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\sanpham\\timkiem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,45 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ThanTai\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ThanTai\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIoAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T03:02:10.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SanPhamController.cs",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPhamController.cs",
-              "RelativeDocumentMoniker": "ThanTai\\Controllers\\SanPhamController.cs",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPhamController.cs",
-              "RelativeToolTip": "ThanTai\\Controllers\\SanPhamController.cs",
-              "ViewState": "AgIAAH4BAAAAAAAAAAAuwJoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T03:02:00.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TimKiem.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\TimKiem.cshtml",
-              "RelativeDocumentMoniker": "ThanTai\\Views\\SanPham\\TimKiem.cshtml",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\TimKiem.cshtml",
-              "RelativeToolTip": "ThanTai\\Views\\SanPham\\TimKiem.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAADwvzoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T03:01:30.628Z",
-              "EditorCaption": ""
             }
           ]
         }

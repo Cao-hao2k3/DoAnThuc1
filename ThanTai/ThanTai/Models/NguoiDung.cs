@@ -56,6 +56,13 @@ namespace ThanTai.Models
         [Display(Name = "Hình ảnh người dùng")]
         public IFormFile? DuLieuHinhAnh { get; set; }
 
+        [DisplayName("Token đặt lại mật khẩu")]
+        [StringLength(255)]
+        public string? ResetPasswordToken { get; set; }
+
+        [DisplayName("Thời gian hết hạn token")]
+        public DateTime? TokenExpiryTime { get; set; }
+
         public ICollection<DatHang>? DatHang { get; set; }
 
         public ICollection<GioHang>? GioHang { get; set; }
