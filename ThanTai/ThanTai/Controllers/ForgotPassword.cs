@@ -98,7 +98,8 @@ namespace ThanTai.Controllers
 
             if (user == null)
             {
-                return Content("Token không hợp lệ hoặc đã hết hạn.");
+                ViewBag.ThongBao = "Token không hợp lệ hoặc đã hết hạn.";
+                return View("ThongBao");
             }
 
             // Mã hóa mật khẩu mới bằng BCrypt
@@ -111,8 +112,12 @@ namespace ThanTai.Controllers
             _context.Update(user);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Login", "Home");
+            return View("DatLaiMatKhauThanhCong");
         }
 
+        public IActionResult DatLaiMatKhauThanhCong()
+        {
+            return View();
+        }
     }
 }
