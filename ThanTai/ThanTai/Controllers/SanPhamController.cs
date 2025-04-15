@@ -409,5 +409,25 @@ namespace ThanTai.Controllers
             return View("TimKiem", sanPhams);
         }
 
+        public async Task<IActionResult> LoaiSanPhamView(string ids)
+        {
+            // Tách chuỗi "1,2" thành List<int> {1, 2}
+            var idList = ids.Split(',').Select(int.Parse).ToList();
+
+            // Lấy tất cả ID con tương ứng (nếu cần mở rộng ra)
+            var loaiIDs = await _context.LoaiSanPham
+                .Where(ls => idList.Contains(ls.ID) || idList.Contains(ls.ParentID ?? 0))
+                .Select(ls => ls.ID)
+                .ToListAsync();
+
+            var sanPhams = await _context.SanPham
+                .Include(sp => sp.HinhAnhSanPham)
+                .Where(sp => loaiIDs.Contains(sp.LoaiSanPhamID))
+                .ToListAsync();
+
+            return View("Index", sanPhams);
+        }
+
+
     }
 }

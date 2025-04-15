@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\controllers\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\controllers\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\views\\forgotpassword\\datlaimatkhauthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\views\\forgotpassword\\datlaimatkhauthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|d:\\hoctap\\doanttck - backuploginxong\\thantai\\thantai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15ED1BE7-AB3F-4351-B48D-B58DCCDA2D17}|ThanTai\\ThanTai.csproj|solutionrelative:thantai\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +39,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DatLaiMatKhauThanhCong.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\ForgotPassword\\DatLaiMatKhauThanhCong.cshtml",
-              "RelativeDocumentMoniker": "ThanTai\\Views\\ForgotPassword\\DatLaiMatKhauThanhCong.cshtml",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\ForgotPassword\\DatLaiMatKhauThanhCong.cshtml",
-              "RelativeToolTip": "ThanTai\\Views\\ForgotPassword\\DatLaiMatKhauThanhCong.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-14T06:30:18.323Z",
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "ThanTai\\Controllers\\SanPhamController.cs",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "ThanTai\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAmwK0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T07:10:52.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ForgotPassword.cs",
-              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\ForgotPassword.cs",
-              "RelativeDocumentMoniker": "ThanTai\\Controllers\\ForgotPassword.cs",
-              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Controllers\\ForgotPassword.cs",
-              "RelativeToolTip": "ThanTai\\Controllers\\ForgotPassword.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T06:26:29.867Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "ThanTai\\Views\\SanPham\\Index.cshtml",
+              "ToolTip": "D:\\HocTap\\DoAnTTCK - BackUpLoginXong\\ThanTai\\ThanTai\\Views\\SanPham\\Index.cshtml",
+              "RelativeToolTip": "ThanTai\\Views\\SanPham\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T07:10:23.914Z",
               "EditorCaption": ""
             }
           ]

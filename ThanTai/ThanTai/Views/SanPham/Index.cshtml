@@ -8,9 +8,14 @@
             <div class="mb-3">
                 <div class="category-title"><i class="fas fa-bars"></i> DANH MỤC SẢN PHẨM</div>
                 <ul class="list-group">
-                    <li class="list-group-item">ĐIỆN TỬ</li>
-                    <li class="list-group-item">ĐIỆN NĂNG LƯỢNG MẶT TRỜI</li>
-                    <li class="list-group-item">ĐIỆN GIA DỤNG</li>
+                    <li class="list-group-item">
+                        <a asp-controller="SanPham" asp-action="LoaiSanPhamView" asp-route-ids="1,2">ĐIỆN TỬ, ĐIỆN MÁY</a>
+                    <li class="list-group-item">
+                        <a asp-controller="SanPham" asp-action="LoaiSanPhamView" asp-route-ids="4">ĐIỆN LẠNH</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="SanPham" asp-action="LoaiSanPhamView" asp-route-ids="3">ĐIỆN GIA DỤNG</a>
+                    </li>
                 </ul>
             </div>
         </div>

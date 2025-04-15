@@ -107,13 +107,6 @@
                                                     <p>Máy lọc không khí</p>
                                                 </a>
                                             </div>
-
-                                            <div class="col-3">
-                                                <a asp-area="" asp-controller="SanPham" asp-action="QuatMayView">
-                                                    <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Common/43/03/430374ebb8aa83838d66a5e6733d3697.png" alt="Quạt máy">
-                                                    <p>Quạt máy</p>
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -234,40 +227,12 @@
         <div class="container">
             <div class="row">
                 <!-- ABOUT US -->
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <h5 class="fw-bold">ABOUT US</h5>
                     <p>Trạm dừng chân thần tài</p>
                     <p><i class="bi bi-geo-alt-fill text-danger"></i> 679 QL91 - xã Bình Hòa, huyện Châu Thành, tỉnh An Giang.</p>
                     <p><i class="bi bi-telephone-fill text-danger"></i> 02963 836 999 - 0918 082 264</p>
                     <p><i class="bi bi-envelope-fill text-danger"></i> thantaiviet@gmail.com    </p>
-                </div>
-
-                <!-- CATEGORIES -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold">SẢN PHẨM</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="footer-link">Điện tử</a></li>
-                        <li><a href="#" class="footer-link">Tủ lạnh</a></li>
-                        <li><a href="#" class="footer-link">Máy lọc nước</a></li>
-
-                    </ul>
-                </div>
-
-                <!-- INFORMATION -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold">Về công ty</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="footer-link">Giới Thiệu</a></li>
-                        <li><a href="#" class="footer-link">Góp ý khiếu nại</a></li>
-                    </ul>
-                </div>
-
-                <!-- SERVICE -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold">Thông tin khác</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="footer-link">Khuyến mãi</a></li>
-                        <li><a href="#" class="footer-link">Tin tức</a></li>
                 </div>
             </div>
         </div>
@@ -280,5 +245,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
